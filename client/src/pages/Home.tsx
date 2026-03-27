@@ -133,7 +133,7 @@ export default function Home() {
                 Building Tomorrow's Power Infrastructure
               </h2>
               <p className="text-lg text-foreground/70 mb-4">
-                Since 2005, ANVM Power Infra has been at the forefront of electrical infrastructure development in India. With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation.
+                Since 2005, ANVM Power Infra Pvt. Ltd. has been at the forefront of electrical infrastructure development in India. With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation.
               </p>
               <p className="text-lg text-foreground/70 mb-8">
                 Our team of experienced engineers and technicians work with leading corporations including KPTCL, KEB, and HESCOM to deliver projects with precision, safety, and excellence.

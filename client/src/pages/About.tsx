@@ -2,7 +2,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function About() {
   const milestones = [
-    { year: "2005", title: "Founded", description: "ANVM Power Infra established with vision for excellence" },
+    { year: "2005", title: "Founded", description: "ANVM Power Infra Pvt. Ltd. established with vision for excellence" },
     { year: "2010", title: "Expansion", description: "Expanded operations across Karnataka and Maharashtra" },
     { year: "2015", title: "Renewable Focus", description: "Major shift towards renewable energy projects" },
     { year: "2023", title: "Market Leader", description: "Recognized as trusted partner for power infrastructure" },
@@ -32,7 +32,7 @@ export default function About() {
       {/* Page Header */}
       <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">About ANVM Power Infra</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">About ANVM Power Infra Pvt. Ltd.</h1>
           <p className="text-xl text-white/90">
             Two decades of expertise in electrical and power infrastructure solutions
           </p>

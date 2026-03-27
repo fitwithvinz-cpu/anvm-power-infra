@@ -184,7 +184,7 @@ export default function Services() {
       {/* Why Choose Us */}
       <section className="py-20 bg-primary/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-primary mb-12 text-center">Why Choose ANVM Power Infra?</h2>
+          <h2 className="text-4xl font-bold text-primary mb-12 text-center">Why Choose ANVM Power Infra Pvt. Ltd.?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               { title: "20+ Years Experience", desc: "Proven track record in electrical infrastructure" },

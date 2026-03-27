@@ -23,7 +23,7 @@ export default function Navigation() {
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold">
               A
             </div>
-            <span className="hidden sm:inline">ANVM Power</span>
+            <span className="hidden sm:inline text-lg">ANVM Power Infra Pvt. Ltd.</span>
           </a>
         </Link>
 

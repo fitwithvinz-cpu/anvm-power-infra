@@ -52,7 +52,7 @@ export default function Team() {
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Our Team</h1>
           <p className="text-xl text-white/90">
-            Meet the experienced professionals behind ANVM Power Infra
+            Meet the experienced professionals behind ANVM Power Infra Pvt. Ltd.
           </p>
         </div>
       </section>

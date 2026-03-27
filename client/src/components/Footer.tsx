@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 font-sans">ANVM Power Infra</h3>
+            <h3 className="text-xl font-bold mb-4 font-sans">ANVM Power Infra Pvt. Ltd.</h3>
             <p className="text-primary-foreground/80 text-sm mb-4">
               Delivering excellence in electrical and power infrastructure solutions across India.
             </p>
