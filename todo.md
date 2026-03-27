@@ -1,0 +1,21 @@
+# ANVM Power Infra - Project TODO
+
+- [x] Initialize project
+- [x] Create Home page with hero section
+- [x] Create About page with company history
+- [x] Create Services page
+- [x] Create Projects page
+- [x] Create Team page with founder profiles
+- [x] Create Contact page with form
+- [x] Create Navigation component
+- [x] Create Footer component
+- [x] Apply Industrial Modernism design theme
+- [x] Upgrade to backend server with database
+- [x] Add contact form submissions table to database schema
+- [x] Create tRPC endpoint to handle contact form submissions
+- [x] Send notification to owner on new contact form submission
+- [x] Restore all pages after backend upgrade (fix Home.tsx conflict)
+- [x] Fix App.tsx routes to include all pages
+- [x] Run database migration (pnpm db:push)
+- [x] Write vitest for contact form submission
+- [ ] Add founder photos (placeholder until client provides)

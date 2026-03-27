@@ -1,8 +1,13 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, Zap, Wind, Hammer, Shield } from "lucide-react";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const services = [
     {
       icon: Zap,
@@ -53,16 +58,12 @@ export default function Home() {
               Two decades of excellence in electrical infrastructure, power transmission, and renewable energy solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact">
-                <a className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
                   Get Started
                   <ArrowRight size={20} />
-                </a>
               </Link>
-              <Link href="/projects">
-                <a className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-all border border-white/30">
+              <Link href="/projects" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-all border border-white/30">
                   View Projects
-                </a>
               </Link>
             </div>
           </div>
@@ -137,11 +138,9 @@ export default function Home() {
               <p className="text-lg text-foreground/70 mb-8">
                 Our team of experienced engineers and technicians work with leading corporations including KPTCL, KEB, and HESCOM to deliver projects with precision, safety, and excellence.
               </p>
-              <Link href="/about">
-                <a className="inline-flex items-center gap-2 text-primary hover:text-secondary font-semibold transition-colors">
+              <Link href="/about" className="inline-flex items-center gap-2 text-primary hover:text-secondary font-semibold transition-colors">
                   Learn More About Us
                   <ArrowRight size={20} />
-                </a>
               </Link>
             </div>
             <div
@@ -166,11 +165,9 @@ export default function Home() {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Contact our team today to discuss your electrical infrastructure needs
           </p>
-          <Link href="/contact">
-            <a className="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
               Get in Touch
               <ArrowRight size={20} />
-            </a>
           </Link>
         </div>
       </section>
