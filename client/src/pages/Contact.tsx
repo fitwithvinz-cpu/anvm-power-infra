@@ -235,7 +235,7 @@ export default function Contact() {
           <div className="w-full rounded-xl overflow-hidden shadow-xl border border-border" style={{ height: '480px' }}>
             <iframe
               title="ANVM Power Infra Pvt. Ltd. Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.9!2d75.1240!3d15.3647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d0e9c3b3b3b3%3A0x3b3b3b3b3b3b3b3b!2sShriya%20Riddhi%20Siddhi%20Commercial%20Complex%2C%20R%20N%20Shetty%20Road%2C%20Hubli%2C%20Karnataka%20580030!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin&q=Shriya+Riddhi+Siddhi+Commercial+Complex+RN+Shetty+Road+Hubli+Karnataka"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.5!2d75.1116!3d15.3471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d78be860443f%3A0x641f120a27f00512!2sShriya%20Ridhi%20Sidhi%2C%2084W6%2BRMF%2C%20Chaitanya%20Nagar%2C%20Rajendra%20Nagar%2C%20Hubballi%2C%20Karnataka%20580024!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -246,7 +246,7 @@ export default function Contact() {
           </div>
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://www.google.com/maps/search/Shriya+Riddhi+Siddhi+Commercial+Complex+RN+Shetty+Road+Hubli+Karnataka"
+              href="https://www.google.com/maps/place/Shriya+Ridhi+Sidhi/@15.3470599,75.111657,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb8d78be860443f:0x641f120a27f00512!8m2!3d15.3470599!4d75.111657!16s%2Fg%2F11s2yrgfm7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors justify-center"
@@ -255,7 +255,7 @@ export default function Contact() {
               Open in Google Maps
             </a>
             <a
-              href="https://www.google.com/maps/dir//Shriya+Riddhi+Siddhi+Commercial+Complex+RN+Shetty+Road+Hubli+Karnataka"
+              href="https://www.google.com/maps/dir//Shriya+Ridhi+Sidhi,84W6+RMF,Chaitanya+Nagar,Rajendra+Nagar,Hubballi,Karnataka+580024/@15.3470599,75.111657,17z"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors justify-center"
