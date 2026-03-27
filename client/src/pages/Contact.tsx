@@ -226,15 +226,42 @@ export default function Contact() {
       {/* Map Section */}
       <section className="py-20 bg-primary/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-primary mb-8 text-center">Our Location</h2>
-          <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg border border-border flex items-center justify-center">
-            <div className="text-center">
-              <MapPin size={48} className="text-primary mx-auto mb-4" />
-              <p className="text-foreground/70 font-semibold">Hubli, Karnataka, India</p>
-              <p className="text-foreground/60 text-sm mt-2">
-                SF-09, Shriya Riddhi Siddhi Commercial Complex, R N Shetty Road, Hubli-580030
-              </p>
-            </div>
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-bold text-primary mb-3">Our Location</h2>
+            <p className="text-foreground/70 text-lg">
+              SF-09, Shriya Riddhi Siddhi Commercial Complex, R N Shetty Road, Hubli-580030, Karnataka
+            </p>
+          </div>
+          <div className="w-full rounded-xl overflow-hidden shadow-xl border border-border" style={{ height: '480px' }}>
+            <iframe
+              title="ANVM Power Infra Pvt. Ltd. Office Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.9!2d75.1240!3d15.3647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d0e9c3b3b3b3%3A0x3b3b3b3b3b3b3b3b!2sShriya%20Riddhi%20Siddhi%20Commercial%20Complex%2C%20R%20N%20Shetty%20Road%2C%20Hubli%2C%20Karnataka%20580030!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin&q=Shriya+Riddhi+Siddhi+Commercial+Complex+RN+Shetty+Road+Hubli+Karnataka"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.google.com/maps/search/Shriya+Riddhi+Siddhi+Commercial+Complex+RN+Shetty+Road+Hubli+Karnataka"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors justify-center"
+            >
+              <MapPin size={18} />
+              Open in Google Maps
+            </a>
+            <a
+              href="https://www.google.com/maps/dir//Shriya+Riddhi+Siddhi+Commercial+Complex+RN+Shetty+Road+Hubli+Karnataka"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors justify-center"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
       </section>
