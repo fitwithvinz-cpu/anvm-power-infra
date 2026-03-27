@@ -32,24 +32,16 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/">
-                  <a className="hover:text-secondary transition-colors">Home</a>
-                </Link>
+                <Link href="/" className="hover:text-secondary transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a className="hover:text-secondary transition-colors">About Us</a>
-                </Link>
+                <Link href="/about" className="hover:text-secondary transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/services">
-                  <a className="hover:text-secondary transition-colors">Services</a>
-                </Link>
+                <Link href="/services" className="hover:text-secondary transition-colors">Services</Link>
               </li>
               <li>
-                <Link href="/projects">
-                  <a className="hover:text-secondary transition-colors">Projects</a>
-                </Link>
+                <Link href="/projects" className="hover:text-secondary transition-colors">Projects</Link>
               </li>
             </ul>
           </div>
@@ -81,7 +73,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={18} />
-                <a href="mailto:anvmpowerinfrapvtltd@gmail.com" className="hover:text-secondary transition-colors">
+                <a href="mailto:anvmpowerinfrapvtltd@gmail.com" className="hover:text-secondary transition-colors break-all">
                   anvmpowerinfrapvtltd@gmail.com
                 </a>
               </div>
@@ -98,7 +90,7 @@ export default function Footer() {
                 Privacy Policy
               </a>
               <a href="#" className="hover:text-secondary transition-colors">
-                Terms & Conditions
+                Terms &amp; Conditions
               </a>
             </div>
           </div>

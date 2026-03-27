@@ -20,3 +20,4 @@
 - [x] Write vitest for contact form submission
 - [ ] Add founder photos (placeholder until client provides)
 - [x] Fix company name to "ANVM Power Infra Pvt. Ltd." consistently across all pages and navigation
+- [x] Fix nested <a> inside <Link> errors across all pages (Contact, Navigation, Footer, Home, About, Projects, Services, Team)
