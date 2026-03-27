@@ -21,3 +21,4 @@
 - [ ] Add founder photos (placeholder until client provides)
 - [x] Fix company name to "ANVM Power Infra Pvt. Ltd." consistently across all pages and navigation
 - [x] Fix nested <a> inside <Link> errors across all pages (Contact, Navigation, Footer, Home, About, Projects, Services, Team)
+- [x] Integrate Nodemailer + Gmail SMTP to send real emails to anvmpowerinfrapvtltd@gmail.com on contact form submission

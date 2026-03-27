@@ -6,6 +6,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { getDb } from "./db";
 import { contactSubmissions } from "../drizzle/schema";
 import { z } from "zod";
+import { sendContactEmail } from "./email";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -46,10 +47,20 @@ export const appRouter = router({
           });
         }
 
-        // Send notification to owner
+        // Send notification to owner via Manus dashboard
         await notifyOwner({
           title: `New Contact Form Submission from ${input.name}`,
           content: `Name: ${input.name}\nEmail: ${input.email}\nPhone: ${input.phone || 'N/A'}\nCompany: ${input.company || 'N/A'}\nSubject: ${input.subject}\n\nMessage:\n${input.message}`,
+        });
+
+        // Send email to Gmail inbox
+        await sendContactEmail({
+          name: input.name,
+          email: input.email,
+          phone: input.phone,
+          company: input.company,
+          subject: input.subject,
+          message: input.message,
         });
 
         return { success: true };
