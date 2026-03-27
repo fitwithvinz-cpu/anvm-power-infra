@@ -1,0 +1,109 @@
+import { Link } from "wouter";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-primary text-primary-foreground mt-20">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          {/* Company Info */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 font-sans">ANVM Power Infra</h3>
+            <p className="text-primary-foreground/80 text-sm mb-4">
+              Delivering excellence in electrical and power infrastructure solutions across India.
+            </p>
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-secondary transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href="#" className="hover:text-secondary transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="hover:text-secondary transition-colors">
+                <Facebook size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/">
+                  <a className="hover:text-secondary transition-colors">Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <a className="hover:text-secondary transition-colors">About Us</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">
+                  <a className="hover:text-secondary transition-colors">Services</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects">
+                  <a className="hover:text-secondary transition-colors">Projects</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="hover:text-secondary transition-colors cursor-pointer">Power Transmission</li>
+              <li className="hover:text-secondary transition-colors cursor-pointer">Substations</li>
+              <li className="hover:text-secondary transition-colors cursor-pointer">Renewable Energy</li>
+              <li className="hover:text-secondary transition-colors cursor-pointer">Civil Works</li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-2">
+                <MapPin size={18} className="mt-0.5 flex-shrink-0" />
+                <p>SF-09, Shriya Riddhi Siddhi Commercial Complex, Hubli-580030</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone size={18} />
+                <a href="tel:+918971162228" className="hover:text-secondary transition-colors">
+                  +91 8971162228
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail size={18} />
+                <a href="mailto:anvmpowerinfrapvtltd@gmail.com" className="hover:text-secondary transition-colors">
+                  anvmpowerinfrapvtltd@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-primary-foreground/20 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/70">
+            <p>&copy; {currentYear} ANVM Power Infra Pvt. Ltd. All rights reserved.</p>
+            <div className="flex gap-6 mt-4 md:mt-0">
+              <a href="#" className="hover:text-secondary transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-secondary transition-colors">
+                Terms & Conditions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
