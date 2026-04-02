@@ -193,7 +193,7 @@ export default function Projects() {
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Project Statistics</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
-              { number: "100+", label: "Projects Completed" },
+              { number: "50+", label: "Projects Completed" },
               { number: "20+", label: "Years of Experience" },
               { number: "3", label: "Major Corporations" },
               { number: "5", label: "States Covered" },

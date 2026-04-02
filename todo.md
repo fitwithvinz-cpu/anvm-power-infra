@@ -24,3 +24,4 @@
 - [x] Integrate Nodemailer + Gmail SMTP to send real emails to anvmpowerinfrapvtltd@gmail.com on contact form submission
 - [x] Add Google Map on Contact page showing office location (SF-09, Shriya Riddhi Siddhi Commercial Complex, R N Shetty Road, Hubli-580030)
 - [x] Highlight exact office location with a pin marker on the Google Map
+- [x] Change "100+ Projects Completed" to "50+ Projects Completed" on Home and Projects pages
