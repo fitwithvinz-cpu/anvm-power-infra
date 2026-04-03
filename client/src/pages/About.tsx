@@ -2,10 +2,10 @@ import { CheckCircle } from "lucide-react";
 
 export default function About() {
   const milestones = [
-    { year: "2005", title: "Founded", description: "ANVM Power Infra Pvt. Ltd. established with vision for excellence" },
-    { year: "2010", title: "Expansion", description: "Expanded operations across Karnataka and Maharashtra" },
-    { year: "2015", title: "Renewable Focus", description: "Major shift towards renewable energy projects" },
-    { year: "2023", title: "Market Leader", description: "Recognized as trusted partner for power infrastructure" },
+    { year: "2025", title: "Founded", description: "ANVM Power Infra Pvt. Ltd. established with vision for excellence in renewable energy and power infrastructure" },
+    { year: "2025", title: "First Projects", description: "Successfully commenced first power transmission and substation projects in Karnataka" },
+    { year: "2026", title: "Renewable Focus", description: "Expanding into wind and solar energy infrastructure projects" },
+    { year: "2026", title: "Growing Strong", description: "Building partnerships with KPTCL, HESCOM, and private renewable energy clients" },
   ];
 
   const values = [
@@ -34,7 +34,7 @@ export default function About() {
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">About ANVM Power Infra Pvt. Ltd.</h1>
           <p className="text-xl text-white/90">
-            Two decades of expertise in electrical and power infrastructure solutions
+            Established in 2025 with a vision for excellence in electrical and power infrastructure
           </p>
         </div>
       </section>
@@ -46,10 +46,10 @@ export default function About() {
             <h2 className="text-4xl font-bold text-primary mb-8">Our Story</h2>
             <div className="space-y-6 text-lg text-foreground/80">
               <p>
-                ANVM Power Infra Pvt. Ltd. is a trusted name in the electrical and power infrastructure sector, backed by decades of experience and technical expertise. The foundation of the company dates back to its earlier operations under Shri Mangalagouri Electricals, where the team gained strong hands-on experience in electrical contracting and project execution.
+                ANVM Power Infra Pvt. Ltd. is a dynamic and forward-thinking company in the electrical and power infrastructure sector, established in 2025 with a strong foundation of technical expertise and industry knowledge. The company was founded by professionals with extensive hands-on experience in electrical contracting and project execution.
               </p>
               <p>
-                Building on this legacy, the organization was formally established as ANVM Power Infra Pvt. Ltd. in 2005, with a vision to deliver high-quality, reliable, and efficient power solutions across Karnataka and beyond.
+                ANVM Power Infra Pvt. Ltd. was formally established in 2025, with a vision to deliver high-quality, reliable, and efficient power solutions across Karnataka and beyond. From day one, the company has been committed to excellence, safety, and innovation in every project it undertakes.
               </p>
               <p>
                 Since then, the company has successfully executed numerous projects in collaboration with Karnataka Power Transmission Corporation Limited (KPTCL), Karnataka Electricity Board (KEB), and Hubli Electricity Supply Company Limited (HESCOM), along with various private and industrial clients.

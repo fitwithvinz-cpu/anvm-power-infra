@@ -55,7 +55,7 @@ export default function Home() {
               Powering India's Infrastructure
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 font-light">
-              Two decades of excellence in electrical infrastructure, power transmission, and renewable energy solutions
+              Established in 2025 — delivering excellence in electrical infrastructure, power transmission, and renewable energy solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
@@ -75,8 +75,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">20+</div>
-              <p className="text-foreground/70">Years of Experience</p>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">2025</div>
+              <p className="text-foreground/70">Established</p>
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">50+</div>
@@ -133,7 +133,7 @@ export default function Home() {
                 Building Tomorrow's Power Infrastructure
               </h2>
               <p className="text-lg text-foreground/70 mb-4">
-                Since 2005, ANVM Power Infra Pvt. Ltd. has been at the forefront of electrical infrastructure development in India. With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation.
+                Established in 2025, ANVM Power Infra Pvt. Ltd. is at the forefront of electrical infrastructure development in India. With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation.
               </p>
               <p className="text-lg text-foreground/70 mb-8">
                 Our team of experienced engineers and technicians work with leading corporations including KPTCL, KEB, and HESCOM to deliver projects with precision, safety, and excellence.
