@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
       <Route path={"/services"} component={Services} />
       <Route path={"/team"} component={Team} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/gallery"} component={Gallery} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
