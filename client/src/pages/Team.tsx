@@ -65,12 +65,12 @@ export default function Team() {
             {founders.map((founder, index) => (
               <div key={index} className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-xl transition-all">
                 {/* Photo */}
-                <div className="h-72 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center border-b border-border overflow-hidden">
+                <div className="h-80 bg-white flex items-center justify-center border-b border-border overflow-hidden">
                   {founder.photo.startsWith('http') ? (
                     <img
                       src={founder.photo}
                       alt={founder.name}
-                      className="w-full h-full object-cover object-top"
+                      className="h-full w-auto object-contain"
                     />
                   ) : (
                     <div className="text-center">

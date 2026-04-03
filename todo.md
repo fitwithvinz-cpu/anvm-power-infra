@@ -32,3 +32,4 @@
 - [x] Make solar panel in logo look more natural/realistic (blue panel cells, metallic frame)
 - [x] Improve solar panel in logo to look more natural and realistic with better detail
 - [x] Upload B. Mahendra photo to CDN and add to Team page
+- [x] Fix B. Mahendra photo to show full image without cropping (use object-contain instead of object-cover)
