@@ -33,3 +33,4 @@
 - [x] Improve solar panel in logo to look more natural and realistic with better detail
 - [x] Upload B. Mahendra photo to CDN and add to Team page
 - [x] Fix B. Mahendra photo to show full image without cropping (use object-contain instead of object-cover)
+- [x] Redesign Team page founder cards - use side-by-side layout with photo on left and info on right for proper display

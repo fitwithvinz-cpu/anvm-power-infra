@@ -34,7 +34,7 @@ export default function Team() {
         "Ethical practices",
       ],
       bio: "M. Rajalaxmi is a dedicated professional and co-founder, bringing strong legal knowledge and organizational insight to the company. With her academic background in law, she plays an important role in ensuring compliance, managing legal aspects, and supporting the strategic growth of the organization. Her attention to detail and commitment to ethical practices contribute significantly to the company's strong operational framework.",
-      photo: "[Placeholder for co-founder photo - to be provided]",
+      photo: "",
     },
   ];
 
@@ -61,75 +61,79 @@ export default function Team() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Leadership Team</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="flex flex-col gap-12 max-w-5xl mx-auto">
             {founders.map((founder, index) => (
-              <div key={index} className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-xl transition-all">
-                {/* Photo */}
-                <div className="h-80 bg-white flex items-center justify-center border-b border-border overflow-hidden">
-                  {founder.photo.startsWith('http') ? (
-                    <img
-                      src={founder.photo}
-                      alt={founder.name}
-                      className="h-full w-auto object-contain"
-                    />
+              <div
+                key={index}
+                className="bg-white border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col md:flex-row"
+              >
+                {/* Photo Section */}
+                <div className="md:w-72 flex-shrink-0 bg-gradient-to-b from-primary/10 to-secondary/10 flex items-center justify-center p-6">
+                  {founder.photo ? (
+                    <div className="w-56 h-64 rounded-xl overflow-hidden shadow-md border-4 border-white">
+                      <img
+                        src={founder.photo}
+                        alt={founder.name}
+                        className="w-full h-full object-cover object-center"
+                        style={{ objectPosition: "center 10%" }}
+                      />
+                    </div>
                   ) : (
-                    <div className="text-center">
-                      <div className="w-24 h-24 bg-primary/30 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <div className="w-56 h-64 rounded-xl bg-primary/20 flex flex-col items-center justify-center border-4 border-white shadow-md">
+                      <div className="w-20 h-20 bg-primary/30 rounded-full flex items-center justify-center mb-3">
                         <span className="text-4xl font-bold text-primary">{founder.name.charAt(0)}</span>
                       </div>
-                      <p className="text-foreground/60 text-sm">Photo coming soon</p>
+                      <p className="text-foreground/50 text-sm text-center px-4">Photo coming soon</p>
                     </div>
                   )}
                 </div>
 
-                {/* Content */}
-                <div className="p-8">
-                  <h3 className="text-3xl font-bold text-primary mb-2">{founder.name}</h3>
-                  <p className="text-xl text-secondary font-semibold mb-4">{founder.role}</p>
+                {/* Content Section */}
+                <div className="flex-1 p-8">
+                  <h3 className="text-3xl font-bold text-primary mb-1">{founder.name}</h3>
+                  <p className="text-lg text-secondary font-semibold mb-4">{founder.role}</p>
 
                   {/* Bio */}
-                  <p className="text-foreground/70 mb-6 leading-relaxed">{founder.bio}</p>
+                  <p className="text-foreground/70 mb-6 leading-relaxed text-sm">{founder.bio}</p>
 
                   {/* Details */}
-                  <div className="space-y-4 mb-6 pb-6 border-b border-border">
-                    <div className="flex items-start gap-3">
-                      <Calendar size={20} className="text-secondary flex-shrink-0 mt-0.5" />
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 pb-6 border-b border-border">
+                    <div className="flex items-start gap-2">
+                      <Calendar size={18} className="text-secondary flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-sm text-foreground/60">Date of Birth</p>
-                        <p className="font-semibold text-foreground">{founder.birthDate}</p>
+                        <p className="text-xs text-foreground/50">Date of Birth</p>
+                        <p className="font-semibold text-foreground text-sm">{founder.birthDate}</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Award size={20} className="text-secondary flex-shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-2">
+                      <Award size={18} className="text-secondary flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-sm text-foreground/60">Qualifications</p>
-                        <div className="space-y-1">
-                          {founder.qualifications.map((qual, idx) => (
-                            <p key={idx} className="font-semibold text-foreground">
-                              {qual}
-                            </p>
-                          ))}
-                        </div>
+                        <p className="text-xs text-foreground/50">Qualifications</p>
+                        {founder.qualifications.map((qual, idx) => (
+                          <p key={idx} className="font-semibold text-foreground text-sm">{qual}</p>
+                        ))}
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Briefcase size={20} className="text-secondary flex-shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-2">
+                      <Briefcase size={18} className="text-secondary flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-sm text-foreground/60">Experience</p>
-                        <p className="font-semibold text-foreground">{founder.experience}</p>
+                        <p className="text-xs text-foreground/50">Experience</p>
+                        <p className="font-semibold text-foreground text-sm">{founder.experience}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Expertise */}
                   <div>
-                    <h4 className="font-bold text-primary mb-4">Areas of Expertise:</h4>
-                    <div className="grid grid-cols-2 gap-2">
+                    <h4 className="font-bold text-primary mb-3 text-sm uppercase tracking-wide">Areas of Expertise</h4>
+                    <div className="flex flex-wrap gap-2">
                       {founder.expertise.map((exp, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <span className="text-secondary font-bold">•</span>
-                          <span className="text-foreground/70 text-sm">{exp}</span>
-                        </div>
+                        <span
+                          key={idx}
+                          className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full border border-primary/20"
+                        >
+                          {exp}
+                        </span>
                       ))}
                     </div>
                   </div>
