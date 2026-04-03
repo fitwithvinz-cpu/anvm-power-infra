@@ -65,11 +65,11 @@ export default function Team() {
             {founders.map((founder, index) => (
               <div
                 key={index}
-                className="bg-white border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col md:flex-row"
+                className={`bg-white border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all ${founder.photo ? 'flex flex-col md:flex-row' : 'flex flex-col'}`}
               >
-                {/* Photo Section */}
-                <div className="md:w-72 flex-shrink-0 bg-gradient-to-b from-primary/10 to-secondary/10 flex items-center justify-center p-6">
-                  {founder.photo ? (
+                {/* Photo Section - only show if photo exists */}
+                {founder.photo && (
+                  <div className="md:w-72 flex-shrink-0 bg-gradient-to-b from-primary/10 to-secondary/10 flex items-center justify-center p-6">
                     <div className="w-56 h-64 rounded-xl overflow-hidden shadow-md border-4 border-white">
                       <img
                         src={founder.photo}
@@ -78,15 +78,8 @@ export default function Team() {
                         style={{ objectPosition: "center 10%" }}
                       />
                     </div>
-                  ) : (
-                    <div className="w-56 h-64 rounded-xl bg-primary/20 flex flex-col items-center justify-center border-4 border-white shadow-md">
-                      <div className="w-20 h-20 bg-primary/30 rounded-full flex items-center justify-center mb-3">
-                        <span className="text-4xl font-bold text-primary">{founder.name.charAt(0)}</span>
-                      </div>
-                      <p className="text-foreground/50 text-sm text-center px-4">Photo coming soon</p>
-                    </div>
-                  )}
-                </div>
+                  </div>
+                )}
 
                 {/* Content Section */}
                 <div className="flex-1 p-8">
