@@ -17,7 +17,7 @@ export default function Team() {
         "Project management",
       ],
       bio: "B. Mahendra is a seasoned electrical contractor with over two decades of hands-on experience in the power and energy sector. Since beginning his professional journey in 2003, he has built a strong reputation for delivering reliable and high-quality electrical solutions across a wide range of projects. His work spans power transmission, renewable energy initiatives, and has demonstrated deep expertise through numerous successful projects with KPTCL.",
-      photo: "[Placeholder for founder photo - to be provided]",
+      photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/b-mahendra_d9651951.png",
     },
     {
       name: "M. Rajalaxmi",
@@ -64,14 +64,22 @@ export default function Team() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {founders.map((founder, index) => (
               <div key={index} className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-xl transition-all">
-                {/* Photo Placeholder */}
-                <div className="h-64 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center border-b border-border">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary/30 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-primary">{founder.name.charAt(0)}</span>
+                {/* Photo */}
+                <div className="h-72 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center border-b border-border overflow-hidden">
+                  {founder.photo.startsWith('http') ? (
+                    <img
+                      src={founder.photo}
+                      alt={founder.name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-primary/30 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span className="text-4xl font-bold text-primary">{founder.name.charAt(0)}</span>
+                      </div>
+                      <p className="text-foreground/60 text-sm">Photo coming soon</p>
                     </div>
-                    <p className="text-foreground/60 text-sm">{founder.photo}</p>
-                  </div>
+                  )}
                 </div>
 
                 {/* Content */}

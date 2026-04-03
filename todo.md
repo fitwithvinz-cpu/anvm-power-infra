@@ -25,3 +25,10 @@
 - [x] Add Google Map on Contact page showing office location (SF-09, Shriya Riddhi Siddhi Commercial Complex, R N Shetty Road, Hubli-580030)
 - [x] Highlight exact office location with a pin marker on the Google Map
 - [x] Change "100+ Projects Completed" to "50+ Projects Completed" on Home and Projects pages
+- [ ] Design and generate modern logo for ANVM Power Infra Pvt. Ltd.
+- [ ] Redesign logo with green color, wind turbine fan and solar panel elements
+- [x] Enhance logo concept 3 with green color on wind turbine and renewable energy elements
+- [x] Change wind turbine fan color to gray in logo concept 3
+- [x] Make solar panel in logo look more natural/realistic (blue panel cells, metallic frame)
+- [x] Improve solar panel in logo to look more natural and realistic with better detail
+- [x] Upload B. Mahendra photo to CDN and add to Team page
