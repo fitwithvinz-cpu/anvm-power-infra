@@ -43,40 +43,40 @@
 }
 
 :root {
-  /* Industrial Modernism - Deep Slate Blue Primary */
-  --primary: #1a3a52;
-  --primary-foreground: #f7fafc;
-  --sidebar-primary: #1a3a52;
-  --sidebar-primary-foreground: #f7fafc;
-  --chart-1: #d97706;
-  --chart-2: #f59e0b;
-  --chart-3: #fbbf24;
-  --chart-4: #1a3a52;
-  --chart-5: #2d3748;
+  /* ANVM Logo Colors - Deep Navy Blue + Emerald Green */
+  --primary: #0f172a;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #0f172a;
+  --sidebar-primary-foreground: #ffffff;
+  --chart-1: #16a34a;
+  --chart-2: #22c55e;
+  --chart-3: #15803d;
+  --chart-4: #0f172a;
+  --chart-5: #1e3a8a;
   --radius: 0.5rem;
   --background: #ffffff;
-  --foreground: #1a3a52;
-  --card: #f8fafc;
-  --card-foreground: #1a3a52;
+  --foreground: #0f172a;
+  --card: #f0fdf4;
+  --card-foreground: #0f172a;
   --popover: #ffffff;
-  --popover-foreground: #1a3a52;
-  --secondary: #d97706;
+  --popover-foreground: #0f172a;
+  --secondary: #16a34a;
   --secondary-foreground: #ffffff;
-  --muted: #cbd5e1;
-  --muted-foreground: #64748b;
-  --accent: #fbbf24;
-  --accent-foreground: #1a3a52;
+  --muted: #dcfce7;
+  --muted-foreground: #4b5563;
+  --accent: #22c55e;
+  --accent-foreground: #0f172a;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #f1f5f9;
-  --ring: #1a3a52;
+  --border: #d1fae5;
+  --input: #f0fdf4;
+  --ring: #16a34a;
   --sidebar: #ffffff;
-  --sidebar-foreground: #1a3a52;
-  --sidebar-accent: #d97706;
+  --sidebar-foreground: #0f172a;
+  --sidebar-accent: #16a34a;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #1a3a52;
+  --sidebar-border: #d1fae5;
+  --sidebar-ring: #16a34a;
 }
 
 .dark {

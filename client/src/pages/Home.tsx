@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary/80">
+      <section className="py-20 bg-gradient-to-r from-[#0f172a] to-[#1e3a5f]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Power Your Project?

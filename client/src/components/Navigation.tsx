@@ -47,7 +47,7 @@ export default function Navigation() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:bg-secondary transition-colors"
+            className="bg-secondary text-secondary-foreground px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
             Get in Touch
           </Link>
@@ -78,7 +78,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:bg-secondary transition-colors text-center"
+              className="bg-secondary text-secondary-foreground px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
               onClick={() => setIsOpen(false)}
             >
               Get in Touch
