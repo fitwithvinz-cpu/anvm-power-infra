@@ -20,12 +20,13 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-bold text-primary hover:text-secondary transition-colors"
+          className="flex items-center hover:opacity-90 transition-opacity"
         >
-          <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">
-            A
-          </div>
-          <span className="hidden sm:inline">ANVM Power Infra Pvt. Ltd.</span>
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final_2f7c6ad3.webp"
+            alt="ANVM Power Infra Pvt. Ltd."
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
