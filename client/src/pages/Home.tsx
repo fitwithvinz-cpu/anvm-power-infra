@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Core Services</h2>
@@ -110,7 +110,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="group bg-white border border-border rounded-lg p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-white/80 backdrop-blur-sm border border-green-100 rounded-xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:bg-white"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mb-6 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
                     <Icon size={32} className="text-primary" />
@@ -125,20 +125,20 @@ export default function Home() {
       </section>
 
       {/* About Preview Section */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #0f2d1a 50%, #1e3a8a 100%)' }}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Building Tomorrow's Power Infrastructure
               </h2>
-              <p className="text-lg text-foreground/70 mb-4">
+              <p className="text-lg text-white/80 mb-4">
 Established in 2025 and built on the 20-year legacy of Shri Mangalagouri Electricals (founded 2005), ANVM Power Infra Pvt. Ltd. is at the forefront of electrical infrastructure development in India. With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation.
               </p>
-              <p className="text-lg text-foreground/70 mb-8">
+              <p className="text-lg text-white/80 mb-8">
                 Our team of experienced engineers and technicians work with leading corporations including KPTCL, KEB, and HESCOM to deliver projects with precision, safety, and excellence.
               </p>
-              <Link href="/about" className="inline-flex items-center gap-2 text-primary hover:text-secondary font-semibold transition-colors">
+              <Link href="/about" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold transition-colors">
                   Learn More About Us
                   <ArrowRight size={20} />
               </Link>

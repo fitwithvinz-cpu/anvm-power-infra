@@ -128,13 +128,13 @@ export default function Services() {
       </section>
 
       {/* Main Services */}
-      <section className="py-16">
+      <section className="py-16" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {mainServices.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-white border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all">
+                <div key={index} className="bg-white/90 border border-green-100 rounded-xl overflow-hidden hover:shadow-lg transition-all">
                   {/* Card Header */}
                   <div className="bg-gradient-to-r from-primary/10 to-secondary/10 px-6 py-5 border-b border-border">
                     <div className="flex items-center gap-4">
@@ -167,7 +167,7 @@ export default function Services() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-16" style={{ background: 'linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 50%, #f0f7f4 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-primary mb-2">Additional Services</h2>
           <p className="text-foreground/60 text-sm mb-8 max-w-2xl">Beyond our core offerings, we provide a range of supporting services to ensure complete project success.</p>
@@ -185,7 +185,7 @@ export default function Services() {
       </section>
 
       {/* Service Process */}
-      <section className="py-16">
+      <section className="py-16" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-primary mb-2">Our Service Process</h2>
           <p className="text-foreground/60 text-sm mb-10 max-w-2xl">A structured, transparent approach from initial assessment to final commissioning.</p>
@@ -216,7 +216,7 @@ export default function Services() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-16" style={{ background: 'linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 50%, #f0f7f4 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-primary mb-2">Why Choose ANVM Power Infra Pvt. Ltd.?</h2>
           <p className="text-foreground/60 text-sm mb-10 max-w-2xl">We combine technical expertise with a commitment to quality, safety, and timely delivery.</p>

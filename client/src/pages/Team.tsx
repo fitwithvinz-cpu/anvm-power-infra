@@ -81,14 +81,14 @@ export default function Team() {
       </section>
 
       {/* Founders Section */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Leadership Team</h2>
           <div className="flex flex-col gap-12 max-w-5xl mx-auto">
             {founders.map((founder, index) => (
               <div
                 key={index}
-                className="bg-white border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col md:flex-row"
+                className="bg-white/90 border border-green-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col md:flex-row"
               >
                 {/* Photo Section - only show if photo exists */}
                 {founder.photo && (
@@ -161,7 +161,7 @@ export default function Team() {
       </section>
 
       {/* Team Structure */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 50%, #f0f7f4 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Team Structure</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -177,7 +177,7 @@ export default function Team() {
       </section>
 
       {/* Team Values */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">What We Value</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -205,7 +205,7 @@ export default function Team() {
       </section>
 
       {/* Career Opportunities */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 50%, #f0f7f4 100%)' }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-primary mb-6">Join Our Team</h2>
           <p className="text-xl text-foreground/70 mb-8 max-w-2xl mx-auto">

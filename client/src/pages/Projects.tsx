@@ -145,7 +145,7 @@ export default function Projects() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           {/* Category Filter */}
           <div className="flex flex-wrap gap-3 mb-12 justify-center">
@@ -256,7 +256,7 @@ export default function Projects() {
       </section>
 
       {/* Key Clients */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-[#0f172a] mb-12 text-center">Key Clients</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">

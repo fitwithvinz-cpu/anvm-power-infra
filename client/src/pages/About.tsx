@@ -63,7 +63,7 @@ export default function About() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h2 className="text-4xl font-bold text-primary mb-8">Our Story</h2>
@@ -83,7 +83,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 50%, #f0f7f4 100%)' }}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-lg border border-border">
@@ -103,7 +103,7 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Our Core Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -119,7 +119,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 50%, #f0f7f4 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Our Journey</h2>
           <div className="max-w-3xl mx-auto">
@@ -149,7 +149,7 @@ export default function About() {
       </section>
 
       {/* Expertise Areas */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Areas of Specialization</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

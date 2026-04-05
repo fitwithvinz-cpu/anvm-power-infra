@@ -68,7 +68,7 @@ export default function Gallery() {
       </section>
 
       {/* Masonry Gallery */}
-      <section className="py-16 bg-[#f8fafc]">
+      <section className="py-16" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <div
             style={{
