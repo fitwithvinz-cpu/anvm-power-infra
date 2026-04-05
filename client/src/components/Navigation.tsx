@@ -24,9 +24,9 @@ export default function Navigation() {
           className="flex items-center hover:opacity-90 transition-opacity"
         >
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final_2f7c6ad3.webp"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final-approved_a1010889.webp"
             alt="ANVM Power Infra Pvt. Ltd."
-            className="h-12 w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
         </Link>
 
