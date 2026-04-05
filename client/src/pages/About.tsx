@@ -30,20 +30,26 @@ export default function About() {
   return (
     <div className="w-full">
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16">
+      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-3 mb-5">
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final-approved_a1010889.webp"
-              alt="ANVM Power Infra"
-              className="h-14 w-auto object-contain drop-shadow-lg"
-              style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}
-            />
+          <div className="flex items-center justify-between gap-8">
+            {/* Text Content */}
+            <div className="flex-1">
+              <h1 className="text-4xl md:text-5xl font-bold mb-3">About ANVM Power Infra Pvt. Ltd.</h1>
+              <p className="text-lg text-white/85 max-w-2xl">
+                Established in 2025 with a vision for excellence in electrical and power infrastructure
+              </p>
+            </div>
+            {/* Logo - right side, blended */}
+            <div className="hidden md:flex flex-shrink-0 items-center justify-center">
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final-approved_a1010889.webp"
+                alt="ANVM Power Infra"
+                className="h-28 w-auto object-contain"
+                style={{ mixBlendMode: 'screen', opacity: 0.92 }}
+              />
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">About ANVM Power Infra Pvt. Ltd.</h1>
-          <p className="text-lg text-white/85 max-w-3xl">
-            Established in 2025 with a vision for excellence in electrical and power infrastructure
-          </p>
         </div>
       </section>
 
