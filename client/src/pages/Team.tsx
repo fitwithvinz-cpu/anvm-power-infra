@@ -34,7 +34,7 @@ export default function Team() {
         "Ethical practices",
       ],
       bio: "M. Rajalaxmi is a dedicated professional and co-founder, bringing strong legal knowledge and organizational insight to the company. With her academic background in law, she plays an important role in ensuring compliance, managing legal aspects, and supporting the strategic growth of the organization. Her attention to detail and commitment to ethical practices contribute significantly to the company's strong operational framework.",
-      photo: "",
+      photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/rajalaxmi-cofounder_8688397a.png",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function Team() {
             {founders.map((founder, index) => (
               <div
                 key={index}
-                className={`bg-white border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all ${founder.photo ? 'flex flex-col md:flex-row' : 'flex flex-col'}`}
+                className="bg-white border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col md:flex-row"
               >
                 {/* Photo Section - only show if photo exists */}
                 {founder.photo && (
