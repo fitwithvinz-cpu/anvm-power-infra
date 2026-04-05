@@ -40,8 +40,8 @@ export default function Gallery() {
           <div className="flex items-center justify-between gap-8">
             {/* Text Content */}
             <div className="flex-1">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 whitespace-nowrap">Project Gallery</h1>
-              <p className="text-lg text-white/85 max-w-2xl">
+              <h1 className="text-xl md:text-2xl font-bold mb-2 whitespace-nowrap">Project Gallery</h1>
+              <p className="text-sm text-white/80 max-w-2xl">
                 Real photographs from our completed projects across power transmission, substations, renewable energy, and civil infrastructure
               </p>
             </div>
@@ -50,7 +50,7 @@ export default function Gallery() {
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
                 alt="ANVM Power Infra"
-                className="h-56 w-auto object-contain"
+                className="h-28 w-auto object-contain"
                 style={{ filter: 'brightness(0.75) contrast(1.2)' }}
               />
             </div>

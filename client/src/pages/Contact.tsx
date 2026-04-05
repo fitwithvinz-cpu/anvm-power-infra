@@ -45,13 +45,13 @@ export default function Contact() {
   return (
     <div className="w-full">
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-8 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between gap-8">
             {/* Text Content */}
             <div className="flex-1">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 whitespace-nowrap">Contact Us</h1>
-              <p className="text-lg text-white/85 max-w-2xl">
+              <h1 className="text-xl md:text-2xl font-bold mb-2 whitespace-nowrap">Contact Us</h1>
+              <p className="text-sm text-white/80 max-w-2xl">
                 Get in touch with our team for your electrical infrastructure needs
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function Contact() {
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
                 alt="ANVM Power Infra"
-                className="h-56 w-auto object-contain"
+                className="h-28 w-auto object-contain"
                 style={{ filter: 'brightness(0.75) contrast(1.2)' }}
               />
             </div>
