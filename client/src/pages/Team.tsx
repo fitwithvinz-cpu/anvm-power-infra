@@ -61,10 +61,9 @@ export default function Team() {
             {/* Logo - right side, blended */}
             <div className="hidden md:flex flex-shrink-0 items-center justify-center">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final-approved_a1010889.webp"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
                 alt="ANVM Power Infra"
                 className="h-28 w-auto object-contain"
-                style={{ mixBlendMode: 'screen', opacity: 0.92 }}
               />
             </div>
           </div>
