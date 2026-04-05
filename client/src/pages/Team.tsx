@@ -50,14 +50,13 @@ export default function Team() {
       {/* Page Header */}
       <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="bg-white rounded-xl px-4 py-2 shadow-md">
-              <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final-approved_a1010889.webp"
-                alt="ANVM Power Infra"
-                className="h-12 w-auto object-contain"
-              />
-            </div>
+          <div className="flex items-center gap-3 mb-5">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final-approved_a1010889.webp"
+              alt="ANVM Power Infra"
+              className="h-14 w-auto object-contain drop-shadow-lg"
+              style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}
+            />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-3">Our Team</h1>
           <p className="text-lg text-white/85 max-w-3xl">

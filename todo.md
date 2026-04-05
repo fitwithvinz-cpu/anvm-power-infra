@@ -36,3 +36,4 @@
 - [x] Redesign Team page founder cards - use side-by-side layout with photo on left and info on right for proper display
 - [x] Fix text alignment across all pages (CEO review feedback)
 - [x] Add ANVM logo to each page header section
+- [x] Fix logo in page headers to look seamlessly integrated (no white box, blend with dark header)
