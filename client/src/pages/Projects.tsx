@@ -127,7 +127,7 @@ export default function Projects() {
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
                 alt="ANVM Power Infra"
-                className="h-40 w-auto object-contain"
+                className="h-56 w-auto object-contain"
                 style={{ filter: 'brightness(0.75) contrast(1.2)' }}
               />
             </div>
