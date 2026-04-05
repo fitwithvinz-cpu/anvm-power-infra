@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
+
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -43,6 +45,7 @@ function App() {
               <Router />
             </main>
             <Footer />
+            <FloatingWhatsApp />
           </div>
         </TooltipProvider>
       </ThemeProvider>

@@ -1,4 +1,22 @@
-import { Award, Briefcase, Calendar } from "lucide-react";
+import { Calendar, Award, Briefcase } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(40px)",
+        transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Team() {
   const founders = [
@@ -86,8 +104,8 @@ export default function Team() {
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Leadership Team</h2>
           <div className="flex flex-col gap-12 max-w-5xl mx-auto">
             {founders.map((founder, index) => (
+              <AnimatedSection key={index} delay={index * 150}>
               <div
-                key={index}
                 className="bg-white/90 border border-green-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col md:flex-row"
               >
                 {/* Photo Section - only show if photo exists */}
@@ -155,6 +173,7 @@ export default function Team() {
                   </div>
                 </div>
               </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -166,11 +185,13 @@ export default function Team() {
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">Team Structure</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamRoles.map((team, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg border border-border text-center hover:shadow-lg transition-shadow">
+              <AnimatedSection key={index} delay={index * 80}>
+              <div className="bg-white p-8 rounded-2xl border border-border text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="text-4xl font-bold text-secondary mb-2">{team.count}</div>
                 <h3 className="text-xl font-bold text-primary mb-2">{team.role}</h3>
                 <p className="text-foreground/70">{team.description}</p>
               </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>

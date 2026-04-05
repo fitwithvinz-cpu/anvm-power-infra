@@ -40,3 +40,15 @@
 - [ ] Move logo to right side of page headers, increase size, blend white background into dark header
 - [ ] Fix text alignment in Services page - service cards and section headings
 - [ ] Replace plain white backgrounds with beautiful gradients and colors across all pages
+- [x] Add scroll-triggered fade-in animations to all pages (Home, About, Services, Projects, Team, Contact, Gallery)
+- [x] Add animated counter section on homepage (20+ years, 50+ projects, 50+ team, 3 corporations)
+- [x] Add floating WhatsApp chat button with popup card
+- [x] Add sticky navigation with scroll-based styling changes
+- [x] Add top contact bar to navigation with email, location, phone
+- [x] Add service cards with background images and hover zoom effect on homepage
+- [x] Add CTA banner with parallax background image
+- [x] Add testimonials section on homepage
+- [x] Add clients section on homepage
+- [x] Add "About Preview" section with image on homepage
+- [x] Improve hover effects on all cards (lift + shadow)
+- [x] Replace plain white backgrounds with beautiful gradients across all pages

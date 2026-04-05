@@ -1,6 +1,24 @@
-import { MapPin, Calendar, Images } from "lucide-react";
+import { Calendar, MapPin, Images } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(40px)",
+        transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
 
 const projects = [
   {
@@ -168,9 +186,9 @@ export default function Projects() {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
+              <AnimatedSection key={index} delay={index * 80}>
               <div
-                key={index}
-                className="bg-white border border-[#d1fae5] rounded-xl overflow-hidden hover:shadow-xl transition-all group"
+                className="bg-white border border-[#d1fae5] rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group h-full"
               >
                 {/* Colored top bar */}
                 <div className="h-2 bg-gradient-to-r from-[#16a34a] to-[#0ea5e9]" />
@@ -210,6 +228,7 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>

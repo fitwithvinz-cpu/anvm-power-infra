@@ -1,4 +1,22 @@
 import { Zap, Wind, Hammer, Cable, Wrench, CheckCircle } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(40px)",
+        transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Services() {
   const mainServices = [
@@ -120,10 +138,12 @@ export default function Services() {
       {/* Section Intro */}
       <section className="py-12 border-b border-border">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-primary mb-3">What We Offer</h2>
-          <p className="text-foreground/70 max-w-3xl text-base leading-relaxed">
-            ANVM Power Infra Pvt. Ltd. delivers end-to-end electrical infrastructure services — from high-voltage transmission lines and substation construction to renewable energy integration and underground cabling. Every project is executed with precision, safety, and compliance at the forefront.
-          </p>
+          <AnimatedSection>
+            <h2 className="text-3xl font-bold text-primary mb-3">What We Offer</h2>
+            <p className="text-foreground/70 max-w-3xl text-base leading-relaxed">
+              ANVM Power Infra Pvt. Ltd. delivers end-to-end electrical infrastructure services — from high-voltage transmission lines and substation construction to renewable energy integration and underground cabling. Every project is executed with precision, safety, and compliance at the forefront.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -134,7 +154,8 @@ export default function Services() {
             {mainServices.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-white/90 border border-green-100 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+                <AnimatedSection key={index} delay={index * 80}>
+                <div className="bg-white/90 border border-green-100 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
                   {/* Card Header */}
                   <div className="bg-gradient-to-r from-primary/10 to-secondary/10 px-6 py-5 border-b border-border">
                     <div className="flex items-center gap-4">
@@ -160,6 +181,7 @@ export default function Services() {
                     </ul>
                   </div>
                 </div>
+                </AnimatedSection>
               );
             })}
           </div>
@@ -173,12 +195,14 @@ export default function Services() {
           <p className="text-foreground/60 text-sm mb-8 max-w-2xl">Beyond our core offerings, we provide a range of supporting services to ensure complete project success.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl">
             {additionalServices.map((service, index) => (
-              <div key={index} className="bg-white px-5 py-4 rounded-lg border border-border flex items-center gap-3 hover:shadow-md transition-shadow">
+              <AnimatedSection key={index} delay={index * 60}>
+              <div className="bg-white px-5 py-4 rounded-lg border border-border flex items-center gap-3 hover:shadow-md transition-shadow hover:-translate-y-1 transition-all duration-300">
                 <div className="w-8 h-8 bg-secondary/20 rounded-md flex items-center justify-center flex-shrink-0">
                   <CheckCircle size={18} className="text-secondary" />
                 </div>
                 <p className="text-sm font-semibold text-foreground">{service}</p>
               </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>

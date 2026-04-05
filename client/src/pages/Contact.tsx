@@ -1,8 +1,26 @@
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(40px)",
+        transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -82,7 +100,7 @@ export default function Contact() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
-            <div className="lg:col-span-1">
+            <AnimatedSection className="lg:col-span-1">
               <h2 className="text-3xl font-bold text-primary mb-8">Get in Touch</h2>
 
               <div className="mb-8">
@@ -144,10 +162,10 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2">
+            <AnimatedSection className="lg:col-span-2" delay={200}>
               <div className="bg-white/90 border border-green-100 rounded-lg p-8">
                 <h2 className="text-3xl font-bold text-primary mb-8">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -241,7 +259,7 @@ export default function Contact() {
                   </Button>
                 </form>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
