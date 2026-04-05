@@ -35,7 +35,7 @@ export default function About() {
           <div className="flex items-center justify-between gap-8">
             {/* Text Content */}
             <div className="flex-1">
-              <h1 className="text-4xl md:text-5xl font-bold mb-3">About ANVM Power Infra Pvt. Ltd.</h1>
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 whitespace-nowrap">About ANVM Power Infra Pvt. Ltd.</h1>
               <p className="text-lg text-white/85 max-w-2xl">
                 Established in 2025 with a vision for excellence in electrical and power infrastructure
               </p>
@@ -45,7 +45,8 @@ export default function About() {
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
                 alt="ANVM Power Infra"
-                className="h-28 w-auto object-contain"
+                className="h-40 w-auto object-contain"
+                style={{ filter: 'brightness(0.75) contrast(1.2)' }}
               />
             </div>
           </div>
