@@ -48,23 +48,32 @@ export default function Team() {
   return (
     <div className="w-full">
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-8 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between gap-8">
+      <section
+        className="text-white relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #0a1628 0%, #0f2d1a 40%, #0d2137 70%, #061020 100%)',
+          borderBottom: '3px solid #16a34a',
+        }}
+      >
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #16a34a 0%, transparent 50%), radial-gradient(circle at 80% 50%, #1e40af 0%, transparent 50%)' }} />
+        <div className="container mx-auto px-4 py-6 relative z-10">
+          <div className="flex items-center justify-between gap-6">
             {/* Text Content */}
             <div className="flex-1">
-              <h1 className="text-xl md:text-2xl font-bold mb-2 whitespace-nowrap">Our Team</h1>
-              <p className="text-sm text-white/80 max-w-2xl">
-                Meet the experienced professionals behind ANVM Power Infra Pvt. Ltd.
-              </p>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-1 h-8 rounded-full" style={{ background: 'linear-gradient(to bottom, #16a34a, #22d3ee)' }} />
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight whitespace-nowrap">Our Team</h1>
+              </div>
+              <p className="text-sm text-white/70 ml-3 max-w-xl">Meet the leadership driving ANVM Power Infra forward</p>
             </div>
-            {/* Logo - right side, blended */}
+            {/* Logo */}
             <div className="hidden md:flex flex-shrink-0 items-center justify-center">
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
                 alt="ANVM Power Infra"
-                className="h-28 w-auto object-contain"
-                style={{ filter: 'brightness(0.75) contrast(1.2)' }}
+                className="h-36 w-auto object-contain"
+                style={{ filter: 'drop-shadow(0 0 12px rgba(22,163,74,0.4))' }}
               />
             </div>
           </div>
