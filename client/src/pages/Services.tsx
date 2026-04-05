@@ -90,8 +90,17 @@ export default function Services() {
       {/* Page Header */}
       <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Our Services</h1>
-          <p className="text-xl text-white/90">
+          <div className="flex items-center gap-4 mb-6">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final_2f7c6ad3.webp"
+              alt="ANVM Power Infra"
+              className="h-14 w-auto object-contain brightness-0 invert"
+            />
+            <div className="h-10 w-px bg-white/40"></div>
+            <span className="text-white/80 text-lg font-medium">Our Services</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">Our Services</h1>
+          <p className="text-lg text-white/85 max-w-3xl">
             Comprehensive electrical infrastructure solutions for power transmission and renewable energy
           </p>
         </div>

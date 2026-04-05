@@ -34,3 +34,5 @@
 - [x] Upload B. Mahendra photo to CDN and add to Team page
 - [x] Fix B. Mahendra photo to show full image without cropping (use object-contain instead of object-cover)
 - [x] Redesign Team page founder cards - use side-by-side layout with photo on left and info on right for proper display
+- [x] Fix text alignment across all pages (CEO review feedback)
+- [x] Add ANVM logo to each page header section

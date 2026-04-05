@@ -35,10 +35,19 @@ export default function Gallery() {
   return (
     <div className="w-full">
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-[#0f172a] to-[#1e3a5f] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Project Gallery</h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+      <section className="bg-gradient-to-r from-[#0f172a] to-[#1e3a5f] text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-4 mb-6">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final_2f7c6ad3.webp"
+              alt="ANVM Power Infra"
+              className="h-14 w-auto object-contain brightness-0 invert"
+            />
+            <div className="h-10 w-px bg-white/40"></div>
+            <span className="text-white/80 text-lg font-medium">Project Gallery</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">Project Gallery</h1>
+          <p className="text-lg text-white/85 max-w-3xl">
             Real photographs from our completed projects across power transmission, substations, renewable energy, and civil infrastructure
           </p>
         </div>
