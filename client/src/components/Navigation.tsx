@@ -50,12 +50,12 @@ export default function Navigation() {
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-6 text-white/80">
-            <span>📧 info@anvmpowerinfra.com</span>
+            <span>📧 anvmpowerinfrapvtltd@gmail.com</span>
             <span>📍 Hubli, Karnataka</span>
           </div>
           <div className="flex items-center gap-2 text-white/80">
             <Phone size={12} />
-            <span>+91 91488 88888</span>
+            <span>+91 89511 93777</span>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function Navigation() {
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="tel:+919148888888"
+            href="tel:+918951193777"
             className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-primary transition-colors"
           >
             <Phone size={16} />

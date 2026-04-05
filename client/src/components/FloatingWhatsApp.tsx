@@ -3,7 +3,7 @@ import { X, MessageCircle } from "lucide-react";
 
 export default function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = "919148888888"; // ANVM Power Infra WhatsApp number
+  const phoneNumber = "918951193777"; // ANVM Power Infra WhatsApp number
   const message = encodeURIComponent(
     "Hello! I'm interested in ANVM Power Infra's services. Could you please provide more information?"
   );

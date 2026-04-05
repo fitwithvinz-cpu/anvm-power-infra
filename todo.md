@@ -52,3 +52,5 @@
 - [x] Add "About Preview" section with image on homepage
 - [x] Improve hover effects on all cards (lift + shadow)
 - [x] Replace plain white backgrounds with beautiful gradients across all pages
+- [x] Update WhatsApp number to 8951193777 across all components
+- [x] Update email to anvmpowerinfrapvtltd@gmail.com across all components
