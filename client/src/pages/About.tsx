@@ -54,8 +54,8 @@ export default function About() {
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
                 alt="ANVM Power Infra"
-                className="h-36 w-auto object-contain"
-                style={{ filter: 'drop-shadow(0 0 12px rgba(22,163,74,0.4))' }}
+                className="h-44 w-auto object-contain"
+                style={{ filter: 'brightness(1.3) drop-shadow(0 0 16px rgba(22,163,74,0.7))' }}
               />
             </div>
           </div>
