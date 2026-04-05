@@ -38,3 +38,4 @@
 - [x] Add ANVM logo to each page header section
 - [x] Fix logo in page headers to look seamlessly integrated (no white box, blend with dark header)
 - [ ] Move logo to right side of page headers, increase size, blend white background into dark header
+- [ ] Fix text alignment in Services page - service cards and section headings
