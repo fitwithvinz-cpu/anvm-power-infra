@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { ArrowRight, Zap, Wind, Hammer, Shield, CheckCircle, Star, TrendingUp, Users, Award, Globe, Phone, ChevronRight } from "lucide-react";
 import { useScrollAnimation, useCounterAnimation } from "@/hooks/useScrollAnimation";
 import WindmillScene from "@/components/WindmillScene";
+import SingleWindmill from "@/components/SingleWindmill";
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const { ref, isVisible } = useScrollAnimation(0.1);
@@ -138,14 +139,11 @@ export default function Home() {
           }} />
         </div>
 
-        {/* Animated wind turbine silhouettes at horizon */}
-        <div className="absolute inset-0 z-[1]">
-          <WindmillScene color="rgba(255,255,255,0.5)" horizonPct={84} />
-        </div>
+        {/* Hero Content — two-column: text left, logo+turbine right */}
+        <div className="container relative z-10 py-32 md:py-40 flex items-center gap-8">
 
-        {/* Hero Content */}
-        <div className="container relative z-10 py-32 md:py-40">
-          <div className="max-w-4xl">
+          {/* LEFT: Text content */}
+          <div className="flex-1 min-w-0">
 
             {/* Badge */}
             <div
@@ -178,7 +176,7 @@ export default function Home() {
 
             {/* Subheadline */}
             <p
-              className="text-lg md:text-xl text-white/75 mb-10 max-w-2xl leading-relaxed"
+              className="text-lg md:text-xl text-white/75 mb-10 max-w-xl leading-relaxed"
               style={{ animation: "fadeInDown 0.8s ease 0.3s both" }}
             >
               From high-voltage power transmission to wind farms and solar energy — ANVM Power Infra delivers world-class electrical infrastructure across Karnataka.
@@ -186,7 +184,7 @@ export default function Home() {
 
             {/* CTAs */}
             <div
-              className="flex flex-wrap gap-4 mb-16"
+              className="flex flex-wrap gap-4 mb-10"
               style={{ animation: "fadeInDown 0.8s ease 0.45s both" }}
             >
               <Link
@@ -220,16 +218,31 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Large ANVM logo — bottom right */}
-        <div className="absolute bottom-12 right-8 z-10 hidden md:block" style={{ animation: "fadeInDown 1s ease 0.5s both" }}>
-          <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
-            alt="ANVM Power Infra"
-            className="h-32 lg:h-40 w-auto object-contain"
-            style={{ filter: "brightness(1.3) drop-shadow(0 0 30px rgba(22,163,74,0.6))" }}
-          />
+          {/* RIGHT: Large logo + single turbine — only on large screens */}
+          <div
+            className="hidden lg:flex flex-col items-center justify-center flex-shrink-0 relative"
+            style={{ width: "420px", animation: "fadeInDown 1s ease 0.4s both" }}
+          >
+            {/* Big ANVM logo */}
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
+              alt="ANVM Power Infra"
+              className="w-auto object-contain relative z-10"
+              style={{
+                height: "240px",
+                filter: "brightness(1.4) drop-shadow(0 0 50px rgba(22,163,74,0.9)) drop-shadow(0 0 100px rgba(22,163,74,0.5))",
+              }}
+            />
+            {/* Single turbine below the logo */}
+            <div className="absolute bottom-[-120px] right-0">
+              <SingleWindmill
+                scale={1.4}
+                color="rgba(255,255,255,0.70)"
+                speed={14}
+              />
+            </div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
