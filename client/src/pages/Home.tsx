@@ -238,8 +238,7 @@ export default function Home() {
             <div className="absolute bottom-[-120px] right-0">
               <SingleWindmill
                 scale={1.4}
-                color="rgba(255,255,255,0.70)"
-                speed={14}
+                speed={20}
               />
             </div>
           </div>
