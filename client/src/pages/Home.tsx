@@ -138,147 +138,7 @@ export default function Home() {
             background: "linear-gradient(to bottom, transparent, rgba(5,15,35,0.95))"
           }} />
 
-          {/* ── Rotating blade overlays — precisely on each turbine hub in the photo ── */}
-          {/*
-            Photo is 1126×750px. The hero uses object-cover so the image fills the viewport.
-            Positions below are expressed as % of the rendered viewport (not raw image px).
-            Large foreground turbine hub: ~47% left, ~19% top
-            Background turbines (left to right): ~14%/32%, ~20%/30%, ~28%/29%, ~36%/28%, ~56%/28%, ~65%/27%, ~74%/27%, ~84%/27%
-          */}
-          <style>{`
-            @keyframes rotor-cw  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-            @keyframes rotor-ccw { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
-          `}</style>
 
-          {/* LARGE foreground turbine — hub at ~47% left, ~19% top */}
-          <div className="absolute" style={{ left:"47%", top:"19%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="200" height="200" viewBox="-100 -100 200 200"
-              style={{ animation:"rotor-cw 12s linear infinite", filter:"drop-shadow(0 0 2px rgba(0,0,0,0.4))" }}>
-              {/* 3 blades at 0°, 120°, 240° */}
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  {/* Realistic aerofoil blade: wide at root, tapers to tip */}
-                  <path d="M -5 0 C -10 -15, -11 -50, -4 -95 C -1 -50, 2 -15, 5 0 Z"
-                    fill="rgba(220,232,242,0.88)" />
-                </g>
-              ))}
-              {/* Hub centre */}
-              <circle r="7" fill="rgba(200,218,232,0.85)" />
-              <circle r="3" fill="rgba(160,185,205,0.80)" />
-            </svg>
-          </div>
-
-          {/* Background turbine 1 — ~14% left, ~32% top */}
-          <div className="absolute" style={{ left:"14%", top:"32%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="44" height="44" viewBox="-22 -22 44 44"
-              style={{ animation:"rotor-ccw 18s linear infinite" }}>
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  <path d="M -1.5 0 C -3 -4, -3.5 -12, -1.2 -20 C -0.2 -12, 1 -4, 1.5 0 Z"
-                    fill="rgba(215,228,240,0.78)" />
-                </g>
-              ))}
-              <circle r="2.5" fill="rgba(195,215,230,0.72)" />
-            </svg>
-          </div>
-
-          {/* Background turbine 2 — ~20% left, ~30% top */}
-          <div className="absolute" style={{ left:"20%", top:"30%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="38" height="38" viewBox="-19 -19 38 38"
-              style={{ animation:"rotor-cw 20s linear infinite" }}>
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  <path d="M -1.2 0 C -2.5 -3.5, -3 -10, -1 -17 C -0.2 -10, 0.8 -3.5, 1.2 0 Z"
-                    fill="rgba(215,228,240,0.75)" />
-                </g>
-              ))}
-              <circle r="2" fill="rgba(195,215,230,0.70)" />
-            </svg>
-          </div>
-
-          {/* Background turbine 3 — ~28% left, ~29% top */}
-          <div className="absolute" style={{ left:"28%", top:"29%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="34" height="34" viewBox="-17 -17 34 34"
-              style={{ animation:"rotor-ccw 15s linear infinite" }}>
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  <path d="M -1 0 C -2 -3, -2.5 -9, -0.8 -15 C -0.1 -9, 0.7 -3, 1 0 Z"
-                    fill="rgba(212,226,238,0.72)" />
-                </g>
-              ))}
-              <circle r="1.8" fill="rgba(192,212,228,0.68)" />
-            </svg>
-          </div>
-
-          {/* Background turbine 4 — ~36% left, ~28% top */}
-          <div className="absolute" style={{ left:"36%", top:"28%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="30" height="30" viewBox="-15 -15 30 30"
-              style={{ animation:"rotor-cw 22s linear infinite" }}>
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  <path d="M -0.9 0 C -1.8 -2.5, -2 -7.5, -0.7 -13 C -0.1 -7.5, 0.6 -2.5, 0.9 0 Z"
-                    fill="rgba(210,225,237,0.70)" />
-                </g>
-              ))}
-              <circle r="1.5" fill="rgba(190,210,226,0.65)" />
-            </svg>
-          </div>
-
-          {/* Background turbine 5 — ~56% left, ~28% top */}
-          <div className="absolute" style={{ left:"56%", top:"28%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="32" height="32" viewBox="-16 -16 32 32"
-              style={{ animation:"rotor-ccw 17s linear infinite" }}>
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  <path d="M -0.9 0 C -1.8 -2.5, -2 -8, -0.7 -13.5 C -0.1 -8, 0.6 -2.5, 0.9 0 Z"
-                    fill="rgba(210,225,237,0.70)" />
-                </g>
-              ))}
-              <circle r="1.5" fill="rgba(190,210,226,0.65)" />
-            </svg>
-          </div>
-
-          {/* Background turbine 6 — ~65% left, ~27% top */}
-          <div className="absolute" style={{ left:"65%", top:"27%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="28" height="28" viewBox="-14 -14 28 28"
-              style={{ animation:"rotor-cw 24s linear infinite" }}>
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  <path d="M -0.8 0 C -1.6 -2, -1.8 -7, -0.6 -12 C -0.1 -7, 0.5 -2, 0.8 0 Z"
-                    fill="rgba(208,223,235,0.68)" />
-                </g>
-              ))}
-              <circle r="1.3" fill="rgba(188,208,224,0.63)" />
-            </svg>
-          </div>
-
-          {/* Background turbine 7 — ~74% left, ~27% top */}
-          <div className="absolute" style={{ left:"74%", top:"27%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="26" height="26" viewBox="-13 -13 26 26"
-              style={{ animation:"rotor-ccw 19s linear infinite" }}>
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  <path d="M -0.7 0 C -1.4 -1.8, -1.6 -6.5, -0.5 -11 C -0.1 -6.5, 0.4 -1.8, 0.7 0 Z"
-                    fill="rgba(206,222,234,0.66)" />
-                </g>
-              ))}
-              <circle r="1.2" fill="rgba(186,206,222,0.62)" />
-            </svg>
-          </div>
-
-          {/* Background turbine 8 — ~84% left, ~27% top */}
-          <div className="absolute" style={{ left:"84%", top:"27%", transform:"translate(-50%,-50%)", zIndex:2 }}>
-            <svg width="24" height="24" viewBox="-12 -12 24 24"
-              style={{ animation:"rotor-cw 21s linear infinite" }}>
-              {[0,120,240].map(deg=>(
-                <g key={deg} transform={`rotate(${deg})`}>
-                  <path d="M -0.6 0 C -1.2 -1.5, -1.4 -6, -0.5 -10 C -0.1 -6, 0.4 -1.5, 0.6 0 Z"
-                    fill="rgba(204,220,232,0.64)" />
-                </g>
-              ))}
-              <circle r="1.1" fill="rgba(184,204,220,0.60)" />
-            </svg>
-          </div>
 
         </div>
 
@@ -362,18 +222,53 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT: Large logo only — no SVG fan */}
+          {/* RIGHT: Large logo + 1 rotating turbine */}
           <div
-            className="hidden lg:flex flex-col items-center justify-center flex-shrink-0"
-            style={{ width: "320px", animation: "fadeInDown 1s ease 0.4s both" }}
+            className="hidden lg:flex flex-row items-center justify-center flex-shrink-0 gap-4"
+            style={{ width: "380px", animation: "fadeInDown 1s ease 0.4s both" }}
           >
+            {/* Single rotating turbine SVG */}
+            <div className="flex-shrink-0">
+              <svg width="160" height="340" viewBox="0 0 160 340" xmlns="http://www.w3.org/2000/svg">
+                {/* Tower — slim tapered pole */}
+                <polygon points="78,80 82,80 88,340 72,340" fill="rgba(220,232,242,0.85)" />
+                {/* Nacelle */}
+                <rect x="70" y="72" width="20" height="10" rx="3" fill="rgba(210,225,238,0.90)" />
+                {/* Rotating rotor group — centred at hub (80, 78) */}
+                <g transform="translate(80,78)">
+                  <animateTransform
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="rotate"
+                    from="0 0 0"
+                    to="360 0 0"
+                    dur="14s"
+                    repeatCount="indefinite"
+                    additive="sum"
+                  />
+                  {/* 3 blades */}
+                  {([0, 120, 240] as number[]).map((deg) => (
+                    <g key={deg} transform={`rotate(${deg})`}>
+                      <path
+                        d="M -5 0 C -9 -14, -10 -44, -3.5 -72 C -0.5 -44, 2.5 -14, 5 0 Z"
+                        fill="rgba(220,232,242,0.90)"
+                      />
+                    </g>
+                  ))}
+                  {/* Hub */}
+                  <circle r="6" fill="rgba(200,218,235,0.92)" />
+                  <circle r="2.5" fill="rgba(160,185,210,0.88)" />
+                </g>
+              </svg>
+            </div>
+            {/* Logo */}
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
               alt="ANVM Power Infra"
               className="w-auto object-contain"
               style={{
-                height: "240px",
-                filter: "brightness(1.4) drop-shadow(0 0 50px rgba(22,163,74,0.9)) drop-shadow(0 0 100px rgba(22,163,74,0.5))",
+                height: "220px",
+                filter: "brightness(1.4) drop-shadow(0 0 40px rgba(22,163,74,0.9)) drop-shadow(0 0 80px rgba(22,163,74,0.5))",
               }}
             />
           </div>
@@ -389,7 +284,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════
           STATS COUNTER STRIP — dark background
       ═══════════════════════════════════════════════════ */}
-      <section style={{ background: "linear-gradient(135deg, #050f23, #0a1f3d)" }} className="py-16">
+      <section style={{ background: "linear-gradient(135deg, #0f172a, #1e3a8a)" }} className="py-16">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <CounterCard target={20} suffix="+" label="Years of Experience" icon={Award} />
@@ -484,7 +379,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════
           RENEWABLE ENERGY SHOWCASE — Full-width split
       ═══════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden" style={{ background: "#050f23" }}>
+      <section className="relative overflow-hidden" style={{ background: "#f0f7f4" }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
           {/* Left: Solar farm image */}
           <div className="relative h-72 lg:h-auto">
@@ -493,19 +388,19 @@ export default function Home() {
               alt="Solar farm aerial"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent 60%, #050f23)" }} />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent 60%, #f0f7f4)" }} />
           </div>
 
           {/* Right: Content */}
           <AnimatedSection className="flex flex-col justify-center px-8 md:px-16 py-16">
             <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6 w-fit"
-              style={{ background: "rgba(22,163,74,0.15)", color: "#4ade80", border: "1px solid rgba(22,163,74,0.3)" }}>
+              style={{ background: "rgba(22,163,74,0.12)", color: "#15803d", border: "1px solid rgba(22,163,74,0.25)" }}>
               Renewable Energy
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
               Building India's Clean Energy Infrastructure
             </h2>
-            <p className="text-white/65 leading-relaxed mb-8">
+            <p className="leading-relaxed mb-8" style={{ color: "#475569" }}>
               ANVM Power Infra is at the forefront of India's renewable energy revolution. We design, build, and commission wind farms and solar energy installations that power communities and industries with clean, sustainable electricity.
             </p>
             <div className="grid grid-cols-2 gap-4 mb-8">
@@ -516,9 +411,9 @@ export default function Home() {
                 { label: "O&M Support", icon: CheckCircle },
               ].map(({ label, icon: Icon }) => (
                 <div key={label} className="flex items-center gap-3 p-4 rounded-xl"
-                  style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                  <Icon size={18} className="text-green-400 flex-shrink-0" />
-                  <span className="text-sm font-medium text-white/80">{label}</span>
+                  style={{ background: "white", border: "1px solid #d1fae5", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
+                  <Icon size={18} style={{ color: "#16a34a", flexShrink: 0 }} />
+                  <span className="text-sm font-medium" style={{ color: "#374151" }}>{label}</span>
                 </div>
               ))}
             </div>
@@ -597,17 +492,17 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════
           WHY CHOOSE US — Dark section
       ═══════════════════════════════════════════════════ */}
-      <section className="py-24" style={{ background: "linear-gradient(135deg, #050f23, #0a1f3d)" }}>
+      <section className="py-24" style={{ background: "#f8fafc" }}>
         <div className="container">
           <AnimatedSection className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
-              style={{ background: "rgba(22,163,74,0.15)", color: "#4ade80", border: "1px solid rgba(22,163,74,0.3)" }}>
+              style={{ background: "rgba(22,163,74,0.1)", color: "#15803d", border: "1px solid rgba(22,163,74,0.2)" }}>
               Why Choose Us
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#0f172a" }}>
               Reliable Services Backed by<br />Trusted Professionals
             </h2>
-            <p className="text-white/55 text-lg max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#64748b" }}>
               We bring two decades of expertise and an unwavering commitment to excellence on every project
             </p>
           </AnimatedSection>
@@ -618,17 +513,17 @@ export default function Home() {
                 <div
                   className="p-7 rounded-2xl transition-all duration-400 hover:-translate-y-1 hover:border-green-500/30"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    backdropFilter: "blur(8px)",
+                    background: "white",
+                    border: "1px solid #e2e8f0",
+                    boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
                   }}
                 >
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
                     style={{ background: "linear-gradient(135deg, rgba(22,163,74,0.3), rgba(22,163,74,0.1))" }}>
                     <item.icon size={22} className="text-green-400" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{item.description}</p>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: "#0f172a" }}>{item.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#64748b" }}>{item.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -708,14 +603,14 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════
           TESTIMONIALS — Dark section
       ═══════════════════════════════════════════════════ */}
-      <section className="py-24" style={{ background: "#050f23" }}>
+      <section className="py-24" style={{ background: "#f8fafc" }}>
         <div className="container">
           <AnimatedSection className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
-              style={{ background: "rgba(22,163,74,0.15)", color: "#4ade80", border: "1px solid rgba(22,163,74,0.3)" }}>
+              style={{ background: "rgba(22,163,74,0.1)", color: "#15803d", border: "1px solid rgba(22,163,74,0.2)" }}>
               Testimonials
             </span>
-            <h2 className="text-4xl font-bold text-white">What Our Clients Say</h2>
+            <h2 className="text-4xl font-bold" style={{ color: "#0f172a" }}>What Our Clients Say</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -723,16 +618,16 @@ export default function Home() {
               <AnimatedSection key={i} delay={i * 100}>
                 <div
                   className="p-8 rounded-2xl h-full flex flex-col"
-                  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}
+                  style={{ background: "white", border: "1px solid #e2e8f0", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}
                 >
                   <div className="flex gap-1 mb-5">
                     {[...Array(t.rating)].map((_, j) => (
                       <Star key={j} size={16} className="text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-white/70 leading-relaxed mb-6 flex-1 italic">"{t.text}"</p>
-                  <div className="border-t border-white/10 pt-5">
-                    <p className="font-semibold text-white">{t.author}</p>
+                  <p className="leading-relaxed mb-6 flex-1 italic" style={{ color: "#475569" }}>"{t.text}"</p>
+                  <div className="border-t pt-5" style={{ borderColor: "#e2e8f0" }}>
+                    <p className="font-semibold" style={{ color: "#0f172a" }}>{t.author}</p>
                     <p className="text-sm text-green-400">{t.company}</p>
                   </div>
                 </div>

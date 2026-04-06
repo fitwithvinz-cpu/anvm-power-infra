@@ -78,3 +78,6 @@
 - [x] Remove SVG fan near logo, add rotating overlays on background photo turbines
 - [x] Remove all SVG animated fan overlays from hero, keep clean background photo only
 - [x] Add precisely positioned rotating SVG blades on each turbine hub in the background photo
+- [x] Remove all animated turbine overlays from hero, keep only 1 near logo
+- [x] Make navbar logo bigger and properly visible
+- [x] Switch entire website to day theme (bright/white backgrounds)
