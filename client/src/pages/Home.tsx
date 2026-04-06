@@ -138,6 +138,148 @@ export default function Home() {
             background: "linear-gradient(to bottom, transparent, rgba(5,15,35,0.95))"
           }} />
 
+          {/* ── Rotating blade overlays — precisely on each turbine hub in the photo ── */}
+          {/*
+            Photo is 1126×750px. The hero uses object-cover so the image fills the viewport.
+            Positions below are expressed as % of the rendered viewport (not raw image px).
+            Large foreground turbine hub: ~47% left, ~19% top
+            Background turbines (left to right): ~14%/32%, ~20%/30%, ~28%/29%, ~36%/28%, ~56%/28%, ~65%/27%, ~74%/27%, ~84%/27%
+          */}
+          <style>{`
+            @keyframes rotor-cw  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+            @keyframes rotor-ccw { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
+          `}</style>
+
+          {/* LARGE foreground turbine — hub at ~47% left, ~19% top */}
+          <div className="absolute" style={{ left:"47%", top:"19%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="200" height="200" viewBox="-100 -100 200 200"
+              style={{ animation:"rotor-cw 12s linear infinite", filter:"drop-shadow(0 0 2px rgba(0,0,0,0.4))" }}>
+              {/* 3 blades at 0°, 120°, 240° */}
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  {/* Realistic aerofoil blade: wide at root, tapers to tip */}
+                  <path d="M -5 0 C -10 -15, -11 -50, -4 -95 C -1 -50, 2 -15, 5 0 Z"
+                    fill="rgba(220,232,242,0.88)" />
+                </g>
+              ))}
+              {/* Hub centre */}
+              <circle r="7" fill="rgba(200,218,232,0.85)" />
+              <circle r="3" fill="rgba(160,185,205,0.80)" />
+            </svg>
+          </div>
+
+          {/* Background turbine 1 — ~14% left, ~32% top */}
+          <div className="absolute" style={{ left:"14%", top:"32%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="44" height="44" viewBox="-22 -22 44 44"
+              style={{ animation:"rotor-ccw 18s linear infinite" }}>
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path d="M -1.5 0 C -3 -4, -3.5 -12, -1.2 -20 C -0.2 -12, 1 -4, 1.5 0 Z"
+                    fill="rgba(215,228,240,0.78)" />
+                </g>
+              ))}
+              <circle r="2.5" fill="rgba(195,215,230,0.72)" />
+            </svg>
+          </div>
+
+          {/* Background turbine 2 — ~20% left, ~30% top */}
+          <div className="absolute" style={{ left:"20%", top:"30%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="38" height="38" viewBox="-19 -19 38 38"
+              style={{ animation:"rotor-cw 20s linear infinite" }}>
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path d="M -1.2 0 C -2.5 -3.5, -3 -10, -1 -17 C -0.2 -10, 0.8 -3.5, 1.2 0 Z"
+                    fill="rgba(215,228,240,0.75)" />
+                </g>
+              ))}
+              <circle r="2" fill="rgba(195,215,230,0.70)" />
+            </svg>
+          </div>
+
+          {/* Background turbine 3 — ~28% left, ~29% top */}
+          <div className="absolute" style={{ left:"28%", top:"29%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="34" height="34" viewBox="-17 -17 34 34"
+              style={{ animation:"rotor-ccw 15s linear infinite" }}>
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path d="M -1 0 C -2 -3, -2.5 -9, -0.8 -15 C -0.1 -9, 0.7 -3, 1 0 Z"
+                    fill="rgba(212,226,238,0.72)" />
+                </g>
+              ))}
+              <circle r="1.8" fill="rgba(192,212,228,0.68)" />
+            </svg>
+          </div>
+
+          {/* Background turbine 4 — ~36% left, ~28% top */}
+          <div className="absolute" style={{ left:"36%", top:"28%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="30" height="30" viewBox="-15 -15 30 30"
+              style={{ animation:"rotor-cw 22s linear infinite" }}>
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path d="M -0.9 0 C -1.8 -2.5, -2 -7.5, -0.7 -13 C -0.1 -7.5, 0.6 -2.5, 0.9 0 Z"
+                    fill="rgba(210,225,237,0.70)" />
+                </g>
+              ))}
+              <circle r="1.5" fill="rgba(190,210,226,0.65)" />
+            </svg>
+          </div>
+
+          {/* Background turbine 5 — ~56% left, ~28% top */}
+          <div className="absolute" style={{ left:"56%", top:"28%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="32" height="32" viewBox="-16 -16 32 32"
+              style={{ animation:"rotor-ccw 17s linear infinite" }}>
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path d="M -0.9 0 C -1.8 -2.5, -2 -8, -0.7 -13.5 C -0.1 -8, 0.6 -2.5, 0.9 0 Z"
+                    fill="rgba(210,225,237,0.70)" />
+                </g>
+              ))}
+              <circle r="1.5" fill="rgba(190,210,226,0.65)" />
+            </svg>
+          </div>
+
+          {/* Background turbine 6 — ~65% left, ~27% top */}
+          <div className="absolute" style={{ left:"65%", top:"27%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="28" height="28" viewBox="-14 -14 28 28"
+              style={{ animation:"rotor-cw 24s linear infinite" }}>
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path d="M -0.8 0 C -1.6 -2, -1.8 -7, -0.6 -12 C -0.1 -7, 0.5 -2, 0.8 0 Z"
+                    fill="rgba(208,223,235,0.68)" />
+                </g>
+              ))}
+              <circle r="1.3" fill="rgba(188,208,224,0.63)" />
+            </svg>
+          </div>
+
+          {/* Background turbine 7 — ~74% left, ~27% top */}
+          <div className="absolute" style={{ left:"74%", top:"27%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="26" height="26" viewBox="-13 -13 26 26"
+              style={{ animation:"rotor-ccw 19s linear infinite" }}>
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path d="M -0.7 0 C -1.4 -1.8, -1.6 -6.5, -0.5 -11 C -0.1 -6.5, 0.4 -1.8, 0.7 0 Z"
+                    fill="rgba(206,222,234,0.66)" />
+                </g>
+              ))}
+              <circle r="1.2" fill="rgba(186,206,222,0.62)" />
+            </svg>
+          </div>
+
+          {/* Background turbine 8 — ~84% left, ~27% top */}
+          <div className="absolute" style={{ left:"84%", top:"27%", transform:"translate(-50%,-50%)", zIndex:2 }}>
+            <svg width="24" height="24" viewBox="-12 -12 24 24"
+              style={{ animation:"rotor-cw 21s linear infinite" }}>
+              {[0,120,240].map(deg=>(
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path d="M -0.6 0 C -1.2 -1.5, -1.4 -6, -0.5 -10 C -0.1 -6, 0.4 -1.5, 0.6 0 Z"
+                    fill="rgba(204,220,232,0.64)" />
+                </g>
+              ))}
+              <circle r="1.1" fill="rgba(184,204,220,0.60)" />
+            </svg>
+          </div>
+
         </div>
 
         {/* Hero Content — two-column: text left, logo+turbine right */}
