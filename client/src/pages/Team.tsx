@@ -1,6 +1,6 @@
 import { Calendar, Award, Briefcase } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import WindmillScene from "@/components/WindmillScene";
+import SolarScene from "@/components/SolarScene";
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const { ref, isVisible } = useScrollAnimation(0.1);
@@ -78,7 +78,7 @@ export default function Team() {
           <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, rgba(5,15,35,0.6))' }} />
         </div>
         <div className="absolute inset-0 z-[1] overflow-hidden">
-          <WindmillScene color="rgba(255,255,255,0.4)" horizonPct={88} />
+          <SolarScene />
         </div>
         <div className="container relative z-10 py-24 md:py-32">
           <div className="max-w-2xl">

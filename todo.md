@@ -82,3 +82,5 @@
 - [x] Make navbar logo bigger and properly visible
 - [x] Switch entire website to day theme (bright/white backgrounds)
 - [x] Remove windmill turbine animation from Services, Contact, and Projects page headers
+- [x] Add animated transmission tower / power line animation to About page header
+- [x] Add animated solar panel / sun rays animation to Team page header
