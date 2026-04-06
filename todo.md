@@ -75,3 +75,4 @@
 - [x] Replace multiple windmill fans in hero with single large turbine next to logo
 - [x] Make logo much bigger in hero section
 - [x] Redesign SingleWindmill to look completely natural and realistic
+- [x] Remove SVG fan near logo, add rotating overlays on background photo turbines

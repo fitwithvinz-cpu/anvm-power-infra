@@ -137,6 +137,76 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-40" style={{
             background: "linear-gradient(to bottom, transparent, rgba(5,15,35,0.95))"
           }} />
+
+          {/* ── Animated rotor overlays on the background photo turbines ── */}
+          {/* These SVG rotors are placed over the actual turbine hubs in the photo */}
+          <style>{`
+            @keyframes spin-slow  { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+            @keyframes spin-med   { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+            @keyframes spin-fast  { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+          `}</style>
+
+          {/* Turbine 1 — large foreground turbine, right side ~78% from left, ~28% from top */}
+          <div className="absolute" style={{ left: "78%", top: "28%", transform: "translate(-50%, -50%)", zIndex: 1 }}>
+            <svg width="120" height="120" viewBox="-60 -60 120 120" style={{ animation: "spin-slow 18s linear infinite" }}>
+              {[0, 120, 240].map((deg) => (
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path
+                    d="M -3 -2 C -9 -18, -10 -44, -1.5 -58 C 1 -44, 4 -18, 3 -2 Z"
+                    fill="rgba(220,235,245,0.82)"
+                  />
+                </g>
+              ))}
+              <circle r="5" fill="rgba(200,220,235,0.75)" />
+              <circle r="2" fill="rgba(160,190,210,0.70)" />
+            </svg>
+          </div>
+
+          {/* Turbine 2 — mid-distance turbine, ~55% from left, ~38% from top */}
+          <div className="absolute" style={{ left: "55%", top: "38%", transform: "translate(-50%, -50%)", zIndex: 1 }}>
+            <svg width="72" height="72" viewBox="-36 -36 72 72" style={{ animation: "spin-med 22s linear infinite" }}>
+              {[0, 120, 240].map((deg) => (
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path
+                    d="M -2 -1.5 C -5.5 -11, -6 -27, -1 -35 C 0.5 -27, 2.5 -11, 2 -1.5 Z"
+                    fill="rgba(210,228,240,0.72)"
+                  />
+                </g>
+              ))}
+              <circle r="3.5" fill="rgba(195,215,230,0.68)" />
+              <circle r="1.5" fill="rgba(155,185,205,0.65)" />
+            </svg>
+          </div>
+
+          {/* Turbine 3 — far background turbine, ~63% from left, ~42% from top */}
+          <div className="absolute" style={{ left: "63%", top: "42%", transform: "translate(-50%, -50%)", zIndex: 1 }}>
+            <svg width="48" height="48" viewBox="-24 -24 48 48" style={{ animation: "spin-fast 16s linear infinite", animationDirection: "reverse" }}>
+              {[0, 120, 240].map((deg) => (
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path
+                    d="M -1.5 -1 C -3.5 -7, -4 -18, -0.8 -23 C 0.5 -18, 1.8 -7, 1.5 -1 Z"
+                    fill="rgba(205,225,238,0.65)"
+                  />
+                </g>
+              ))}
+              <circle r="2.5" fill="rgba(190,212,228,0.62)" />
+            </svg>
+          </div>
+
+          {/* Turbine 4 — another mid turbine, ~47% from left, ~40% from top */}
+          <div className="absolute" style={{ left: "47%", top: "40%", transform: "translate(-50%, -50%)", zIndex: 1 }}>
+            <svg width="56" height="56" viewBox="-28 -28 56 56" style={{ animation: "spin-slow 25s linear infinite" }}>
+              {[0, 120, 240].map((deg) => (
+                <g key={deg} transform={`rotate(${deg})`}>
+                  <path
+                    d="M -1.8 -1.2 C -4.5 -9, -5 -22, -0.9 -28 C 0.5 -22, 2.2 -9, 1.8 -1.2 Z"
+                    fill="rgba(208,228,242,0.68)"
+                  />
+                </g>
+              ))}
+              <circle r="3" fill="rgba(192,214,230,0.65)" />
+            </svg>
+          </div>
         </div>
 
         {/* Hero Content — two-column: text left, logo+turbine right */}
@@ -219,28 +289,20 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT: Large logo + single turbine — only on large screens */}
+          {/* RIGHT: Large logo only — no SVG fan */}
           <div
-            className="hidden lg:flex flex-col items-center justify-center flex-shrink-0 relative"
-            style={{ width: "420px", animation: "fadeInDown 1s ease 0.4s both" }}
+            className="hidden lg:flex flex-col items-center justify-center flex-shrink-0"
+            style={{ width: "320px", animation: "fadeInDown 1s ease 0.4s both" }}
           >
-            {/* Big ANVM logo */}
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
               alt="ANVM Power Infra"
-              className="w-auto object-contain relative z-10"
+              className="w-auto object-contain"
               style={{
                 height: "240px",
                 filter: "brightness(1.4) drop-shadow(0 0 50px rgba(22,163,74,0.9)) drop-shadow(0 0 100px rgba(22,163,74,0.5))",
               }}
             />
-            {/* Single turbine below the logo */}
-            <div className="absolute bottom-[-120px] right-0">
-              <SingleWindmill
-                scale={1.4}
-                speed={20}
-              />
-            </div>
           </div>
         </div>
 
