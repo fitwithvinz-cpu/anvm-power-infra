@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import WindmillScene from "@/components/WindmillScene";
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const { ref, isVisible } = useScrollAnimation(0.1);
@@ -73,9 +72,6 @@ export default function Contact() {
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(5,15,35,0.92) 0%, rgba(5,15,35,0.75) 50%, rgba(5,15,35,0.50) 100%)' }} />
           <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, rgba(5,15,35,0.6))' }} />
-        </div>
-        <div className="absolute inset-0 z-[1] overflow-hidden">
-          <WindmillScene color="rgba(255,255,255,0.4)" horizonPct={88} />
         </div>
         <div className="container relative z-10 py-24 md:py-32">
           <div className="max-w-2xl">
