@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight, Zap, Wind, Hammer, Shield, CheckCircle, Star, TrendingUp, Users, Award, Globe } from "lucide-react";
 import { useScrollAnimation, useCounterAnimation } from "@/hooks/useScrollAnimation";
+import WindmillScene from "@/components/WindmillScene";
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const { ref, isVisible } = useScrollAnimation(0.1);
@@ -169,8 +170,25 @@ export default function Home() {
             style={{ background: "radial-gradient(circle, #1e3a8a, transparent)", animation: "float 6s ease-in-out infinite reverse" }} />
         </div>
 
+        {/* Windmill scene at the bottom of hero */}
+        <div className="absolute inset-0 z-[1] overflow-hidden">
+          <WindmillScene color="white" />
+        </div>
+
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10 py-20">
+          {/* Large logo in hero */}
+          <div
+            className="mb-8"
+            style={{ animation: "fadeInDown 0.8s ease 0s both" }}
+          >
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
+              alt="ANVM Power Infra Pvt. Ltd."
+              className="h-28 md:h-36 w-auto object-contain"
+              style={{ filter: "brightness(1.4) drop-shadow(0 0 24px rgba(22,163,74,0.8))" }}
+            />
+          </div>
           <div className="max-w-3xl">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6"

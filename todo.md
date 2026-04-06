@@ -54,3 +54,7 @@
 - [x] Replace plain white backgrounds with beautiful gradients across all pages
 - [x] Update WhatsApp number to 8951193777 across all components
 - [x] Update email to anvmpowerinfrapvtltd@gmail.com across all components
+- [x] Create reusable animated windmill SVG component for page headers
+- [x] Add windmill animations to homepage hero section
+- [x] Increase logo size on homepage hero section
+- [x] Add windmill animations to all page headers (About, Services, Projects, Team, Contact, Gallery)
