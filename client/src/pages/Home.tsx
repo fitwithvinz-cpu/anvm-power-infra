@@ -148,32 +148,30 @@ export default function Home() {
     <div className="w-full overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background Image with Overlay */}
+        {/* Sky gradient background — natural dawn/dusk feel like Suzlon */}
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage:
-              "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-power-transmission-fxmPpQAERVJbTMB3qp5bTg.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
+            background: "linear-gradient(180deg, #0a1628 0%, #0d2137 25%, #1a3a5c 50%, #2d5a3d 75%, #1a3d25 100%)",
           }}
-        >
-          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.75) 50%, rgba(30,58,138,0.6) 100%)" }}></div>
-        </div>
+        />
 
-        {/* Animated background elements */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full opacity-10"
-            style={{ background: "radial-gradient(circle, #16a34a, transparent)", animation: "float 8s ease-in-out infinite" }} />
-          <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full opacity-10"
-            style={{ background: "radial-gradient(circle, #1e3a8a, transparent)", animation: "float 6s ease-in-out infinite reverse" }} />
-        </div>
+        {/* Subtle atmospheric glow */}
+        <div className="absolute inset-0 z-0" style={{
+          background: "radial-gradient(ellipse 80% 50% at 50% 60%, rgba(22,163,74,0.12) 0%, transparent 70%)"
+        }} />
 
-        {/* Windmill scene at the bottom of hero */}
+        {/* Wind farm scene — full width, horizon-placed turbines */}
         <div className="absolute inset-0 z-[1] overflow-hidden">
-          <WindmillScene color="white" />
+          <WindmillScene color="rgba(255,255,255,0.85)" horizonPct={82} />
         </div>
+
+        {/* Ground strip at horizon */}
+        <div className="absolute z-[2] w-full" style={{
+          bottom: "18%",
+          height: "2px",
+          background: "linear-gradient(90deg, transparent, rgba(22,163,74,0.3), rgba(22,163,74,0.5), rgba(22,163,74,0.3), transparent)"
+        }} />
 
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10 py-20">

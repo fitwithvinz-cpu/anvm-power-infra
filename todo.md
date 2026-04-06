@@ -58,3 +58,6 @@
 - [x] Add windmill animations to homepage hero section
 - [x] Increase logo size on homepage hero section
 - [x] Add windmill animations to all page headers (About, Services, Projects, Team, Contact, Gallery)
+- [x] Study Suzlon website windmill design and visual style
+- [x] Redesign WindmillScene with realistic proportions and natural look like Suzlon
+- [x] Update homepage hero with Suzlon-inspired full-width windmill scenic background
