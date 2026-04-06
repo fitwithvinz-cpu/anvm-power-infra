@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ArrowRight, Zap, Wind, Hammer, Shield, CheckCircle, Star, TrendingUp, Users, Award, Globe } from "lucide-react";
+import { ArrowRight, Zap, Wind, Hammer, Shield, CheckCircle, Star, TrendingUp, Users, Award, Globe, Phone, ChevronRight } from "lucide-react";
 import { useScrollAnimation, useCounterAnimation } from "@/hooks/useScrollAnimation";
 import WindmillScene from "@/components/WindmillScene";
 
@@ -27,24 +27,24 @@ function CounterCard({ target, suffix, label, icon: Icon }: { target: number; su
   return (
     <div
       ref={ref}
-      className="text-center p-6 rounded-2xl transition-all duration-500 hover:scale-105"
+      className="text-center p-8 rounded-2xl transition-all duration-500 hover:scale-105"
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateY(0) scale(1)" : "translateY(30px) scale(0.95)",
+        transform: isVisible ? "translateY(0)" : "translateY(30px)",
         transition: "opacity 0.6s ease, transform 0.6s ease",
-        background: "rgba(255,255,255,0.08)",
-        backdropFilter: "blur(10px)",
-        border: "1px solid rgba(255,255,255,0.15)",
+        background: "rgba(255,255,255,0.06)",
+        backdropFilter: "blur(16px)",
+        border: "1px solid rgba(255,255,255,0.12)",
       }}
     >
-      <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3"
-        style={{ background: "rgba(22, 163, 74, 0.3)" }}>
-        <Icon size={24} className="text-green-400" />
+      <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4"
+        style={{ background: "linear-gradient(135deg, rgba(22,163,74,0.4), rgba(22,163,74,0.15))" }}>
+        <Icon size={26} className="text-green-400" />
       </div>
-      <div className="text-4xl md:text-5xl font-bold text-white mb-1">
+      <div className="text-5xl font-bold text-white mb-2 tracking-tight">
         {count}{suffix}
       </div>
-      <p className="text-white/70 text-sm font-medium">{label}</p>
+      <p className="text-white/60 text-sm font-medium uppercase tracking-wider">{label}</p>
     </div>
   );
 }
@@ -54,64 +54,48 @@ export default function Home() {
     {
       icon: Zap,
       title: "Power Transmission",
-      description: "High-voltage transmission lines from 33kV to 220kV with precision engineering and safety compliance",
-      features: ["EHV & HV Lines", "Tower Erection", "Conductor Stringing"],
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-power-transmission-fxmPpQAERVJbTMB3qp5bTg.webp",
+      subtitle: "33kV to 220kV",
+      description: "High-voltage transmission lines engineered for reliability, safety, and long-term performance across Karnataka.",
+      features: ["EHV & HV Transmission Lines", "Tower Erection & Stringing", "Line Testing & Commissioning"],
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/power-transmission-towers_6353e402.jpg",
+      color: "#f59e0b",
     },
     {
       icon: Wind,
       title: "Renewable Energy",
-      description: "Wind and solar energy infrastructure with complete integration and grid connectivity solutions",
-      features: ["Wind Farm Setup", "Solar Integration", "Grid Connectivity"],
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-renewable-energy-nAJU8iVuGG6WKFNTvFLUef.webp",
+      subtitle: "Wind & Solar",
+      description: "Complete wind farm and solar energy infrastructure with grid integration and connectivity solutions.",
+      features: ["Wind Farm Development", "Solar Panel Installation", "Grid Connectivity & Integration"],
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/wind-turbines-golden_6aaa089a.jpg",
+      color: "#22c55e",
     },
     {
       icon: Hammer,
       title: "Substation Works",
-      description: "Complete substation design, construction, and commissioning services for all voltage levels",
-      features: ["Design & Build", "Commissioning", "Testing & Maintenance"],
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/project-substation-1-Ub6rnRr2EAkqHfBmqoNMt4.webp",
+      subtitle: "Design to Commissioning",
+      description: "End-to-end substation design, construction, and commissioning for all voltage levels.",
+      features: ["Substation Design & Build", "Equipment Installation", "Testing & Commissioning"],
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/substation-construction_fd3756a6.jpg",
+      color: "#3b82f6",
     },
     {
       icon: Shield,
       title: "Civil Works",
-      description: "Foundation, tower, and infrastructure construction with strict safety and quality compliance",
-      features: ["Tower Foundations", "Civil Infrastructure", "Quality Assurance"],
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/project-civil-works-1-NeVqxJyqYGqjqLhVYBBWkE.webp",
+      subtitle: "Foundation & Infrastructure",
+      description: "Tower foundations, civil infrastructure, and construction with strict safety and quality compliance.",
+      features: ["Tower Foundation Work", "Civil Infrastructure", "Quality & Safety Compliance"],
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/substation-india_ca7f052e.jpg",
+      color: "#8b5cf6",
     },
   ];
 
   const whyChooseUs = [
-    {
-      icon: Award,
-      title: "20+ Years Legacy",
-      description: "Built on the foundation of Shri Mangalagouri Electricals (est. 2005), with two decades of proven excellence",
-    },
-    {
-      icon: CheckCircle,
-      title: "Certified Excellence",
-      description: "ISO certified processes with strict quality control and safety standards on every project",
-    },
-    {
-      icon: Users,
-      title: "Expert Team",
-      description: "50+ skilled engineers and technicians with deep domain expertise in power infrastructure",
-    },
-    {
-      icon: TrendingUp,
-      title: "Proven Track Record",
-      description: "50+ successfully completed projects across Karnataka for KPTCL, KEB, and HESCOM",
-    },
-    {
-      icon: Globe,
-      title: "Renewable Focus",
-      description: "Committed to India's clean energy future with wind and solar infrastructure expertise",
-    },
-    {
-      icon: Star,
-      title: "Client Trust",
-      description: "Long-term partnerships with major power utilities built on reliability and quality delivery",
-    },
+    { icon: Award, title: "20+ Years Legacy", description: "Built on the foundation of Shri Mangalagouri Electricals (est. 2005), with two decades of proven excellence in power infrastructure." },
+    { icon: CheckCircle, title: "Certified Excellence", description: "ISO certified processes with strict quality control and safety standards on every project we undertake." },
+    { icon: Users, title: "Expert Team", description: "50+ skilled engineers and technicians with deep domain expertise in power and renewable energy infrastructure." },
+    { icon: TrendingUp, title: "Proven Track Record", description: "50+ successfully completed projects across Karnataka for KPTCL, KEB, HESCOM, and other major utilities." },
+    { icon: Globe, title: "Renewable Focus", description: "Committed to India's clean energy future with specialised wind and solar infrastructure expertise." },
+    { icon: Star, title: "Client Trust", description: "Long-term partnerships with Karnataka's major power utilities built on reliability, quality, and timely delivery." },
   ];
 
   const clients = [
@@ -124,264 +108,338 @@ export default function Home() {
   ];
 
   const testimonials = [
-    {
-      text: "ANVM Power Infra delivered our 110kV transmission line project on time and within budget. Their team's technical expertise and safety standards are exceptional.",
-      author: "Project Manager",
-      company: "KPTCL",
-      rating: 5,
-    },
-    {
-      text: "We have been working with ANVM for our substation construction projects. Their quality of work and commitment to deadlines is commendable.",
-      author: "Senior Engineer",
-      company: "HESCOM",
-      rating: 5,
-    },
-    {
-      text: "The renewable energy integration project was completed flawlessly. ANVM's team demonstrated deep knowledge and professional execution throughout.",
-      author: "Technical Director",
-      company: "KEB",
-      rating: 5,
-    },
+    { text: "ANVM Power Infra delivered our 110kV transmission line project on time and within budget. Their team's technical expertise and safety standards are exceptional.", author: "Project Manager", company: "KPTCL", rating: 5 },
+    { text: "We have been working with ANVM for our substation construction projects. Their quality of work and commitment to deadlines is commendable.", author: "Senior Engineer", company: "HESCOM", rating: 5 },
+    { text: "The renewable energy integration project was completed flawlessly. ANVM's team demonstrated deep knowledge and professional execution throughout.", author: "Technical Director", company: "KEB", rating: 5 },
   ];
 
   return (
     <div className="w-full overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Sky gradient background — natural dawn/dusk feel like Suzlon */}
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            background: "linear-gradient(180deg, #0a1628 0%, #0d2137 25%, #1a3a5c 50%, #2d5a3d 75%, #1a3d25 100%)",
-          }}
-        />
 
-        {/* Subtle atmospheric glow */}
-        <div className="absolute inset-0 z-0" style={{
-          background: "radial-gradient(ellipse 80% 50% at 50% 60%, rgba(22,163,74,0.12) 0%, transparent 70%)"
-        }} />
+      {/* ═══════════════════════════════════════════════════
+          HERO — Full-screen wind farm with natural sky
+      ═══════════════════════════════════════════════════ */}
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
 
-        {/* Wind farm scene — full width, horizon-placed turbines */}
-        <div className="absolute inset-0 z-[1] overflow-hidden">
-          <WindmillScene color="rgba(255,255,255,0.85)" horizonPct={82} />
+        {/* Real wind farm photo background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/wind-farm-sunset_69e78ea2.jpg"
+            alt="Wind farm at sunset"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Multi-layer overlay for text readability while keeping photo natural */}
+          <div className="absolute inset-0" style={{
+            background: "linear-gradient(135deg, rgba(5,15,35,0.88) 0%, rgba(5,15,35,0.70) 40%, rgba(5,15,35,0.40) 100%)"
+          }} />
+          {/* Bottom fade to blend into next section */}
+          <div className="absolute bottom-0 left-0 right-0 h-40" style={{
+            background: "linear-gradient(to bottom, transparent, rgba(5,15,35,0.95))"
+          }} />
         </div>
 
-        {/* Ground strip at horizon */}
-        <div className="absolute z-[2] w-full" style={{
-          bottom: "18%",
-          height: "2px",
-          background: "linear-gradient(90deg, transparent, rgba(22,163,74,0.3), rgba(22,163,74,0.5), rgba(22,163,74,0.3), transparent)"
-        }} />
+        {/* Animated wind turbine silhouettes at horizon */}
+        <div className="absolute inset-0 z-[1]">
+          <WindmillScene color="rgba(255,255,255,0.5)" horizonPct={84} />
+        </div>
 
-        {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 py-20">
-          {/* Large logo in hero */}
-          <div
-            className="mb-8"
-            style={{ animation: "fadeInDown 0.8s ease 0s both" }}
-          >
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
-              alt="ANVM Power Infra Pvt. Ltd."
-              className="h-28 md:h-36 w-auto object-contain"
-              style={{ filter: "brightness(1.4) drop-shadow(0 0 24px rgba(22,163,74,0.8))" }}
-            />
-          </div>
-          <div className="max-w-3xl">
+        {/* Hero Content */}
+        <div className="container relative z-10 py-32 md:py-40">
+          <div className="max-w-4xl">
+
+            {/* Badge */}
             <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-8"
               style={{
-                background: "rgba(22, 163, 74, 0.2)",
-                border: "1px solid rgba(22, 163, 74, 0.4)",
+                background: "rgba(22, 163, 74, 0.18)",
+                border: "1px solid rgba(22, 163, 74, 0.45)",
                 color: "#4ade80",
-                animation: "fadeInDown 0.8s ease 0.2s both",
+                animation: "fadeInDown 0.8s ease 0s both",
               }}
             >
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               Established 2025 — Built on 20 Years of Excellence
             </div>
+
+            {/* Headline */}
             <h1
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
-              style={{ animation: "fadeInDown 0.8s ease 0.4s both" }}
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.08] mb-6"
+              style={{ animation: "fadeInDown 0.8s ease 0.15s both" }}
             >
               Powering India's
-              <span className="block" style={{ background: "linear-gradient(135deg, #4ade80, #60a5fa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              <span className="block mt-1" style={{
+                background: "linear-gradient(90deg, #4ade80 0%, #34d399 50%, #60a5fa 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}>
                 Green Future
               </span>
             </h1>
+
+            {/* Subheadline */}
             <p
-              className="text-xl md:text-2xl text-white/80 mb-10 font-light leading-relaxed"
-              style={{ animation: "fadeInDown 0.8s ease 0.6s both" }}
+              className="text-lg md:text-xl text-white/75 mb-10 max-w-2xl leading-relaxed"
+              style={{ animation: "fadeInDown 0.8s ease 0.3s both" }}
             >
-              From power transmission to renewable energy — delivering world-class electrical infrastructure solutions across Karnataka
+              From high-voltage power transmission to wind farms and solar energy — ANVM Power Infra delivers world-class electrical infrastructure across Karnataka.
             </p>
+
+            {/* CTAs */}
             <div
-              className="flex flex-col sm:flex-row gap-4"
-              style={{ animation: "fadeInDown 0.8s ease 0.8s both" }}
+              className="flex flex-wrap gap-4 mb-16"
+              style={{ animation: "fadeInDown 0.8s ease 0.45s both" }}
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all hover:opacity-90 hover:shadow-xl hover:-translate-y-1 active:scale-95"
-                style={{ background: "linear-gradient(135deg, #16a34a, #15803d)" }}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                style={{ background: "linear-gradient(135deg, #16a34a, #15803d)", boxShadow: "0 4px 24px rgba(22,163,74,0.4)" }}
               >
-                Get Started Today
-                <ArrowRight size={20} />
+                Get Free Consultation
+                <ArrowRight size={18} />
               </Link>
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all hover:bg-white/20 active:scale-95"
-                style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.3)" }}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:bg-white/20"
+                style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)", backdropFilter: "blur(8px)" }}
               >
                 View Our Projects
+                <ChevronRight size={18} />
               </Link>
             </div>
+
+            {/* Quick service pills */}
+            <div
+              className="flex flex-wrap gap-3"
+              style={{ animation: "fadeInDown 0.8s ease 0.6s both" }}
+            >
+              {["Power Transmission", "Wind Energy", "Solar Energy", "Substation Works", "Civil Works"].map((s) => (
+                <span key={s} className="px-4 py-1.5 rounded-full text-xs font-medium text-white/80"
+                  style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)" }}>
+                  {s}
+                </span>
+              ))}
+            </div>
           </div>
+        </div>
+
+        {/* Large ANVM logo — bottom right */}
+        <div className="absolute bottom-12 right-8 z-10 hidden md:block" style={{ animation: "fadeInDown 1s ease 0.5s both" }}>
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
+            alt="ANVM Power Infra"
+            className="h-32 lg:h-40 w-auto object-contain"
+            style={{ filter: "brightness(1.3) drop-shadow(0 0 30px rgba(22,163,74,0.6))" }}
+          />
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50">
-          <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/50 to-transparent" style={{ animation: "scrollLine 2s ease-in-out infinite" }}></div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/40 text-xs" style={{ animation: "fadeIn 1s ease 1.2s both" }}>
+          <span>Scroll</span>
+          <div className="w-px h-10 bg-gradient-to-b from-white/40 to-transparent" style={{ animation: "pulse 2s ease-in-out infinite" }} />
         </div>
       </section>
 
-      {/* Stats Counter Section */}
-      <section
-        className="py-16"
-        style={{ background: "linear-gradient(135deg, #0f172a 0%, #0f2d1a 50%, #1e3a8a 100%)" }}
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <CounterCard target={20} suffix="+" label="Years of Legacy" icon={Award} />
+      {/* ═══════════════════════════════════════════════════
+          STATS COUNTER STRIP — dark background
+      ═══════════════════════════════════════════════════ */}
+      <section style={{ background: "linear-gradient(135deg, #050f23, #0a1f3d)" }} className="py-16">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <CounterCard target={20} suffix="+" label="Years of Experience" icon={Award} />
             <CounterCard target={50} suffix="+" label="Projects Completed" icon={TrendingUp} />
             <CounterCard target={50} suffix="+" label="Team Members" icon={Users} />
-            <CounterCard target={3} suffix="" label="Major Corporations" icon={Globe} />
+            <CounterCard target={6} suffix="+" label="Major Corporations" icon={Globe} />
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-24" style={{ background: "linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)" }}>
-        <div className="container mx-auto px-4">
+      {/* ═══════════════════════════════════════════════════
+          SERVICES — Full-width cards with real photos
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-24" style={{ background: "#f8fafc" }}>
+        <div className="container">
           <AnimatedSection className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4"
-              style={{ background: "rgba(22, 163, 74, 0.1)", color: "#16a34a", border: "1px solid rgba(22, 163, 74, 0.2)" }}>
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
+              style={{ background: "rgba(22,163,74,0.1)", color: "#16a34a", border: "1px solid rgba(22,163,74,0.2)" }}>
               What We Do
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Core Services</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive electrical infrastructure solutions tailored to your needs
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#0f172a" }}>
+              Our Core Services
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#64748b" }}>
+              Comprehensive electrical infrastructure solutions — from high-voltage transmission to renewable energy and civil works
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <AnimatedSection key={index} delay={index * 100}>
-                  <div
-                    className="group rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer h-full"
-                    style={{ background: "white", border: "1px solid rgba(22, 163, 74, 0.15)" }}
-                  >
-                    {/* Image */}
-                    <div className="h-48 overflow-hidden relative">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="absolute top-3 left-3 w-10 h-10 rounded-xl flex items-center justify-center"
-                        style={{ background: "linear-gradient(135deg, #16a34a, #0f172a)" }}>
-                        <Icon size={20} className="text-white" />
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, i) => (
+              <AnimatedSection key={service.title} delay={i * 100}>
+                <div
+                  className="group rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                  style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.08)", background: "white" }}
+                >
+                  {/* Image */}
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%)" }} />
+                    {/* Service icon badge */}
+                    <div className="absolute top-4 left-4 w-12 h-12 rounded-2xl flex items-center justify-center"
+                      style={{ background: service.color, boxShadow: `0 4px 16px ${service.color}60` }}>
+                      <service.icon size={22} className="text-white" />
                     </div>
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold text-primary mb-2">{service.title}</h3>
-                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">{service.description}</p>
-                      <ul className="space-y-1">
-                        {service.features.map((feature, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm text-gray-500">
-                            <CheckCircle size={14} className="text-green-500 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
+                    {/* Subtitle on image */}
+                    <div className="absolute bottom-4 left-4">
+                      <span className="text-xs font-semibold text-white/80 uppercase tracking-widest">{service.subtitle}</span>
                     </div>
                   </div>
-                </AnimatedSection>
-              );
-            })}
+
+                  {/* Content */}
+                  <div className="p-7">
+                    <h3 className="text-xl font-bold mb-2" style={{ color: "#0f172a" }}>{service.title}</h3>
+                    <p className="text-sm leading-relaxed mb-5" style={{ color: "#64748b" }}>{service.description}</p>
+
+                    {/* Feature list */}
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((f) => (
+                        <li key={f} className="flex items-center gap-2 text-sm font-medium" style={{ color: "#374151" }}>
+                          <CheckCircle size={15} style={{ color: service.color, flexShrink: 0 }} />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link href="/services"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 hover:gap-3"
+                      style={{ color: service.color }}>
+                      Learn More <ArrowRight size={15} />
+                    </Link>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
 
           <AnimatedSection className="text-center mt-12">
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all hover:opacity-90 hover:shadow-lg hover:-translate-y-1"
-              style={{ background: "linear-gradient(135deg, #0f172a, #16a34a)" }}
-            >
+            <Link href="/services"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              style={{ background: "linear-gradient(135deg, #0f172a, #1e3a5f)" }}>
               View All Services
-              <ArrowRight size={20} />
+              <ArrowRight size={18} />
             </Link>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* About Preview Section */}
-      <section className="py-24" style={{ background: "linear-gradient(135deg, #0f172a 0%, #0f2d1a 50%, #1e3a8a 100%)" }}>
-        <div className="container mx-auto px-4">
+      {/* ═══════════════════════════════════════════════════
+          RENEWABLE ENERGY SHOWCASE — Full-width split
+      ═══════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden" style={{ background: "#050f23" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+          {/* Left: Solar farm image */}
+          <div className="relative h-72 lg:h-auto">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/solar-farm-aerial_4fddd583.jpg"
+              alt="Solar farm aerial"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent 60%, #050f23)" }} />
+          </div>
+
+          {/* Right: Content */}
+          <AnimatedSection className="flex flex-col justify-center px-8 md:px-16 py-16">
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6 w-fit"
+              style={{ background: "rgba(22,163,74,0.15)", color: "#4ade80", border: "1px solid rgba(22,163,74,0.3)" }}>
+              Renewable Energy
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              Building India's Clean Energy Infrastructure
+            </h2>
+            <p className="text-white/65 leading-relaxed mb-8">
+              ANVM Power Infra is at the forefront of India's renewable energy revolution. We design, build, and commission wind farms and solar energy installations that power communities and industries with clean, sustainable electricity.
+            </p>
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {[
+                { label: "Wind Farm Setup", icon: Wind },
+                { label: "Solar Integration", icon: Zap },
+                { label: "Grid Connectivity", icon: Globe },
+                { label: "O&M Support", icon: CheckCircle },
+              ].map(({ label, icon: Icon }) => (
+                <div key={label} className="flex items-center gap-3 p-4 rounded-xl"
+                  style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <Icon size={18} className="text-green-400 flex-shrink-0" />
+                  <span className="text-sm font-medium text-white/80">{label}</span>
+                </div>
+              ))}
+            </div>
+            <Link href="/services"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white w-fit transition-all duration-300 hover:-translate-y-1"
+              style={{ background: "linear-gradient(135deg, #16a34a, #15803d)", boxShadow: "0 4px 20px rgba(22,163,74,0.35)" }}>
+              Explore Renewable Services
+              <ArrowRight size={16} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
+          ABOUT STRIP — Company story with photo
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-24" style={{ background: "white" }}>
+        <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Content */}
             <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6"
-                style={{ background: "rgba(22, 163, 74, 0.2)", color: "#4ade80", border: "1px solid rgba(22, 163, 74, 0.3)" }}>
+              <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6"
+                style={{ background: "rgba(22,163,74,0.1)", color: "#16a34a", border: "1px solid rgba(22,163,74,0.2)" }}>
                 Our Story
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: "#0f172a" }}>
                 Building Tomorrow's Power Infrastructure
               </h2>
-              <p className="text-lg text-white/75 mb-5 leading-relaxed">
-                Established in 2025 and built on the 20-year legacy of <strong className="text-green-400">Shri Mangalagouri Electricals</strong> (founded 2005), ANVM Power Infra Pvt. Ltd. is at the forefront of electrical infrastructure development in India.
+              <p className="text-lg leading-relaxed mb-6" style={{ color: "#475569" }}>
+                Established in 2025 and built on the 20-year legacy of <strong style={{ color: "#0f172a" }}>Shri Mangalagouri Electricals</strong> (founded 2005), ANVM Power Infra Pvt. Ltd. is at the forefront of electrical infrastructure development in Karnataka.
               </p>
-              <p className="text-lg text-white/75 mb-8 leading-relaxed">
+              <p className="leading-relaxed mb-8" style={{ color: "#64748b" }}>
                 With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation. Our team works with leading corporations including KPTCL, KEB, and HESCOM.
               </p>
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex flex-wrap gap-3 mb-8">
                 {["Power Transmission", "Renewable Energy", "Substation Works", "Civil Infrastructure"].map((tag) => (
-                  <span key={tag} className="px-4 py-2 rounded-full text-sm font-medium"
-                    style={{ background: "rgba(22, 163, 74, 0.15)", color: "#4ade80", border: "1px solid rgba(22, 163, 74, 0.25)" }}>
+                  <span key={tag} className="px-4 py-2 rounded-lg text-sm font-medium"
+                    style={{ background: "#f1f5f9", color: "#334155" }}>
                     {tag}
                   </span>
                 ))}
               </div>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 font-semibold text-green-400 hover:text-green-300 transition-colors group"
-              >
+              <Link href="/about"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                style={{ background: "linear-gradient(135deg, #0f172a, #1e3a5f)" }}>
                 Learn More About Us
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={16} />
               </Link>
             </AnimatedSection>
 
+            {/* Right: Photo grid */}
             <AnimatedSection delay={200}>
-              <div className="relative">
-                <div
-                  className="h-96 rounded-2xl overflow-hidden shadow-2xl"
-                  style={{
-                    backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-renewable-energy-nAJU8iVuGG6WKFNTvFLUef.webp')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  <div className="absolute inset-0 rounded-2xl" style={{ background: "linear-gradient(to top, rgba(15,23,42,0.6), transparent)" }} />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-2xl overflow-hidden h-48">
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/power-transmission-towers_6353e402.jpg"
+                    alt="Power transmission" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
-                {/* Floating badge */}
-                <div
-                  className="absolute -bottom-6 -left-6 p-5 rounded-2xl shadow-xl"
-                  style={{ background: "linear-gradient(135deg, #16a34a, #15803d)" }}
-                >
-                  <div className="text-3xl font-bold text-white">20+</div>
-                  <div className="text-white/90 text-sm font-medium">Years of Excellence</div>
+                <div className="rounded-2xl overflow-hidden h-48 mt-8">
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/wind-turbines-golden_6aaa089a.jpg"
+                    alt="Wind turbines" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="rounded-2xl overflow-hidden h-48">
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/substation-construction_fd3756a6.jpg"
+                    alt="Substation" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="rounded-2xl overflow-hidden h-48 mt-8">
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/solar-farm-aerial_4fddd583.jpg"
+                    alt="Solar farm" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
             </AnimatedSection>
@@ -389,57 +447,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-24" style={{ background: "linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)" }}>
-        <div className="container mx-auto px-4">
+      {/* ═══════════════════════════════════════════════════
+          WHY CHOOSE US — Dark section
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-24" style={{ background: "linear-gradient(135deg, #050f23, #0a1f3d)" }}>
+        <div className="container">
           <AnimatedSection className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4"
-              style={{ background: "rgba(22, 163, 74, 0.1)", color: "#16a34a", border: "1px solid rgba(22, 163, 74, 0.2)" }}>
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
+              style={{ background: "rgba(22,163,74,0.15)", color: "#4ade80", border: "1px solid rgba(22,163,74,0.3)" }}>
               Why Choose Us
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-              Reliable Services Backed by Trusted Professionals
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Reliable Services Backed by<br />Trusted Professionals
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We bring two decades of expertise and a commitment to excellence on every project
+            <p className="text-white/55 text-lg max-w-2xl mx-auto">
+              We bring two decades of expertise and an unwavering commitment to excellence on every project
             </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyChooseUs.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <AnimatedSection key={index} delay={index * 80}>
-                  <div
-                    className="group p-6 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                    style={{ background: "white", border: "1px solid rgba(22, 163, 74, 0.15)" }}
-                  >
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all group-hover:scale-110"
-                      style={{ background: "linear-gradient(135deg, rgba(22, 163, 74, 0.15), rgba(15, 23, 42, 0.1))" }}>
-                      <Icon size={24} className="text-green-600" />
-                    </div>
-                    <h3 className="text-lg font-bold text-primary mb-2">{item.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+            {whyChooseUs.map((item, i) => (
+              <AnimatedSection key={item.title} delay={i * 80}>
+                <div
+                  className="p-7 rounded-2xl transition-all duration-400 hover:-translate-y-1 hover:border-green-500/30"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    backdropFilter: "blur(8px)",
+                  }}
+                >
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                    style={{ background: "linear-gradient(135deg, rgba(22,163,74,0.3), rgba(22,163,74,0.1))" }}>
+                    <item.icon size={22} className="text-green-400" />
                   </div>
-                </AnimatedSection>
-              );
-            })}
+                  <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{item.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Banner with Background */}
-      <section
-        className="py-24 relative overflow-hidden"
-        style={{
-          backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/project-substation-1-Ub6rnRr2EAkqHfBmqoNMt4.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <div className="absolute inset-0" style={{ background: "rgba(15, 23, 42, 0.85)" }} />
-        <div className="container mx-auto px-4 text-center relative z-10">
+      {/* ═══════════════════════════════════════════════════
+          CTA BANNER — Full-width with transmission photo
+      ═══════════════════════════════════════════════════ */}
+      <section className="relative py-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/power-transmission-towers_6353e402.jpg"
+            alt="Power infrastructure"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(5,15,35,0.92), rgba(22,163,74,0.75))" }} />
+        </div>
+        <div className="container relative z-10 text-center">
           <AnimatedSection>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Power Your Project?
@@ -447,46 +509,48 @@ export default function Home() {
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
               Contact our team today to discuss your electrical infrastructure needs and get a free consultation
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl font-semibold text-white transition-all hover:opacity-90 hover:shadow-xl hover:-translate-y-1"
-                style={{ background: "linear-gradient(135deg, #16a34a, #15803d)" }}
-              >
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact"
+                className="inline-flex items-center gap-2 px-9 py-4 rounded-xl font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                style={{ background: "linear-gradient(135deg, #16a34a, #15803d)", boxShadow: "0 4px 24px rgba(22,163,74,0.5)" }}>
                 Get Free Consultation
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </Link>
-              <a
-                href="tel:+918951193777"
-                className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl font-semibold text-white transition-all hover:bg-white/20"
-                style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.3)" }}
-              >
-                📞 Call Us Now
+              <a href="tel:+918951193777"
+                className="inline-flex items-center gap-2 px-9 py-4 rounded-xl font-bold text-white transition-all duration-300 hover:bg-white/25"
+                style={{ background: "rgba(255,255,255,0.15)", border: "2px solid rgba(255,255,255,0.4)", backdropFilter: "blur(8px)" }}>
+                <Phone size={18} />
+                +91 8951193777
               </a>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Clients Section */}
-      <section className="py-20" style={{ background: "linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)" }}>
-        <div className="container mx-auto px-4">
+      {/* ═══════════════════════════════════════════════════
+          CLIENTS — Light section
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-20" style={{ background: "#f8fafc" }}>
+        <div className="container">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Trusted Clients</h2>
-            <p className="text-gray-600">Partnering with Karnataka's leading power utilities</p>
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
+              style={{ background: "rgba(22,163,74,0.1)", color: "#16a34a", border: "1px solid rgba(22,163,74,0.2)" }}>
+              Our Trusted Clients
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ color: "#0f172a" }}>
+              Partnering with Karnataka's Leading Power Utilities
+            </h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {clients.map((client, index) => (
-              <AnimatedSection key={index} delay={index * 60}>
+            {clients.map((client, i) => (
+              <AnimatedSection key={client.name} delay={i * 60}>
                 <div
-                  className="group p-4 rounded-xl text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-                  style={{ background: "white", border: "1px solid rgba(22, 163, 74, 0.15)" }}
+                  className="flex flex-col items-center justify-center p-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default"
+                  style={{ background: "white", border: "1px solid #e2e8f0", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}
                 >
-                  <div className="text-2xl font-bold text-primary mb-1 group-hover:text-green-600 transition-colors">
-                    {client.name}
-                  </div>
-                  <div className="text-xs text-gray-500 leading-tight">{client.full}</div>
+                  <div className="text-2xl font-black mb-2" style={{ color: "#0f172a" }}>{client.name}</div>
+                  <p className="text-xs leading-tight" style={{ color: "#94a3b8" }}>{client.full}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -494,39 +558,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24" style={{ background: "linear-gradient(135deg, #0f172a 0%, #0f2d1a 50%, #1e3a8a 100%)" }}>
-        <div className="container mx-auto px-4">
+      {/* ═══════════════════════════════════════════════════
+          TESTIMONIALS — Dark section
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-24" style={{ background: "#050f23" }}>
+        <div className="container">
           <AnimatedSection className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4"
-              style={{ background: "rgba(22, 163, 74, 0.2)", color: "#4ade80", border: "1px solid rgba(22, 163, 74, 0.3)" }}>
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
+              style={{ background: "rgba(22,163,74,0.15)", color: "#4ade80", border: "1px solid rgba(22,163,74,0.3)" }}>
               Testimonials
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">What Our Clients Say</h2>
+            </span>
+            <h2 className="text-4xl font-bold text-white">What Our Clients Say</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
+            {testimonials.map((t, i) => (
+              <AnimatedSection key={i} delay={i * 100}>
                 <div
-                  className="p-6 rounded-2xl h-full flex flex-col"
-                  style={{
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    backdropFilter: "blur(10px)",
-                  }}
+                  className="p-8 rounded-2xl h-full flex flex-col"
+                  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}
                 >
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                  <div className="flex gap-1 mb-5">
+                    {[...Array(t.rating)].map((_, j) => (
+                      <Star key={j} size={16} className="text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-white/80 text-sm leading-relaxed flex-1 mb-4 italic">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="border-t border-white/10 pt-4">
-                    <div className="font-semibold text-white">{testimonial.author}</div>
-                    <div className="text-green-400 text-sm">{testimonial.company}</div>
+                  <p className="text-white/70 leading-relaxed mb-6 flex-1 italic">"{t.text}"</p>
+                  <div className="border-t border-white/10 pt-5">
+                    <p className="font-semibold text-white">{t.author}</p>
+                    <p className="text-sm text-green-400">{t.company}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -535,20 +595,6 @@ export default function Home() {
         </div>
       </section>
 
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        @keyframes fadeInDown {
-          from { opacity: 0; transform: translateY(-20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes scrollLine {
-          0%, 100% { opacity: 0.5; transform: scaleY(1); }
-          50% { opacity: 1; transform: scaleY(1.2); }
-        }
-      `}</style>
     </div>
   );
 }
