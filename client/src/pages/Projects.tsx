@@ -130,39 +130,28 @@ export default function Projects() {
 
   return (
     <div className="w-full">
-      {/* Page Header */}
-      <section
-        className="text-white relative overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #0a1628 0%, #0f2d1a 40%, #0d2137 70%, #061020 100%)',
-          borderBottom: '3px solid #16a34a',
-        }}
-      >
-        {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #16a34a 0%, transparent 50%), radial-gradient(circle at 80% 50%, #1e40af 0%, transparent 50%)' }} />
-        {/* Windmill animation */}
-        <div className="absolute inset-0 overflow-hidden">
-          <WindmillScene color="white" />
+      {/* Page Header — tall, natural, photo-backed */}
+      <section className="relative overflow-hidden text-white" style={{ minHeight: '420px' }}>
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/tower-construction-india_aae703b8.jpg"
+            alt="Project construction"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(5,15,35,0.92) 0%, rgba(5,15,35,0.75) 50%, rgba(5,15,35,0.50) 100%)' }} />
+          <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, rgba(5,15,35,0.6))' }} />
         </div>
-        <div className="container mx-auto px-4 py-6 relative z-10">
-          <div className="flex items-center justify-between gap-6">
-            {/* Text Content */}
-            <div className="flex-1">
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-1 h-8 rounded-full" style={{ background: 'linear-gradient(to bottom, #16a34a, #22d3ee)' }} />
-                <h1 className="text-2xl md:text-3xl font-bold tracking-tight whitespace-nowrap">Our Projects</h1>
-              </div>
-              <p className="text-sm text-white/70 ml-3 max-w-xl">A portfolio of successful power infrastructure projects across India</p>
+        <div className="absolute inset-0 z-[1] overflow-hidden">
+          <WindmillScene color="rgba(255,255,255,0.4)" horizonPct={88} />
+        </div>
+        <div className="container relative z-10 py-24 md:py-32">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6"
+              style={{ background: 'rgba(22,163,74,0.2)', border: '1px solid rgba(22,163,74,0.4)', color: '#4ade80' }}>
+              Portfolio
             </div>
-            {/* Logo */}
-            <div className="hidden md:flex flex-shrink-0 items-center justify-center">
-              <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
-                alt="ANVM Power Infra"
-                className="h-44 w-auto object-contain"
-                style={{ filter: 'brightness(1.3) drop-shadow(0 0 16px rgba(22,163,74,0.7))' }}
-              />
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Our Projects</h1>
+            <p className="text-lg text-white/70 max-w-xl">A portfolio of successfully completed power infrastructure projects across Karnataka and India</p>
           </div>
         </div>
       </section>
