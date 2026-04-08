@@ -149,7 +149,7 @@ export default function Navigation() {
       </div>
 
       {/* Main navigation */}
-      <div className="container mx-auto px-4 flex items-center justify-between" style={{ minHeight: 80 }}>
+      <div className="container mx-auto px-4 flex items-center justify-between" style={{ minHeight: 100 }}>
         {/* Logo — bigger and more prominent */}
         <Link
           href="/"
@@ -158,7 +158,7 @@ export default function Navigation() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
             alt="ANVM Power Infra Pvt. Ltd."
-            style={{ height: 88, width: "auto", objectFit: "contain" }}
+            style={{ height: 120, width: "auto", objectFit: "contain" }}
           />
         </Link>
 

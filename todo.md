@@ -87,3 +87,4 @@
 - [x] Increase navbar logo size to be more visible
 - [x] Add small animated transmission line decoration in navbar white space
 - [x] Increase logo size in homepage hero section
+- [x] Increase navbar logo size in menu bar
