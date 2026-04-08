@@ -267,7 +267,7 @@ export default function Home() {
               alt="ANVM Power Infra"
               className="w-auto object-contain"
               style={{
-                height: "220px",
+                height: "320px",
                 filter: "brightness(1.4) drop-shadow(0 0 40px rgba(22,163,74,0.9)) drop-shadow(0 0 80px rgba(22,163,74,0.5))",
               }}
             />
