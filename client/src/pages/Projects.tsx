@@ -276,6 +276,7 @@ export default function Projects() {
               "JSW Renewables",
               "CleanMax Renewables",
               "Suzlon",
+              "Hero Future Energies",
             ].map((client, index) => (
               <div
                 key={index}
