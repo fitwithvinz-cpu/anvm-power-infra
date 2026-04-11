@@ -97,3 +97,4 @@
 - [x] Remove Metering System Works photo from Gallery
 - [x] Upload 10 real project photos to CDN
 - [x] Add 10 real project photos to Gallery page
+- [x] Reorganize Gallery page — real photos first, category tabs, balanced layout

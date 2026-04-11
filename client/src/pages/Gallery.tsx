@@ -22,44 +22,55 @@ function AnimatedSection({ children, className = "", delay = 0 }: { children: Re
 
 const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL";
 
-const photos = [
-  { url: `${CDN}/project-photo-01_1f9b80fb.jpg`, caption: "Power Transmission Infrastructure" },
-  { url: `${CDN}/project-photo-02_f7db99ef.jpg`, caption: "Substation Construction Works" },
-  { url: `${CDN}/project-photo-03_c054c72e.jpg`, caption: "Electrical Line Installation" },
-  { url: `${CDN}/project-photo-04_ed704ea5.jpg`, caption: "Tower Erection Works" },
-  { url: `${CDN}/project-photo-06_77b5c7dd.jpg`, caption: "33kV Line Project" },
-  { url: `${CDN}/project-photo-07_1dcbe847.jpg`, caption: "Substation Commissioning" },
-  { url: `${CDN}/project-photo-08_3b686b1c.jpg`, caption: "Electrical Infrastructure Works" },
-  { url: `${CDN}/project-photo-09_05ec3ad5.jpg`, caption: "Power Line Construction" },
-  { url: `${CDN}/project-photo-10_6fdd2896.jpg`, caption: "Renewable Energy Project" },
-  { url: `${CDN}/project-photo-11_8d3801ef.jpg`, caption: "Civil and Electrical Works" },
-  { url: `${CDN}/project-photo-13_6c135574.jpg`, caption: "VCB Yard Installation" },
-  { url: `${CDN}/project-photo-15_95dbd21b.jpg`, caption: "Underground Cable Project" },
-  { url: `${CDN}/real-photo-01_583e202f.jpeg`, caption: "Power Line Maintenance Works" },
-  { url: `${CDN}/real-photo-02_0c3c343e.jpeg`, caption: "Substation Gantry Structure" },
-  { url: `${CDN}/real-photo-03_cf4636d7.jpeg`, caption: "Substation Construction Site" },
-  { url: `${CDN}/real-photo-04_ed0e5ad5.jpeg`, caption: "Substation Insulator Works" },
-  { url: `${CDN}/real-photo-05_a7b1bd3d.jpeg`, caption: "Wind Farm Power Infrastructure" },
-  { url: `${CDN}/real-photo-06_e8b92aae.jpeg`, caption: "Site Team Briefing — Harlapur" },
-  { url: `${CDN}/real-photo-07_0d37a5a6.jpeg`, caption: "ITC Metering Yard — Solar Plant" },
-  { url: `${CDN}/real-photo-08_2e5d4c1d.jpeg`, caption: "Power Pole Installation" },
-  { url: `${CDN}/real-photo-09_463f44ad.jpeg`, caption: "Foundation Boring Works" },
-  { url: `${CDN}/real-photo-10_821a6307.jpeg`, caption: "Pole Erection with Crane" },
+type Photo = { url: string; caption: string; category: string };
+
+// Real project photos first, then stock photos
+const photos: Photo[] = [
+  // ── Real Site Photos ──────────────────────────────────────────────────────
+  { url: `${CDN}/real-photo-01_583e202f.jpeg`, caption: "Power Line Maintenance Works", category: "Site Works" },
+  { url: `${CDN}/real-photo-10_821a6307.jpeg`, caption: "Pole Erection with Crane", category: "Site Works" },
+  { url: `${CDN}/real-photo-09_463f44ad.jpeg`, caption: "Foundation Boring Works", category: "Site Works" },
+  { url: `${CDN}/real-photo-06_e8b92aae.jpeg`, caption: "Site Team Briefing — Harlapur", category: "Site Works" },
+  { url: `${CDN}/real-photo-08_2e5d4c1d.jpeg`, caption: "Power Pole Installation", category: "Site Works" },
+  { url: `${CDN}/real-photo-05_a7b1bd3d.jpeg`, caption: "Wind Farm Power Infrastructure", category: "Renewable Energy" },
+  { url: `${CDN}/real-photo-02_0c3c343e.jpeg`, caption: "Substation Gantry Structure", category: "Substation Works" },
+  { url: `${CDN}/real-photo-03_cf4636d7.jpeg`, caption: "Substation Construction Site", category: "Substation Works" },
+  { url: `${CDN}/real-photo-04_ed0e5ad5.jpeg`, caption: "Substation Insulator Works", category: "Substation Works" },
+  { url: `${CDN}/real-photo-07_0d37a5a6.jpeg`, caption: "ITC Metering Yard — Solar Plant", category: "Substation Works" },
+  // ── Stock / Reference Photos ──────────────────────────────────────────────
+  { url: `${CDN}/project-photo-01_1f9b80fb.jpg`, caption: "Power Transmission Infrastructure", category: "Site Works" },
+  { url: `${CDN}/project-photo-04_ed704ea5.jpg`, caption: "Tower Erection Works", category: "Site Works" },
+  { url: `${CDN}/project-photo-09_05ec3ad5.jpg`, caption: "Power Line Construction", category: "Site Works" },
+  { url: `${CDN}/project-photo-11_8d3801ef.jpg`, caption: "Civil and Electrical Works", category: "Site Works" },
+  { url: `${CDN}/project-photo-15_95dbd21b.jpg`, caption: "Underground Cable Project", category: "Site Works" },
+  { url: `${CDN}/project-photo-10_6fdd2896.jpg`, caption: "Renewable Energy Project", category: "Renewable Energy" },
+  { url: `${CDN}/project-photo-03_c054c72e.jpg`, caption: "Electrical Line Installation", category: "Renewable Energy" },
+  { url: `${CDN}/project-photo-02_f7db99ef.jpg`, caption: "Substation Construction Works", category: "Substation Works" },
+  { url: `${CDN}/project-photo-06_77b5c7dd.jpg`, caption: "33kV Line Project", category: "Substation Works" },
+  { url: `${CDN}/project-photo-07_1dcbe847.jpg`, caption: "Substation Commissioning", category: "Substation Works" },
+  { url: `${CDN}/project-photo-08_3b686b1c.jpg`, caption: "Electrical Infrastructure Works", category: "Substation Works" },
+  { url: `${CDN}/project-photo-13_6c135574.jpg`, caption: "VCB Yard Installation", category: "Substation Works" },
 ];
+
+const CATEGORIES = ["All", "Site Works", "Substation Works", "Renewable Energy"];
 
 export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [activeCategory, setActiveCategory] = useState("All");
 
+  const filtered = activeCategory === "All" ? photos : photos.filter((p) => p.category === activeCategory);
+
+  // Build lightbox index within the filtered array
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
   const prev = () =>
-    setLightboxIndex((i) => (i !== null ? (i - 1 + photos.length) % photos.length : 0));
+    setLightboxIndex((i) => (i !== null ? (i - 1 + filtered.length) % filtered.length : 0));
   const next = () =>
-    setLightboxIndex((i) => (i !== null ? (i + 1) % photos.length : 0));
+    setLightboxIndex((i) => (i !== null ? (i + 1) % filtered.length : 0));
 
   return (
     <div className="w-full">
-      {/* Page Header — tall, natural, photo-backed */}
+      {/* Page Header */}
       <section className="relative overflow-hidden text-white" style={{ minHeight: '420px' }}>
         <div className="absolute inset-0 z-0">
           <img
@@ -85,40 +96,68 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Masonry Gallery */}
+      {/* Gallery Section */}
       <section className="py-16" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
-          <div
-            style={{
-              columnCount: 3,
-              columnGap: "1rem",
-            }}
-            className="sm:columns-2 md:columns-3"
-          >
-            {photos.map((photo, index) => (
-              <div
-                key={photo.url}
-                className="relative overflow-hidden rounded-xl cursor-pointer group mb-4 break-inside-avoid"
-                onClick={() => openLightbox(index)}
-                style={{ display: "inline-block", width: "100%" }}
+
+          {/* Category Filter Tabs */}
+          <AnimatedSection className="flex flex-wrap justify-center gap-3 mb-10">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className="px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
+                style={
+                  activeCategory === cat
+                    ? { background: '#16a34a', color: '#fff', boxShadow: '0 4px 14px rgba(22,163,74,0.35)' }
+                    : { background: '#fff', color: '#374151', border: '1.5px solid #d1fae5' }
+                }
               >
-                <img
-                  src={photo.url}
-                  alt={photo.caption}
-                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ display: "block" }}
-                />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <p className="text-white text-sm font-medium">{photo.caption}</p>
-                </div>
-                {/* Zoom icon */}
-                <div className="absolute top-3 right-3 bg-white/90 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ZoomIn size={16} className="text-[#0f172a]" />
-                </div>
-              </div>
+                {cat}
+                <span className="ml-2 text-xs opacity-70">
+                  ({cat === "All" ? photos.length : photos.filter(p => p.category === cat).length})
+                </span>
+              </button>
             ))}
-          </div>
+          </AnimatedSection>
+
+          {/* Masonry Grid */}
+          <AnimatedSection delay={100}>
+            <div
+              style={{ columnCount: 3, columnGap: "1rem" }}
+              className="sm:columns-2 md:columns-3"
+            >
+              {filtered.map((photo, index) => (
+                <div
+                  key={photo.url}
+                  className="relative overflow-hidden rounded-xl cursor-pointer group mb-4 break-inside-avoid"
+                  onClick={() => openLightbox(index)}
+                  style={{ display: "inline-block", width: "100%" }}
+                >
+                  <img
+                    src={photo.url}
+                    alt={photo.caption}
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ display: "block" }}
+                  />
+                  {/* Category badge */}
+                  <div className="absolute top-3 left-3 px-2 py-0.5 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: 'rgba(22,163,74,0.85)', color: '#fff' }}>
+                    {photo.category}
+                  </div>
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <p className="text-white text-sm font-medium">{photo.caption}</p>
+                  </div>
+                  {/* Zoom icon */}
+                  <div className="absolute top-3 right-3 bg-white/90 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ZoomIn size={16} className="text-[#0f172a]" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+
         </div>
       </section>
 
@@ -153,14 +192,18 @@ export default function Gallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={photos[lightboxIndex].url}
-              alt={photos[lightboxIndex].caption}
+              src={filtered[lightboxIndex].url}
+              alt={filtered[lightboxIndex].caption}
               className="max-h-[75vh] w-auto max-w-full object-contain rounded-xl shadow-2xl"
             />
             <div className="mt-4 text-center">
-              <p className="text-white text-lg font-medium">{photos[lightboxIndex].caption}</p>
+              <span className="inline-block px-3 py-0.5 rounded-full text-xs font-semibold mb-2"
+                style={{ background: 'rgba(22,163,74,0.8)', color: '#fff' }}>
+                {filtered[lightboxIndex].category}
+              </span>
+              <p className="text-white text-lg font-medium">{filtered[lightboxIndex].caption}</p>
               <p className="text-white/40 text-sm mt-1">
-                {lightboxIndex + 1} / {photos.length}
+                {lightboxIndex + 1} / {filtered.length}
               </p>
             </div>
           </div>
