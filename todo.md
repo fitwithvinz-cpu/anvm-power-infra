@@ -94,3 +94,4 @@
 - [x] Remove last photo from Gallery section
 - [x] Remove 5th photo from Gallery section
 - [x] Remove Transmission Line Erection photo from Gallery
+- [x] Remove Metering System Works photo from Gallery
