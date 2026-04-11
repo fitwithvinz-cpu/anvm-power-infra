@@ -95,3 +95,5 @@
 - [x] Remove 5th photo from Gallery section
 - [x] Remove Transmission Line Erection photo from Gallery
 - [x] Remove Metering System Works photo from Gallery
+- [x] Upload 10 real project photos to CDN
+- [x] Add 10 real project photos to Gallery page

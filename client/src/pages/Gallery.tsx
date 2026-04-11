@@ -35,6 +35,16 @@ const photos = [
   { url: `${CDN}/project-photo-11_8d3801ef.jpg`, caption: "Civil and Electrical Works" },
   { url: `${CDN}/project-photo-13_6c135574.jpg`, caption: "VCB Yard Installation" },
   { url: `${CDN}/project-photo-15_95dbd21b.jpg`, caption: "Underground Cable Project" },
+  { url: `${CDN}/real-photo-01_583e202f.jpeg`, caption: "Power Line Maintenance Works" },
+  { url: `${CDN}/real-photo-02_0c3c343e.jpeg`, caption: "Substation Gantry Structure" },
+  { url: `${CDN}/real-photo-03_cf4636d7.jpeg`, caption: "Substation Construction Site" },
+  { url: `${CDN}/real-photo-04_ed0e5ad5.jpeg`, caption: "Substation Insulator Works" },
+  { url: `${CDN}/real-photo-05_a7b1bd3d.jpeg`, caption: "Wind Farm Power Infrastructure" },
+  { url: `${CDN}/real-photo-06_e8b92aae.jpeg`, caption: "Site Team Briefing — Harlapur" },
+  { url: `${CDN}/real-photo-07_0d37a5a6.jpeg`, caption: "ITC Metering Yard — Solar Plant" },
+  { url: `${CDN}/real-photo-08_2e5d4c1d.jpeg`, caption: "Power Pole Installation" },
+  { url: `${CDN}/real-photo-09_463f44ad.jpeg`, caption: "Foundation Boring Works" },
+  { url: `${CDN}/real-photo-10_821a6307.jpeg`, caption: "Pole Erection with Crane" },
 ];
 
 export default function Gallery() {
