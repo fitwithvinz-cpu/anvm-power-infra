@@ -27,7 +27,6 @@ const photos = [
   { url: `${CDN}/project-photo-02_f7db99ef.jpg`, caption: "Substation Construction Works" },
   { url: `${CDN}/project-photo-03_c054c72e.jpg`, caption: "Electrical Line Installation" },
   { url: `${CDN}/project-photo-04_ed704ea5.jpg`, caption: "Tower Erection Works" },
-  { url: `${CDN}/project-photo-05_07bc1300.jpg`, caption: "High Voltage Transmission Line" },
   { url: `${CDN}/project-photo-06_77b5c7dd.jpg`, caption: "33kV Line Project" },
   { url: `${CDN}/project-photo-07_1dcbe847.jpg`, caption: "Substation Commissioning" },
   { url: `${CDN}/project-photo-08_3b686b1c.jpg`, caption: "Electrical Infrastructure Works" },

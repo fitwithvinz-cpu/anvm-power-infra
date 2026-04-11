@@ -92,3 +92,4 @@
 - [x] Redesign letterhead with light subtle colors (not plain white) for better visual appeal
 - [x] Remove KEB from trusted clients section on homepage
 - [x] Remove last photo from Gallery section
+- [x] Remove 5th photo from Gallery section
