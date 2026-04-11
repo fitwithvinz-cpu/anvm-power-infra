@@ -275,6 +275,7 @@ export default function Projects() {
               "Wind World India Ltd",
               "JSW Renewables",
               "CleanMax Renewables",
+              "Suzlon Energy Ltd",
             ].map((client, index) => (
               <div
                 key={index}

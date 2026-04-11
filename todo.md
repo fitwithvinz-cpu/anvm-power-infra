@@ -100,3 +100,5 @@
 - [x] Reorganize Gallery page — real photos first, category tabs, balanced layout
 - [x] Remove KEB from Key Clients section on homepage
 - [x] Fix spelling to CleanMax in Key Clients section
+- [ ] Add JSW to Key Clients section on Projects page
+- [x] Add Suzlon to Key Clients section on Projects page
