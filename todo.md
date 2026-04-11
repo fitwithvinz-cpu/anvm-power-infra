@@ -98,3 +98,5 @@
 - [x] Upload 10 real project photos to CDN
 - [x] Add 10 real project photos to Gallery page
 - [x] Reorganize Gallery page — real photos first, category tabs, balanced layout
+- [x] Remove KEB from Key Clients section on homepage
+- [x] Fix spelling to CleanMax in Key Clients section

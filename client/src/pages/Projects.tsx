@@ -271,11 +271,10 @@ export default function Projects() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               "Karnataka Power Transmission Corporation Limited (KPTCL)",
-              "Karnataka Electricity Board (KEB)",
               "Hubli Electricity Supply Company Limited (HESCOM)",
               "Wind World India Ltd",
               "JSW Renewables",
-              "Clinmax Renewables",
+              "CleanMax Renewables",
             ].map((client, index) => (
               <div
                 key={index}

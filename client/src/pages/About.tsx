@@ -98,7 +98,7 @@ export default function About() {
                   Carrying forward this legacy, ANVM Power Infra Pvt. Ltd. was formally incorporated in 2025 with a vision to deliver high-quality, reliable, and efficient power solutions across Karnataka and beyond.
                 </p>
                 <p>
-                  The company has successfully executed numerous projects in collaboration with <strong className="text-green-700">KPTCL, KEB, and HESCOM</strong>, along with various private and industrial clients.
+                  The company has successfully executed numerous projects in collaboration with <strong className="text-green-700">KPTCL, HESCOM, and CleanMax Renewables</strong>, along with various private and industrial clients.
                 </p>
               </div>
             </AnimatedSection>
