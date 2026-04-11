@@ -88,3 +88,6 @@
 - [x] Add small animated transmission line decoration in navbar white space
 - [x] Increase logo size in homepage hero section
 - [x] Increase navbar logo size in menu bar
+- [x] Redesign letterhead with light/white background for better logo visibility
+- [x] Redesign letterhead with light subtle colors (not plain white) for better visual appeal
+- [x] Remove KEB from trusted clients section on homepage

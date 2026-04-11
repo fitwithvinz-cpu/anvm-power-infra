@@ -94,14 +94,13 @@ export default function Home() {
     { icon: Award, title: "20+ Years Legacy", description: "Built on the foundation of Shri Mangalagouri Electricals (est. 2005), with two decades of proven excellence in power infrastructure." },
     { icon: CheckCircle, title: "Certified Excellence", description: "ISO certified processes with strict quality control and safety standards on every project we undertake." },
     { icon: Users, title: "Expert Team", description: "50+ skilled engineers and technicians with deep domain expertise in power and renewable energy infrastructure." },
-    { icon: TrendingUp, title: "Proven Track Record", description: "50+ successfully completed projects across Karnataka for KPTCL, KEB, HESCOM, and other major utilities." },
+    { icon: TrendingUp, title: "Proven Track Record", description: "50+ successfully completed projects across Karnataka for KPTCL, HESCOM, BESCOM, and other major utilities." },
     { icon: Globe, title: "Renewable Focus", description: "Committed to India's clean energy future with specialised wind and solar infrastructure expertise." },
     { icon: Star, title: "Client Trust", description: "Long-term partnerships with Karnataka's major power utilities built on reliability, quality, and timely delivery." },
   ];
 
   const clients = [
     { name: "KPTCL", full: "Karnataka Power Transmission Corporation Ltd." },
-    { name: "KEB", full: "Karnataka Electricity Board" },
     { name: "HESCOM", full: "Hubli Electricity Supply Company" },
     { name: "BESCOM", full: "Bangalore Electricity Supply Company" },
     { name: "MESCOM", full: "Mangalore Electricity Supply Company" },
@@ -111,7 +110,7 @@ export default function Home() {
   const testimonials = [
     { text: "ANVM Power Infra delivered our 110kV transmission line project on time and within budget. Their team's technical expertise and safety standards are exceptional.", author: "Project Manager", company: "KPTCL", rating: 5 },
     { text: "We have been working with ANVM for our substation construction projects. Their quality of work and commitment to deadlines is commendable.", author: "Senior Engineer", company: "HESCOM", rating: 5 },
-    { text: "The renewable energy integration project was completed flawlessly. ANVM's team demonstrated deep knowledge and professional execution throughout.", author: "Technical Director", company: "KEB", rating: 5 },
+    { text: "The substation commissioning work was handled with great precision and professionalism. ANVM's team exceeded our expectations on every front.", author: "Technical Director", company: "BESCOM", rating: 5 },
   ];
 
   return (
@@ -446,7 +445,7 @@ export default function Home() {
                 Established in 2025 and built on the 20-year legacy of <strong style={{ color: "#0f172a" }}>Shri Mangalagouri Electricals</strong> (founded 2005), ANVM Power Infra Pvt. Ltd. is at the forefront of electrical infrastructure development in Karnataka.
               </p>
               <p className="leading-relaxed mb-8" style={{ color: "#64748b" }}>
-                With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation. Our team works with leading corporations including KPTCL, KEB, and HESCOM.
+                With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation. Our team works with leading corporations including KPTCL, HESCOM, and BESCOM.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {["Power Transmission", "Renewable Energy", "Substation Works", "Civil Infrastructure"].map((tag) => (
