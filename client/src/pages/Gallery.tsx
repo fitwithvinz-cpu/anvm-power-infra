@@ -38,7 +38,6 @@ const photos = [
   { url: `${CDN}/project-photo-13_6c135574.jpg`, caption: "VCB Yard Installation" },
   { url: `${CDN}/project-photo-14_fdac6a93.jpg`, caption: "Metering System Works" },
   { url: `${CDN}/project-photo-15_95dbd21b.jpg`, caption: "Underground Cable Project" },
-  { url: `${CDN}/project-photo-16_aea7bccf.jpg`, caption: "Wind Farm Infrastructure" },
 ];
 
 export default function Gallery() {
