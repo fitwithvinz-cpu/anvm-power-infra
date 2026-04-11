@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Images } from "lucide-react";
+import { MapPin, Images } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -189,10 +189,7 @@ export default function Projects() {
                     <span className="inline-block bg-[#16a34a] text-white px-3 py-1 rounded-full text-xs font-semibold">
                       {project.category}
                     </span>
-                    <span className="text-sm text-gray-400 flex items-center gap-1">
-                      <Calendar size={14} />
-                      {project.year}
-                    </span>
+
                   </div>
                   <h3 className="text-lg font-bold text-[#0f172a] mb-2 group-hover:text-[#16a34a] transition-colors leading-snug">
                     {project.title}
