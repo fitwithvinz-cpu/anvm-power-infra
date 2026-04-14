@@ -142,7 +142,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content — two-column: text left, logo+turbine right */}
-        <div className="container relative z-10 py-32 md:py-40 flex items-center gap-8">
+        <div className="container relative z-10 pt-44 pb-20 md:pt-52 md:pb-24 flex items-center gap-8">
 
           {/* LEFT: Text content */}
           <div className="flex-1 min-w-0">
@@ -224,7 +224,7 @@ export default function Home() {
           {/* RIGHT: Large logo + 1 rotating turbine */}
           <div
             className="hidden lg:flex flex-row items-center justify-center flex-shrink-0 gap-4"
-            style={{ width: "520px", animation: "fadeInDown 1s ease 0.4s both" }}
+            style={{ width: "480px", animation: "fadeInDown 1s ease 0.4s both" }}
           >
             {/* Single rotating turbine SVG */}
             <div className="flex-shrink-0">
@@ -294,7 +294,7 @@ export default function Home() {
                 alt="ANVM Power Infra"
                 className="w-auto object-contain"
                 style={{
-                  height: "480px",
+                  height: "360px",
                   position: "relative",
                   zIndex: 1,
                   filter:
