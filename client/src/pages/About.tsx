@@ -57,12 +57,12 @@ export default function About() {
         {/* Background photo */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/team-engineers_a3e45cd7.jpg"
-            alt="Our team"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/about-header-substation_a03f0ac8.jpg"
+            alt="Power substation"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(5,15,35,0.90) 0%, rgba(5,15,35,0.75) 50%, rgba(5,15,35,0.55) 100%)' }} />
-          <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, rgba(5,15,35,0.6))' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(5,15,40,0.82) 0%, rgba(5,20,50,0.65) 50%, rgba(5,15,40,0.50) 100%)' }} />
+          <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, rgba(5,15,40,0.55))' }} />
         </div>
         {/* Transmission tower animation */}
         <div className="absolute inset-0 z-[1] overflow-hidden">
