@@ -261,6 +261,18 @@ export default function Home() {
               </svg>
             </div>
 
+            {/* Logo — large, no box */}
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
+              alt="ANVM Power Infra"
+              className="w-auto object-contain"
+              style={{
+                height: "340px",
+                filter:
+                  "brightness(10) saturate(0) drop-shadow(0 0 1px rgba(255,255,255,0.8))",
+              }}
+            />
+
           </div>
         </div>
 
