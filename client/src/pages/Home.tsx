@@ -618,12 +618,12 @@ export default function Home() {
             </h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {clients.map((client, i) => (
               <AnimatedSection key={client.name} delay={i * 60}>
                 <div
                   className="flex flex-col items-center justify-center p-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default"
-                  style={{ background: "white", border: "1px solid #e2e8f0", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}
+                  style={{ background: "white", border: "1px solid #e2e8f0", boxShadow: "0 2px 8px rgba(0,0,0,0.04)", width: "180px", minHeight: "100px" }}
                 >
                   <div className="text-2xl font-black mb-2" style={{ color: "#0f172a" }}>{client.name}</div>
                   <p className="text-xs leading-tight" style={{ color: "#94a3b8" }}>{client.full}</p>
