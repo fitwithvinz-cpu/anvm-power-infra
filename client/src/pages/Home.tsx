@@ -224,7 +224,7 @@ export default function Home() {
           {/* RIGHT: Large logo + 1 rotating turbine */}
           <div
             className="hidden lg:flex flex-row items-center justify-center flex-shrink-0 gap-4"
-            style={{ width: "380px", animation: "fadeInDown 1s ease 0.4s both" }}
+            style={{ width: "520px", animation: "fadeInDown 1s ease 0.4s both" }}
           >
             {/* Single rotating turbine SVG */}
             <div className="flex-shrink-0">
