@@ -1,4 +1,5 @@
 import { MapPin, Images } from "lucide-react";
+import RenewableScene from "@/components/RenewableScene";
 import { useState } from "react";
 import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -286,135 +287,8 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          RENEWABLE ENERGY ANIMATION — Wind + Solar
-      ═══════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #e8f5e9 0%, #bbdefb 60%, #90caf9 100%)', height: '220px' }}>
-        {/* Sun */}
-        <div className="absolute" style={{ top: '18px', right: '12%', width: '54px', height: '54px' }}>
-          <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
-            <circle cx="27" cy="27" r="14" fill="#FDD835" opacity="0.95" />
-            {[0,45,90,135,180,225,270,315].map((deg, i) => (
-              <line key={i} x1="27" y1="27"
-                x2={27 + 22 * Math.cos(deg * Math.PI / 180)}
-                y2={27 + 22 * Math.sin(deg * Math.PI / 180)}
-                stroke="#FDD835" strokeWidth="2.5" strokeLinecap="round" opacity="0.7" />
-            ))}
-          </svg>
-        </div>
-
-        {/* Solar Panels — animated tilt + shine */}
-        <style>{`
-          @keyframes solarTilt1 {
-            0%   { transform: rotate(-18deg); }
-            50%  { transform: rotate(-6deg); }
-            100% { transform: rotate(-18deg); }
-          }
-          @keyframes solarTilt2 {
-            0%   { transform: rotate(-6deg); }
-            50%  { transform: rotate(-18deg); }
-            100% { transform: rotate(-6deg); }
-          }
-          @keyframes solarShine {
-            0%   { opacity: 0.05; }
-            50%  { opacity: 0.45; }
-            100% { opacity: 0.05; }
-          }
-          @keyframes solarShine2 {
-            0%   { opacity: 0.45; }
-            50%  { opacity: 0.05; }
-            100% { opacity: 0.45; }
-          }
-          .solar-panel-1 { transform-origin: 35px 62px; animation: solarTilt1 4s ease-in-out infinite; }
-          .solar-panel-2 { transform-origin: 112px 62px; animation: solarTilt2 4s ease-in-out infinite; }
-          .solar-shine-1 { animation: solarShine 3s ease-in-out infinite; }
-          .solar-shine-2 { animation: solarShine2 3s ease-in-out infinite; }
-        `}</style>
-        <div className="absolute" style={{ bottom: '48px', right: '6%' }}>
-          <svg viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '180px', height: '80px', overflow: 'visible' }}>
-            <defs>
-              <linearGradient id="sshine1" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="white" stopOpacity="0.9" />
-                <stop offset="60%" stopColor="white" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="white" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient id="sshine2" x1="1" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="white" stopOpacity="0.9" />
-                <stop offset="60%" stopColor="white" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="white" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            {/* Panel 1 — tilts left to right */}
-            <g className="solar-panel-1">
-              <rect x="5" y="22" width="60" height="38" rx="3" fill="#1565C0" stroke="#0D47A1" strokeWidth="1.5" />
-              <line x1="5" y1="34" x2="65" y2="34" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
-              <line x1="5" y1="46" x2="65" y2="46" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
-              <line x1="25" y1="22" x2="25" y2="60" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
-              <line x1="45" y1="22" x2="45" y2="60" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
-              <rect x="5" y="22" width="60" height="38" rx="3" fill="url(#sshine1)" className="solar-shine-1" />
-              {/* Stand */}
-              <line x1="35" y1="60" x2="35" y2="75" stroke="#546E7A" strokeWidth="2.5" />
-              <line x1="20" y1="75" x2="50" y2="75" stroke="#546E7A" strokeWidth="2" />
-            </g>
-            {/* Panel 2 — tilts opposite phase */}
-            <g className="solar-panel-2">
-              <rect x="88" y="22" width="60" height="38" rx="3" fill="#1565C0" stroke="#0D47A1" strokeWidth="1.5" />
-              <line x1="88" y1="34" x2="148" y2="34" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
-              <line x1="88" y1="46" x2="148" y2="46" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
-              <line x1="108" y1="22" x2="108" y2="60" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
-              <line x1="128" y1="22" x2="128" y2="60" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
-              <rect x="88" y="22" width="60" height="38" rx="3" fill="url(#sshine2)" className="solar-shine-2" />
-              {/* Stand */}
-              <line x1="118" y1="60" x2="118" y2="75" stroke="#546E7A" strokeWidth="2.5" />
-              <line x1="103" y1="75" x2="133" y2="75" stroke="#546E7A" strokeWidth="2" />
-            </g>
-          </svg>
-        </div>
-
-        {/* Wind Turbines — small, inline SVG */}
-        {[
-          { x: '8%',  h: 110, speed: 5,   opacity: 0.9 },
-          { x: '20%', h: 90,  speed: 7,   opacity: 0.75 },
-          { x: '33%', h: 120, speed: 4.5, opacity: 0.95 },
-          { x: '46%', h: 80,  speed: 6,   opacity: 0.65 },
-          { x: '57%', h: 100, speed: 5.5, opacity: 0.85 },
-        ].map((t, i) => {
-          const bladeLen = t.h * 0.58;
-          const hubY = 220 - t.h - 10;
-          const baseY = 210;
-          return (
-            <div key={i} className="absolute" style={{ left: t.x, bottom: 0, width: '60px', height: '220px', pointerEvents: 'none' }}>
-              <svg viewBox="0 0 60 220" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
-                {/* Tower */}
-                <polygon
-                  points={`28,${baseY} 32,${baseY} 31,${hubY} 29,${hubY}`}
-                  fill="#546E7A" opacity={t.opacity}
-                />
-                {/* Rotating blades */}
-                <g transform={`translate(30, ${hubY})`}>
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    from={`0 0 0`}
-                    to={`360 0 0`}
-                    dur={`${t.speed}s`}
-                    repeatCount="indefinite"
-                    additive="sum"
-                  />
-                  <ellipse cx="0" cy={-bladeLen / 2} rx={t.h * 0.025} ry={bladeLen / 2} fill="#78909C" opacity={t.opacity} transform={`rotate(0)`} />
-                  <ellipse cx="0" cy={-bladeLen / 2} rx={t.h * 0.025} ry={bladeLen / 2} fill="#78909C" opacity={t.opacity} transform={`rotate(120)`} />
-                  <ellipse cx="0" cy={-bladeLen / 2} rx={t.h * 0.025} ry={bladeLen / 2} fill="#78909C" opacity={t.opacity} transform={`rotate(240)`} />
-                  <circle cx="0" cy="0" r={t.h * 0.025} fill="#455A64" opacity={t.opacity} />
-                </g>
-              </svg>
-            </div>
-          );
-        })}
-
-        {/* Ground line */}
-        <div className="absolute bottom-0 left-0 right-0 h-10" style={{ background: 'linear-gradient(180deg, transparent, #4caf5044)' }} />
-        <div className="absolute bottom-0 left-0 right-0 h-3 rounded-t-full" style={{ background: '#388e3c', opacity: 0.5 }} />
-      </section>
+      {/* Renewable Energy Scene */}
+      <RenewableScene />
     </div>
   );
 }
