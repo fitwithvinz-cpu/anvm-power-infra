@@ -260,16 +260,28 @@ export default function Home() {
                 </g>
               </svg>
             </div>
-            {/* Logo */}
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
-              alt="ANVM Power Infra"
-              className="w-auto object-contain"
+            {/* Logo — frosted glass card for clear visibility */}
+            <div
               style={{
-                height: "320px",
-                filter: "brightness(1.4) drop-shadow(0 0 40px rgba(22,163,74,0.9)) drop-shadow(0 0 80px rgba(22,163,74,0.5))",
+                background: "rgba(255,255,255,0.13)",
+                backdropFilter: "blur(14px)",
+                WebkitBackdropFilter: "blur(14px)",
+                borderRadius: "24px",
+                padding: "20px 24px",
+                border: "1.5px solid rgba(255,255,255,0.28)",
+                boxShadow: "0 8px 40px rgba(0,0,0,0.45), 0 0 60px rgba(22,163,74,0.20), inset 0 1px 0 rgba(255,255,255,0.15)",
               }}
-            />
+            >
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
+                alt="ANVM Power Infra"
+                className="w-auto object-contain"
+                style={{
+                  height: "280px",
+                  filter: "brightness(1.25) contrast(1.15) drop-shadow(0 2px 16px rgba(0,0,0,0.7))",
+                }}
+              />
+            </div>
           </div>
         </div>
 
