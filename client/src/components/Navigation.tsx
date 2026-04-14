@@ -103,27 +103,27 @@ export default function Navigation() {
 
             {/* ── RIGHT TOWER (near Get in Touch, x≈1245) ── */}
             <g opacity="0.5">
-              <line x1="1245" y1="100" x2="1245" y2="12" stroke="#1e3a8a" strokeWidth="2.5"/>
-              <line x1="1225" y1="20" x2="1265" y2="20" stroke="#1e3a8a" strokeWidth="2"/>
-              <line x1="1228" y1="36" x2="1262" y2="36" stroke="#1e3a8a" strokeWidth="2"/>
-              <line x1="1239" y1="12" x2="1225" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
-              <line x1="1251" y1="12" x2="1265" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
-              <line x1="1237" y1="20" x2="1228" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
-              <line x1="1253" y1="20" x2="1262" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
-              <line x1="1245" y1="100" x2="1230" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
-              <line x1="1245" y1="100" x2="1260" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
-              <circle cx="1225" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
-              <circle cx="1265" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
-              <circle cx="1228" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
-              <circle cx="1262" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
+              <line x1="1380" y1="100" x2="1380" y2="12" stroke="#1e3a8a" strokeWidth="2.5"/>
+              <line x1="1360" y1="20" x2="1400" y2="20" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="1363" y1="36" x2="1397" y2="36" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="1374" y1="12" x2="1360" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="1386" y1="12" x2="1400" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="1372" y1="20" x2="1363" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="1388" y1="20" x2="1397" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="1380" y1="100" x2="1365" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="1380" y1="100" x2="1395" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
+              <circle cx="1360" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
+              <circle cx="1400" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
+              <circle cx="1363" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
+              <circle cx="1397" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
             </g>
 
             {/* ── POWER LINES — top pair (y≈20) ── */}
-            <path d="M290 20 Q780 42 1225 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
-            <path d="M330 20 Q780 42 1265 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
+            <path d="M290 20 Q780 42 1360 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
+            <path d="M330 20 Q780 42 1400 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
             {/* ── POWER LINES — mid pair (y≈36) ── */}
-            <path d="M293 36 Q780 58 1228 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
-            <path d="M327 36 Q780 58 1262 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
+            <path d="M293 36 Q780 58 1363 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
+            <path d="M327 36 Q780 58 1397 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
 
             {/* ── ANIMATED PULSES ── */}
             {/* Pulse 1 — top line, left to right */}
@@ -132,7 +132,7 @@ export default function Navigation() {
                 <mpath xlinkHref="#fullTopLine"/>
               </animateMotion>
             </circle>
-            <path id="fullTopLine" d="M290 20 Q780 42 1225 20" fill="none"/>
+            <path id="fullTopLine" d="M290 20 Q780 42 1360 20" fill="none"/>
 
             {/* Pulse 2 — mid line, left to right, offset */}
             <circle r="3.5" fill="#22c55e" opacity="0.8">
@@ -140,7 +140,7 @@ export default function Navigation() {
                 <mpath xlinkHref="#fullMidLine"/>
               </animateMotion>
             </circle>
-            <path id="fullMidLine" d="M293 36 Q780 58 1228 36" fill="none"/>
+            <path id="fullMidLine" d="M293 36 Q780 58 1363 36" fill="none"/>
 
             {/* Pulse 3 — top line, right to left */}
             <circle r="3" fill="#4ade80" opacity="0.75">
@@ -148,7 +148,7 @@ export default function Navigation() {
                 <mpath xlinkHref="#fullTopLine2"/>
               </animateMotion>
             </circle>
-            <path id="fullTopLine2" d="M290 20 Q780 42 1225 20" fill="none"/>
+            <path id="fullTopLine2" d="M290 20 Q780 42 1360 20" fill="none"/>
 
             {/* Pulse 4 — mid line, right to left, offset */}
             <circle r="2.5" fill="#86efac" opacity="0.7">
@@ -156,7 +156,7 @@ export default function Navigation() {
                 <mpath xlinkHref="#fullMidLine2"/>
               </animateMotion>
             </circle>
-            <path id="fullMidLine2" d="M293 36 Q780 58 1228 36" fill="none"/>
+            <path id="fullMidLine2" d="M293 36 Q780 58 1363 36" fill="none"/>
           </svg>
         </div>
 

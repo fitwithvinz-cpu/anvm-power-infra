@@ -107,3 +107,4 @@
 - [x] Fix hero section text overlapping with navbar transmission towers on laptop screens
 - [x] Fix About page header — transmission towers overlapping the heading text
 - [x] Extend About page header transmission line from left edge to right edge (full width)
+- [x] Move right tower in navbar to appear after the Get in Touch button (at the far right end)
