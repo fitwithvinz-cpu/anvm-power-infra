@@ -102,3 +102,4 @@
 - [x] Fix spelling to CleanMax in Key Clients section
 - [ ] Add JSW to Key Clients section on Projects page
 - [x] Add Suzlon to Key Clients section on Projects page
+- [x] Extend transmission line animation full width across navbar behind all menu items

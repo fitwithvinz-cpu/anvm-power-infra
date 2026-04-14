@@ -2,94 +2,6 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 
-// Small animated transmission line SVG for the navbar
-function NavTransmissionLine() {
-  return (
-    <div className="hidden lg:flex items-center flex-1 mx-8 overflow-hidden" style={{ maxWidth: 420, height: 90 }}>
-      <svg
-        viewBox="0 0 260 56"
-        width="420"
-        height="90"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ overflow: "visible" }}
-      >
-        {/* Tower 1 */}
-        <g opacity="0.55">
-          {/* Mast */}
-          <line x1="40" y1="52" x2="40" y2="8" stroke="#1e3a8a" strokeWidth="2"/>
-          {/* Cross arm top */}
-          <line x1="28" y1="14" x2="52" y2="14" stroke="#1e3a8a" strokeWidth="1.5"/>
-          {/* Cross arm mid */}
-          <line x1="30" y1="24" x2="50" y2="24" stroke="#1e3a8a" strokeWidth="1.5"/>
-          {/* Diagonal braces */}
-          <line x1="36" y1="8" x2="28" y2="14" stroke="#1e3a8a" strokeWidth="1"/>
-          <line x1="44" y1="8" x2="52" y2="14" stroke="#1e3a8a" strokeWidth="1"/>
-          <line x1="34" y1="14" x2="30" y2="24" stroke="#1e3a8a" strokeWidth="1"/>
-          <line x1="46" y1="14" x2="50" y2="24" stroke="#1e3a8a" strokeWidth="1"/>
-          {/* Base spread */}
-          <line x1="40" y1="52" x2="32" y2="52" stroke="#1e3a8a" strokeWidth="1.5"/>
-          <line x1="40" y1="52" x2="48" y2="52" stroke="#1e3a8a" strokeWidth="1.5"/>
-          {/* Insulators */}
-          <circle cx="28" cy="14" r="2" fill="#16a34a" opacity="0.8"/>
-          <circle cx="52" cy="14" r="2" fill="#16a34a" opacity="0.8"/>
-          <circle cx="30" cy="24" r="1.5" fill="#16a34a" opacity="0.8"/>
-          <circle cx="50" cy="24" r="1.5" fill="#16a34a" opacity="0.8"/>
-        </g>
-
-        {/* Tower 2 */}
-        <g opacity="0.45">
-          <line x1="220" y1="52" x2="220" y2="8" stroke="#1e3a8a" strokeWidth="2"/>
-          <line x1="208" y1="14" x2="232" y2="14" stroke="#1e3a8a" strokeWidth="1.5"/>
-          <line x1="210" y1="24" x2="230" y2="24" stroke="#1e3a8a" strokeWidth="1.5"/>
-          <line x1="216" y1="8" x2="208" y2="14" stroke="#1e3a8a" strokeWidth="1"/>
-          <line x1="224" y1="8" x2="232" y2="14" stroke="#1e3a8a" strokeWidth="1"/>
-          <line x1="214" y1="14" x2="210" y2="24" stroke="#1e3a8a" strokeWidth="1"/>
-          <line x1="226" y1="14" x2="230" y2="24" stroke="#1e3a8a" strokeWidth="1"/>
-          <line x1="220" y1="52" x2="212" y2="52" stroke="#1e3a8a" strokeWidth="1.5"/>
-          <line x1="220" y1="52" x2="228" y2="52" stroke="#1e3a8a" strokeWidth="1.5"/>
-          <circle cx="208" cy="14" r="2" fill="#16a34a" opacity="0.8"/>
-          <circle cx="232" cy="14" r="2" fill="#16a34a" opacity="0.8"/>
-          <circle cx="210" cy="24" r="1.5" fill="#16a34a" opacity="0.8"/>
-          <circle cx="230" cy="24" r="1.5" fill="#16a34a" opacity="0.8"/>
-        </g>
-
-        {/* Power lines — top pair */}
-        <path d="M28 14 Q130 28 208 14" stroke="#374151" strokeWidth="0.8" fill="none" opacity="0.4"/>
-        <path d="M52 14 Q130 28 232 14" stroke="#374151" strokeWidth="0.8" fill="none" opacity="0.4"/>
-
-        {/* Power lines — mid pair */}
-        <path d="M30 24 Q130 38 210 24" stroke="#374151" strokeWidth="0.8" fill="none" opacity="0.35"/>
-        <path d="M50 24 Q130 38 230 24" stroke="#374151" strokeWidth="0.8" fill="none" opacity="0.35"/>
-
-        {/* Animated electricity pulse — top line */}
-        <circle r="3" fill="#16a34a" opacity="0.9">
-          <animateMotion dur="2.2s" repeatCount="indefinite">
-            <mpath xlinkHref="#topLine"/>
-          </animateMotion>
-        </circle>
-        <path id="topLine" d="M28 14 Q130 28 208 14" fill="none"/>
-
-        {/* Animated electricity pulse — mid line (offset timing) */}
-        <circle r="2.5" fill="#22c55e" opacity="0.8">
-          <animateMotion dur="2.8s" begin="0.7s" repeatCount="indefinite">
-            <mpath xlinkHref="#midLine"/>
-          </animateMotion>
-        </circle>
-        <path id="midLine" d="M30 24 Q130 38 210 24" fill="none"/>
-
-        {/* Animated electricity pulse — reverse on bottom line */}
-        <circle r="2" fill="#4ade80" opacity="0.7">
-          <animateMotion dur="3.2s" begin="1.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
-            <mpath xlinkHref="#topLine2"/>
-          </animateMotion>
-        </circle>
-        <path id="topLine2" d="M28 14 Q130 28 208 14" fill="none"/>
-      </svg>
-    </div>
-  );
-}
-
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -148,71 +60,170 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Main navigation */}
-      <div className="container mx-auto px-4 flex items-center justify-between" style={{ minHeight: 100 }}>
-        {/* Logo — bigger and more prominent */}
-        <Link
-          href="/"
-          className="flex items-center hover:opacity-90 transition-opacity flex-shrink-0"
+      {/* Main navigation — full width transmission line as background */}
+      <div className="relative" style={{ minHeight: 100 }}>
+
+        {/* Full-width transmission line SVG — absolute behind everything */}
+        <div
+          className="hidden lg:block absolute inset-0 pointer-events-none"
+          style={{ zIndex: 0, overflow: "hidden" }}
         >
-          <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
-            alt="ANVM Power Infra Pvt. Ltd."
-            style={{ height: 120, width: "auto", objectFit: "contain" }}
-          />
-        </Link>
+          <svg
+            width="100%"
+            height="100"
+            viewBox="0 0 1400 100"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ display: "block" }}
+          >
+            {/* ── LEFT TOWER (near logo, x≈155) ── */}
+            <g opacity="0.6">
+              {/* Mast */}
+              <line x1="155" y1="100" x2="155" y2="12" stroke="#1e3a8a" strokeWidth="2.5"/>
+              {/* Cross arm top */}
+              <line x1="135" y1="20" x2="175" y2="20" stroke="#1e3a8a" strokeWidth="2"/>
+              {/* Cross arm mid */}
+              <line x1="138" y1="36" x2="172" y2="36" stroke="#1e3a8a" strokeWidth="2"/>
+              {/* Diagonal braces top */}
+              <line x1="149" y1="12" x2="135" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="161" y1="12" x2="175" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
+              {/* Diagonal braces mid */}
+              <line x1="147" y1="20" x2="138" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="163" y1="20" x2="172" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
+              {/* Base spread */}
+              <line x1="155" y1="100" x2="140" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="155" y1="100" x2="170" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
+              {/* Insulators */}
+              <circle cx="135" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
+              <circle cx="175" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
+              <circle cx="138" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
+              <circle cx="172" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
+            </g>
 
-        {/* Animated transmission line in the white space */}
-        <NavTransmissionLine />
+            {/* ── RIGHT TOWER (near Get in Touch, x≈1245) ── */}
+            <g opacity="0.5">
+              <line x1="1245" y1="100" x2="1245" y2="12" stroke="#1e3a8a" strokeWidth="2.5"/>
+              <line x1="1225" y1="20" x2="1265" y2="20" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="1228" y1="36" x2="1262" y2="36" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="1239" y1="12" x2="1225" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="1251" y1="12" x2="1265" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="1237" y1="20" x2="1228" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="1253" y1="20" x2="1262" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="1245" y1="100" x2="1230" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="1245" y1="100" x2="1260" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
+              <circle cx="1225" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
+              <circle cx="1265" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
+              <circle cx="1228" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
+              <circle cx="1262" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
+            </g>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-1 flex-shrink-0">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`px-3 py-2 rounded-lg font-medium text-sm transition-all duration-200 relative ${
-                isActive(link.href)
-                  ? "text-white"
-                  : "text-gray-700 hover:text-primary"
-              }`}
-              style={
-                isActive(link.href)
-                  ? { background: "linear-gradient(135deg, #0f172a, #16a34a)" }
-                  : {}
-              }
-            >
-              {link.label}
-            </Link>
-          ))}
+            {/* ── POWER LINES — top pair (y≈20) ── */}
+            <path d="M135 20 Q700 42 1225 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
+            <path d="M175 20 Q700 42 1265 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
+            {/* ── POWER LINES — mid pair (y≈36) ── */}
+            <path d="M138 36 Q700 58 1228 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
+            <path d="M172 36 Q700 58 1262 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
+
+            {/* ── ANIMATED PULSES ── */}
+            {/* Pulse 1 — top line, left to right */}
+            <circle r="4" fill="#16a34a" opacity="0.9">
+              <animateMotion dur="3s" repeatCount="indefinite">
+                <mpath xlinkHref="#fullTopLine"/>
+              </animateMotion>
+            </circle>
+            <path id="fullTopLine" d="M135 20 Q700 42 1225 20" fill="none"/>
+
+            {/* Pulse 2 — mid line, left to right, offset */}
+            <circle r="3.5" fill="#22c55e" opacity="0.8">
+              <animateMotion dur="3.8s" begin="0.8s" repeatCount="indefinite">
+                <mpath xlinkHref="#fullMidLine"/>
+              </animateMotion>
+            </circle>
+            <path id="fullMidLine" d="M138 36 Q700 58 1228 36" fill="none"/>
+
+            {/* Pulse 3 — top line, right to left */}
+            <circle r="3" fill="#4ade80" opacity="0.75">
+              <animateMotion dur="4.2s" begin="1.6s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath xlinkHref="#fullTopLine2"/>
+              </animateMotion>
+            </circle>
+            <path id="fullTopLine2" d="M135 20 Q700 42 1225 20" fill="none"/>
+
+            {/* Pulse 4 — mid line, right to left, offset */}
+            <circle r="2.5" fill="#86efac" opacity="0.7">
+              <animateMotion dur="3.5s" begin="2.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath xlinkHref="#fullMidLine2"/>
+              </animateMotion>
+            </circle>
+            <path id="fullMidLine2" d="M138 36 Q700 58 1228 36" fill="none"/>
+          </svg>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="hidden md:flex items-center gap-3 flex-shrink-0 ml-3">
-          <a
-            href="tel:+918951193777"
-            className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-primary transition-colors"
-          >
-            <Phone size={16} />
-            Call Now
-          </a>
+        {/* Nav content — above the SVG */}
+        <div className="container mx-auto px-4 flex items-center justify-between relative" style={{ zIndex: 1, minHeight: 100 }}>
+          {/* Logo */}
           <Link
-            href="/contact"
-            className="text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all hover:opacity-90 hover:shadow-lg active:scale-95"
-            style={{ background: "linear-gradient(135deg, #16a34a, #0f172a)" }}
+            href="/"
+            className="flex items-center hover:opacity-90 transition-opacity flex-shrink-0"
           >
-            Get in Touch
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
+              alt="ANVM Power Infra Pvt. Ltd."
+              style={{ height: 120, width: "auto", objectFit: "contain" }}
+            />
           </Link>
-        </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Desktop Navigation — centered */}
+          <div className="hidden md:flex items-center gap-1 flex-shrink-0">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-3 py-2 rounded-lg font-medium text-sm transition-all duration-200 relative ${
+                  isActive(link.href)
+                    ? "text-white"
+                    : "text-gray-700 hover:text-primary"
+                }`}
+                style={
+                  isActive(link.href)
+                    ? { background: "linear-gradient(135deg, #0f172a, #16a34a)" }
+                    : { background: "rgba(255,255,255,0.85)", backdropFilter: "blur(4px)" }
+                }
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-3 flex-shrink-0 ml-3">
+            <a
+              href="tel:+918951193777"
+              className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+              style={{ background: "rgba(255,255,255,0.85)", backdropFilter: "blur(4px)", padding: "6px 10px", borderRadius: "8px" }}
+            >
+              <Phone size={16} />
+              Call Now
+            </a>
+            <Link
+              href="/contact"
+              className="text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all hover:opacity-90 hover:shadow-lg active:scale-95"
+              style={{ background: "linear-gradient(135deg, #16a34a, #0f172a)" }}
+            >
+              Get in Touch
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
