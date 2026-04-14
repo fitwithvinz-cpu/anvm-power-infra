@@ -68,7 +68,7 @@ export default function TransmissionScene() {
 
       {/* ── TOWER 1 — anchored at left edge x=0, base at y=160 ── */}
       {/* Mast from y=10 to y=160, centred at x=30 */}
-      <g transform="translate(30, 10)" opacity="0.88">
+      <g transform="translate(60, 10)" opacity="0.88">
         <rect x="-2.5" y="0" width="5" height="150" fill="url(#ts-tg)" rx="1"/>
         {/* Top cross-arm */}
         <rect x="-32" y="8"  width="64" height="3"   fill="url(#ts-tg)" rx="1"/>
@@ -135,7 +135,7 @@ export default function TransmissionScene() {
       </g>
 
       {/* ── TOWER 5 — anchored at right edge x=1200, centred at x=1170 ── */}
-      <g transform="translate(1170, 14)" opacity="0.85">
+      <g transform="translate(1140, 14)" opacity="0.85">
         <rect x="-2.5" y="0" width="5" height="146" fill="url(#ts-tg)" rx="1"/>
         <rect x="-32" y="8"  width="64" height="3"   fill="url(#ts-tg)" rx="1"/>
         <rect x="-23" y="20" width="46" height="2.5" fill="url(#ts-tg)" rx="1"/>
@@ -151,10 +151,10 @@ export default function TransmissionScene() {
       </g>
 
       {/* ── POWER LINES — catenary curves spanning full width ── */}
-      {/* Span 1: Tower1(x=30) → Tower2(x=310) */}
-      <path d="M-2,18   Q170,38  282,27"  fill="none" stroke="rgba(200,225,255,0.50)" strokeWidth="1.2"/>
-      <path d="M30,26   Q170,48  310,36"  fill="none" stroke="rgba(200,225,255,0.50)" strokeWidth="1.2"/>
-      <path d="M62,18   Q170,38  338,27"  fill="none" stroke="rgba(200,225,255,0.50)" strokeWidth="1.2"/>
+      {/* Span 1: Tower1(x=60) → Tower2(x=310) */}
+      <path d="M28,18   Q195,38  312,27"  fill="none" stroke="rgba(200,225,255,0.50)" strokeWidth="1.2"/>
+      <path d="M60,26   Q200,48  340,36"  fill="none" stroke="rgba(200,225,255,0.50)" strokeWidth="1.2"/>
+      <path d="M92,18   Q195,38  368,27"  fill="none" stroke="rgba(200,225,255,0.50)" strokeWidth="1.2"/>
       {/* Span 2: Tower2(x=310) → Tower3(x=600) */}
       <path d="M282,27  Q445,52  572,25"  fill="none" stroke="rgba(200,225,255,0.46)" strokeWidth="1.2"/>
       <path d="M310,36  Q455,62  600,34"  fill="none" stroke="rgba(200,225,255,0.46)" strokeWidth="1.2"/>
@@ -163,20 +163,20 @@ export default function TransmissionScene() {
       <path d="M572,25  Q735,52  863,29"  fill="none" stroke="rgba(200,225,255,0.42)" strokeWidth="1.2"/>
       <path d="M600,34  Q745,62  890,38"  fill="none" stroke="rgba(200,225,255,0.42)" strokeWidth="1.2"/>
       <path d="M628,25  Q745,52  917,29"  fill="none" stroke="rgba(200,225,255,0.42)" strokeWidth="1.2"/>
-      {/* Span 4: Tower4(x=890) → Tower5(x=1170) */}
-      <path d="M863,29  Q1030,52 1138,22" fill="none" stroke="rgba(200,225,255,0.48)" strokeWidth="1.2"/>
-      <path d="M890,38  Q1030,62 1170,30" fill="none" stroke="rgba(200,225,255,0.48)" strokeWidth="1.2"/>
-      <path d="M917,29  Q1030,52 1202,22" fill="none" stroke="rgba(200,225,255,0.48)" strokeWidth="1.2"/>
+      {/* Span 4: Tower4(x=890) → Tower5(x=1140) */}
+      <path d="M893,29  Q1045,52 1108,22" fill="none" stroke="rgba(200,225,255,0.48)" strokeWidth="1.2"/>
+      <path d="M920,38  Q1045,62 1140,30" fill="none" stroke="rgba(200,225,255,0.48)" strokeWidth="1.2"/>
+      <path d="M947,29  Q1045,52 1172,22" fill="none" stroke="rgba(200,225,255,0.48)" strokeWidth="1.2"/>
 
       {/* ── ANIMATED ELECTRICITY FLOW ── */}
-      <path className="ts-f1" d="M30,26  Q170,48  310,36"  fill="none" stroke="rgba(100,200,255,0.88)" strokeWidth="2"   filter="url(#ts-eg)"/>
+      <path className="ts-f1" d="M60,26  Q200,48  340,36"  fill="none" stroke="rgba(100,200,255,0.88)" strokeWidth="2"   filter="url(#ts-eg)"/>
       <path className="ts-f2" d="M310,36 Q455,62  600,34"  fill="none" stroke="rgba(100,200,255,0.88)" strokeWidth="2"   filter="url(#ts-eg)"/>
       <path className="ts-f3" d="M600,34 Q745,62  890,38"  fill="none" stroke="rgba(100,200,255,0.88)" strokeWidth="2"   filter="url(#ts-eg)"/>
-      <path className="ts-f4" d="M890,38 Q1030,62 1170,30" fill="none" stroke="rgba(100,200,255,0.88)" strokeWidth="2"   filter="url(#ts-eg)"/>
+      <path className="ts-f4" d="M920,38 Q1045,62 1140,30" fill="none" stroke="rgba(100,200,255,0.88)" strokeWidth="2"   filter="url(#ts-eg)"/>
       <path className="ts-f5" d="M-2,18  Q170,38  282,27"  fill="none" stroke="rgba(180,230,255,0.65)" strokeWidth="1.5" filter="url(#ts-eg)"/>
 
       {/* ── SPARK NODES ── */}
-      <circle className="ts-s1" cx="30"   cy="26"  r="2.5" fill="rgba(150,220,255,0.9)" filter="url(#ts-sg)"/>
+      <circle className="ts-s1" cx="60"   cy="26"  r="2.5" fill="rgba(150,220,255,0.9)" filter="url(#ts-sg)"/>
       <circle className="ts-s2" cx="310"  cy="36"  r="2.5" fill="rgba(150,220,255,0.9)" filter="url(#ts-sg)"/>
       <circle className="ts-s3" cx="600"  cy="34"  r="2.5" fill="rgba(150,220,255,0.9)" filter="url(#ts-sg)"/>
       <circle className="ts-s4" cx="890"  cy="38"  r="2.5" fill="rgba(150,220,255,0.9)" filter="url(#ts-sg)"/>

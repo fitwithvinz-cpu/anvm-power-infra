@@ -57,8 +57,8 @@ export default function About() {
         {/* Background photo */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/about-header-substation_a03f0ac8.jpg"
-            alt="Power substation"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/about-natural-bg_370d5aaf.jpg"
+            alt="Natural landscape with power infrastructure"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(5,15,40,0.82) 0%, rgba(5,20,50,0.65) 50%, rgba(5,15,40,0.50) 100%)' }} />

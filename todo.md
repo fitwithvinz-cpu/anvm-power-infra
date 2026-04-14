@@ -108,3 +108,5 @@
 - [x] Fix About page header — transmission towers overlapping the heading text
 - [x] Extend About page header transmission line from left edge to right edge (full width)
 - [x] Move right tower in navbar to appear after the Get in Touch button (at the far right end)
+- [x] Change About page header to a natural outdoor background image
+- [x] Adjust TransmissionScene start/end points slightly inward from edges
