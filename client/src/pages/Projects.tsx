@@ -285,6 +285,112 @@ export default function Projects() {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════════════
+          RENEWABLE ENERGY ANIMATION — Wind + Solar
+      ═══════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #e8f5e9 0%, #bbdefb 60%, #90caf9 100%)', height: '220px' }}>
+        {/* Sun */}
+        <div className="absolute" style={{ top: '18px', right: '12%', width: '54px', height: '54px' }}>
+          <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
+            <circle cx="27" cy="27" r="14" fill="#FDD835" opacity="0.95" />
+            {[0,45,90,135,180,225,270,315].map((deg, i) => (
+              <line key={i} x1="27" y1="27"
+                x2={27 + 22 * Math.cos(deg * Math.PI / 180)}
+                y2={27 + 22 * Math.sin(deg * Math.PI / 180)}
+                stroke="#FDD835" strokeWidth="2.5" strokeLinecap="round" opacity="0.7" />
+            ))}
+          </svg>
+        </div>
+
+        {/* Solar Panels */}
+        <div className="absolute" style={{ bottom: '52px', right: '6%' }}>
+          <svg viewBox="0 0 160 70" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '160px', height: '70px' }}>
+            {/* Panel 1 */}
+            <g transform="rotate(-12, 40, 35)">
+              <rect x="5" y="20" width="60" height="36" rx="3" fill="#1565C0" stroke="#0D47A1" strokeWidth="1.5" />
+              <line x1="5" y1="32" x2="65" y2="32" stroke="#90CAF9" strokeWidth="0.8" />
+              <line x1="5" y1="44" x2="65" y2="44" stroke="#90CAF9" strokeWidth="0.8" />
+              <line x1="25" y1="20" x2="25" y2="56" stroke="#90CAF9" strokeWidth="0.8" />
+              <line x1="45" y1="20" x2="45" y2="56" stroke="#90CAF9" strokeWidth="0.8" />
+              {/* Shine animation */}
+              <rect x="5" y="20" width="60" height="36" rx="3" fill="url(#shine1)" opacity="0.3">
+                <animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite" />
+              </rect>
+            </g>
+            {/* Panel 2 */}
+            <g transform="rotate(-12, 115, 35)">
+              <rect x="82" y="20" width="60" height="36" rx="3" fill="#1565C0" stroke="#0D47A1" strokeWidth="1.5" />
+              <line x1="82" y1="32" x2="142" y2="32" stroke="#90CAF9" strokeWidth="0.8" />
+              <line x1="82" y1="44" x2="142" y2="44" stroke="#90CAF9" strokeWidth="0.8" />
+              <line x1="102" y1="20" x2="102" y2="56" stroke="#90CAF9" strokeWidth="0.8" />
+              <line x1="122" y1="20" x2="122" y2="56" stroke="#90CAF9" strokeWidth="0.8" />
+              <rect x="82" y="20" width="60" height="36" rx="3" fill="url(#shine2)" opacity="0.3">
+                <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite" />
+              </rect>
+            </g>
+            {/* Ground stands */}
+            <line x1="20" y1="54" x2="20" y2="68" stroke="#555" strokeWidth="2" />
+            <line x1="50" y1="54" x2="50" y2="68" stroke="#555" strokeWidth="2" />
+            <line x1="97" y1="54" x2="97" y2="68" stroke="#555" strokeWidth="2" />
+            <line x1="127" y1="54" x2="127" y2="68" stroke="#555" strokeWidth="2" />
+            <defs>
+              <linearGradient id="shine1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="white" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="white" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient id="shine2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="white" stopOpacity="0" />
+                <stop offset="100%" stopColor="white" stopOpacity="0.8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        {/* Wind Turbines — small, inline SVG */}
+        {[
+          { x: '8%',  h: 110, speed: 5,   opacity: 0.9 },
+          { x: '20%', h: 90,  speed: 7,   opacity: 0.75 },
+          { x: '33%', h: 120, speed: 4.5, opacity: 0.95 },
+          { x: '46%', h: 80,  speed: 6,   opacity: 0.65 },
+          { x: '57%', h: 100, speed: 5.5, opacity: 0.85 },
+        ].map((t, i) => {
+          const bladeLen = t.h * 0.58;
+          const hubY = 220 - t.h - 10;
+          const baseY = 210;
+          return (
+            <div key={i} className="absolute" style={{ left: t.x, bottom: 0, width: '60px', height: '220px', pointerEvents: 'none' }}>
+              <svg viewBox="0 0 60 220" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
+                {/* Tower */}
+                <polygon
+                  points={`28,${baseY} 32,${baseY} 31,${hubY} 29,${hubY}`}
+                  fill="#546E7A" opacity={t.opacity}
+                />
+                {/* Rotating blades */}
+                <g transform={`translate(30, ${hubY})`}>
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from={`0 0 0`}
+                    to={`360 0 0`}
+                    dur={`${t.speed}s`}
+                    repeatCount="indefinite"
+                    additive="sum"
+                  />
+                  <ellipse cx="0" cy={-bladeLen / 2} rx={t.h * 0.025} ry={bladeLen / 2} fill="#78909C" opacity={t.opacity} transform={`rotate(0)`} />
+                  <ellipse cx="0" cy={-bladeLen / 2} rx={t.h * 0.025} ry={bladeLen / 2} fill="#78909C" opacity={t.opacity} transform={`rotate(120)`} />
+                  <ellipse cx="0" cy={-bladeLen / 2} rx={t.h * 0.025} ry={bladeLen / 2} fill="#78909C" opacity={t.opacity} transform={`rotate(240)`} />
+                  <circle cx="0" cy="0" r={t.h * 0.025} fill="#455A64" opacity={t.opacity} />
+                </g>
+              </svg>
+            </div>
+          );
+        })}
+
+        {/* Ground line */}
+        <div className="absolute bottom-0 left-0 right-0 h-10" style={{ background: 'linear-gradient(180deg, transparent, #4caf5044)' }} />
+        <div className="absolute bottom-0 left-0 right-0 h-3 rounded-t-full" style={{ background: '#388e3c', opacity: 0.5 }} />
+      </section>
     </div>
   );
 }
