@@ -303,47 +303,71 @@ export default function Projects() {
           </svg>
         </div>
 
-        {/* Solar Panels */}
-        <div className="absolute" style={{ bottom: '52px', right: '6%' }}>
-          <svg viewBox="0 0 160 70" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '160px', height: '70px' }}>
-            {/* Panel 1 */}
-            <g transform="rotate(-12, 40, 35)">
-              <rect x="5" y="20" width="60" height="36" rx="3" fill="#1565C0" stroke="#0D47A1" strokeWidth="1.5" />
-              <line x1="5" y1="32" x2="65" y2="32" stroke="#90CAF9" strokeWidth="0.8" />
-              <line x1="5" y1="44" x2="65" y2="44" stroke="#90CAF9" strokeWidth="0.8" />
-              <line x1="25" y1="20" x2="25" y2="56" stroke="#90CAF9" strokeWidth="0.8" />
-              <line x1="45" y1="20" x2="45" y2="56" stroke="#90CAF9" strokeWidth="0.8" />
-              {/* Shine animation */}
-              <rect x="5" y="20" width="60" height="36" rx="3" fill="url(#shine1)" opacity="0.3">
-                <animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite" />
-              </rect>
-            </g>
-            {/* Panel 2 */}
-            <g transform="rotate(-12, 115, 35)">
-              <rect x="82" y="20" width="60" height="36" rx="3" fill="#1565C0" stroke="#0D47A1" strokeWidth="1.5" />
-              <line x1="82" y1="32" x2="142" y2="32" stroke="#90CAF9" strokeWidth="0.8" />
-              <line x1="82" y1="44" x2="142" y2="44" stroke="#90CAF9" strokeWidth="0.8" />
-              <line x1="102" y1="20" x2="102" y2="56" stroke="#90CAF9" strokeWidth="0.8" />
-              <line x1="122" y1="20" x2="122" y2="56" stroke="#90CAF9" strokeWidth="0.8" />
-              <rect x="82" y="20" width="60" height="36" rx="3" fill="url(#shine2)" opacity="0.3">
-                <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite" />
-              </rect>
-            </g>
-            {/* Ground stands */}
-            <line x1="20" y1="54" x2="20" y2="68" stroke="#555" strokeWidth="2" />
-            <line x1="50" y1="54" x2="50" y2="68" stroke="#555" strokeWidth="2" />
-            <line x1="97" y1="54" x2="97" y2="68" stroke="#555" strokeWidth="2" />
-            <line x1="127" y1="54" x2="127" y2="68" stroke="#555" strokeWidth="2" />
+        {/* Solar Panels — animated tilt + shine */}
+        <style>{`
+          @keyframes solarTilt1 {
+            0%   { transform: rotate(-18deg); }
+            50%  { transform: rotate(-6deg); }
+            100% { transform: rotate(-18deg); }
+          }
+          @keyframes solarTilt2 {
+            0%   { transform: rotate(-6deg); }
+            50%  { transform: rotate(-18deg); }
+            100% { transform: rotate(-6deg); }
+          }
+          @keyframes solarShine {
+            0%   { opacity: 0.05; }
+            50%  { opacity: 0.45; }
+            100% { opacity: 0.05; }
+          }
+          @keyframes solarShine2 {
+            0%   { opacity: 0.45; }
+            50%  { opacity: 0.05; }
+            100% { opacity: 0.45; }
+          }
+          .solar-panel-1 { transform-origin: 35px 62px; animation: solarTilt1 4s ease-in-out infinite; }
+          .solar-panel-2 { transform-origin: 112px 62px; animation: solarTilt2 4s ease-in-out infinite; }
+          .solar-shine-1 { animation: solarShine 3s ease-in-out infinite; }
+          .solar-shine-2 { animation: solarShine2 3s ease-in-out infinite; }
+        `}</style>
+        <div className="absolute" style={{ bottom: '48px', right: '6%' }}>
+          <svg viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '180px', height: '80px', overflow: 'visible' }}>
             <defs>
-              <linearGradient id="shine1" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="white" stopOpacity="0.8" />
+              <linearGradient id="sshine1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="white" stopOpacity="0.9" />
+                <stop offset="60%" stopColor="white" stopOpacity="0.2" />
                 <stop offset="100%" stopColor="white" stopOpacity="0" />
               </linearGradient>
-              <linearGradient id="shine2" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="white" stopOpacity="0" />
-                <stop offset="100%" stopColor="white" stopOpacity="0.8" />
+              <linearGradient id="sshine2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="white" stopOpacity="0.9" />
+                <stop offset="60%" stopColor="white" stopOpacity="0.2" />
+                <stop offset="100%" stopColor="white" stopOpacity="0" />
               </linearGradient>
             </defs>
+            {/* Panel 1 — tilts left to right */}
+            <g className="solar-panel-1">
+              <rect x="5" y="22" width="60" height="38" rx="3" fill="#1565C0" stroke="#0D47A1" strokeWidth="1.5" />
+              <line x1="5" y1="34" x2="65" y2="34" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
+              <line x1="5" y1="46" x2="65" y2="46" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
+              <line x1="25" y1="22" x2="25" y2="60" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
+              <line x1="45" y1="22" x2="45" y2="60" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
+              <rect x="5" y="22" width="60" height="38" rx="3" fill="url(#sshine1)" className="solar-shine-1" />
+              {/* Stand */}
+              <line x1="35" y1="60" x2="35" y2="75" stroke="#546E7A" strokeWidth="2.5" />
+              <line x1="20" y1="75" x2="50" y2="75" stroke="#546E7A" strokeWidth="2" />
+            </g>
+            {/* Panel 2 — tilts opposite phase */}
+            <g className="solar-panel-2">
+              <rect x="88" y="22" width="60" height="38" rx="3" fill="#1565C0" stroke="#0D47A1" strokeWidth="1.5" />
+              <line x1="88" y1="34" x2="148" y2="34" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
+              <line x1="88" y1="46" x2="148" y2="46" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
+              <line x1="108" y1="22" x2="108" y2="60" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
+              <line x1="128" y1="22" x2="128" y2="60" stroke="#90CAF9" strokeWidth="0.8" opacity="0.7" />
+              <rect x="88" y="22" width="60" height="38" rx="3" fill="url(#sshine2)" className="solar-shine-2" />
+              {/* Stand */}
+              <line x1="118" y1="60" x2="118" y2="75" stroke="#546E7A" strokeWidth="2.5" />
+              <line x1="103" y1="75" x2="133" y2="75" stroke="#546E7A" strokeWidth="2" />
+            </g>
           </svg>
         </div>
 
