@@ -106,3 +106,4 @@
 - [x] Reduce tower size and change background in About page header only
 - [x] Fix hero section text overlapping with navbar transmission towers on laptop screens
 - [x] Fix About page header — transmission towers overlapping the heading text
+- [x] Extend About page header transmission line from left edge to right edge (full width)
