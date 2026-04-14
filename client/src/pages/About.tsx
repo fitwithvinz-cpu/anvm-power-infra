@@ -57,7 +57,7 @@ export default function About() {
         {/* Background photo */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/about-natural-bg_370d5aaf.jpg"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/about-natural-bg2_8fbeca70.jpg"
             alt="Natural landscape with power infrastructure"
             className="w-full h-full object-cover object-center"
           />

@@ -110,3 +110,5 @@
 - [x] Move right tower in navbar to appear after the Get in Touch button (at the far right end)
 - [x] Change About page header to a natural outdoor background image
 - [x] Adjust TransmissionScene start/end points slightly inward from edges
+- [x] Fix broken last tower in TransmissionScene animation
+- [x] Replace About page header background with a better image
