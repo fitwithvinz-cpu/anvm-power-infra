@@ -261,16 +261,49 @@ export default function Home() {
               </svg>
             </div>
 
-            {/* Logo — actual colors, large */}
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
-              alt="ANVM Power Infra"
-              className="w-auto object-contain"
-              style={{
-                height: "340px",
-                filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.7)) drop-shadow(0 0 2px rgba(0,0,0,0.9))",
-              }}
-            />
+            {/* Logo — actual colors with pulsing glow flash */}
+            <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              {/* Outer slow pulse ring */}
+              <div style={{
+                position: "absolute",
+                width: "320px",
+                height: "320px",
+                borderRadius: "50%",
+                background: "radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, rgba(22,163,74,0.12) 40%, transparent 70%)",
+                animation: "logoPulse 2.5s ease-in-out infinite",
+                pointerEvents: "none",
+              }} />
+              {/* Inner bright flash */}
+              <div style={{
+                position: "absolute",
+                width: "220px",
+                height: "220px",
+                borderRadius: "50%",
+                background: "radial-gradient(ellipse at center, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.08) 50%, transparent 75%)",
+                animation: "logoPulse 2.5s ease-in-out infinite 0.4s",
+                pointerEvents: "none",
+              }} />
+              <style>{`
+                @keyframes logoPulse {
+                  0%, 100% { opacity: 0.4; transform: scale(0.95); }
+                  50% { opacity: 1; transform: scale(1.08); }
+                }
+              `}</style>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
+                alt="ANVM Power Infra"
+                className="w-auto object-contain"
+                style={{
+                  height: "340px",
+                  position: "relative",
+                  zIndex: 1,
+                  filter:
+                    "drop-shadow(0 0 8px rgba(255,255,255,0.6)) " +
+                    "drop-shadow(0 0 20px rgba(255,255,255,0.3)) " +
+                    "drop-shadow(0 4px 16px rgba(0,0,0,0.8))",
+                }}
+              />
+            </div>
 
           </div>
         </div>
