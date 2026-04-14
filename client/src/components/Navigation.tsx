@@ -77,28 +77,28 @@ export default function Navigation() {
             xmlns="http://www.w3.org/2000/svg"
             style={{ display: "block" }}
           >
-            {/* ── LEFT TOWER (near logo, x≈155) ── */}
+            {/* ── LEFT TOWER (after logo, x≈310) ── */}
             <g opacity="0.6">
               {/* Mast */}
-              <line x1="155" y1="100" x2="155" y2="12" stroke="#1e3a8a" strokeWidth="2.5"/>
+              <line x1="310" y1="100" x2="310" y2="12" stroke="#1e3a8a" strokeWidth="2.5"/>
               {/* Cross arm top */}
-              <line x1="135" y1="20" x2="175" y2="20" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="290" y1="20" x2="330" y2="20" stroke="#1e3a8a" strokeWidth="2"/>
               {/* Cross arm mid */}
-              <line x1="138" y1="36" x2="172" y2="36" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="293" y1="36" x2="327" y2="36" stroke="#1e3a8a" strokeWidth="2"/>
               {/* Diagonal braces top */}
-              <line x1="149" y1="12" x2="135" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
-              <line x1="161" y1="12" x2="175" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="304" y1="12" x2="290" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="316" y1="12" x2="330" y2="20" stroke="#1e3a8a" strokeWidth="1.2"/>
               {/* Diagonal braces mid */}
-              <line x1="147" y1="20" x2="138" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
-              <line x1="163" y1="20" x2="172" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="302" y1="20" x2="293" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
+              <line x1="318" y1="20" x2="327" y2="36" stroke="#1e3a8a" strokeWidth="1.2"/>
               {/* Base spread */}
-              <line x1="155" y1="100" x2="140" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
-              <line x1="155" y1="100" x2="170" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="310" y1="100" x2="295" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
+              <line x1="310" y1="100" x2="325" y2="100" stroke="#1e3a8a" strokeWidth="2"/>
               {/* Insulators */}
-              <circle cx="135" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
-              <circle cx="175" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
-              <circle cx="138" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
-              <circle cx="172" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
+              <circle cx="290" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
+              <circle cx="330" cy="20" r="3" fill="#16a34a" opacity="0.9"/>
+              <circle cx="293" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
+              <circle cx="327" cy="36" r="2.5" fill="#16a34a" opacity="0.9"/>
             </g>
 
             {/* ── RIGHT TOWER (near Get in Touch, x≈1245) ── */}
@@ -119,11 +119,11 @@ export default function Navigation() {
             </g>
 
             {/* ── POWER LINES — top pair (y≈20) ── */}
-            <path d="M135 20 Q700 42 1225 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
-            <path d="M175 20 Q700 42 1265 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
+            <path d="M290 20 Q780 42 1225 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
+            <path d="M330 20 Q780 42 1265 20" stroke="#374151" strokeWidth="1" fill="none" opacity="0.35"/>
             {/* ── POWER LINES — mid pair (y≈36) ── */}
-            <path d="M138 36 Q700 58 1228 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
-            <path d="M172 36 Q700 58 1262 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
+            <path d="M293 36 Q780 58 1228 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
+            <path d="M327 36 Q780 58 1262 36" stroke="#374151" strokeWidth="1" fill="none" opacity="0.3"/>
 
             {/* ── ANIMATED PULSES ── */}
             {/* Pulse 1 — top line, left to right */}
@@ -132,7 +132,7 @@ export default function Navigation() {
                 <mpath xlinkHref="#fullTopLine"/>
               </animateMotion>
             </circle>
-            <path id="fullTopLine" d="M135 20 Q700 42 1225 20" fill="none"/>
+            <path id="fullTopLine" d="M290 20 Q780 42 1225 20" fill="none"/>
 
             {/* Pulse 2 — mid line, left to right, offset */}
             <circle r="3.5" fill="#22c55e" opacity="0.8">
@@ -140,7 +140,7 @@ export default function Navigation() {
                 <mpath xlinkHref="#fullMidLine"/>
               </animateMotion>
             </circle>
-            <path id="fullMidLine" d="M138 36 Q700 58 1228 36" fill="none"/>
+            <path id="fullMidLine" d="M293 36 Q780 58 1228 36" fill="none"/>
 
             {/* Pulse 3 — top line, right to left */}
             <circle r="3" fill="#4ade80" opacity="0.75">
@@ -148,7 +148,7 @@ export default function Navigation() {
                 <mpath xlinkHref="#fullTopLine2"/>
               </animateMotion>
             </circle>
-            <path id="fullTopLine2" d="M135 20 Q700 42 1225 20" fill="none"/>
+            <path id="fullTopLine2" d="M290 20 Q780 42 1225 20" fill="none"/>
 
             {/* Pulse 4 — mid line, right to left, offset */}
             <circle r="2.5" fill="#86efac" opacity="0.7">
@@ -156,7 +156,7 @@ export default function Navigation() {
                 <mpath xlinkHref="#fullMidLine2"/>
               </animateMotion>
             </circle>
-            <path id="fullMidLine2" d="M138 36 Q700 58 1228 36" fill="none"/>
+            <path id="fullMidLine2" d="M293 36 Q780 58 1228 36" fill="none"/>
           </svg>
         </div>
 
