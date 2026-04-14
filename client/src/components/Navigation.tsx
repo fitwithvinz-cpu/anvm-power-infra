@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 // Small animated transmission line SVG for the navbar
 function NavTransmissionLine() {
   return (
-    <div className="hidden lg:flex items-center flex-1 mx-4 overflow-hidden" style={{ maxWidth: 260, height: 56 }}>
+    <div className="hidden lg:flex items-center flex-1 mx-8 overflow-hidden" style={{ maxWidth: 420, height: 90 }}>
       <svg
         viewBox="0 0 260 56"
-        width="260"
-        height="56"
+        width="420"
+        height="90"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         style={{ overflow: "visible" }}
