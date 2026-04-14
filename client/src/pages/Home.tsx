@@ -266,8 +266,8 @@ export default function Home() {
               {/* Outer slow pulse ring */}
               <div style={{
                 position: "absolute",
-                width: "320px",
-                height: "320px",
+                width: "460px",
+                height: "460px",
                 borderRadius: "50%",
                 background: "radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, rgba(22,163,74,0.12) 40%, transparent 70%)",
                 animation: "logoPulse 2.5s ease-in-out infinite",
@@ -276,8 +276,8 @@ export default function Home() {
               {/* Inner bright flash */}
               <div style={{
                 position: "absolute",
-                width: "220px",
-                height: "220px",
+                width: "320px",
+                height: "320px",
                 borderRadius: "50%",
                 background: "radial-gradient(ellipse at center, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.08) 50%, transparent 75%)",
                 animation: "logoPulse 2.5s ease-in-out infinite 0.4s",
@@ -294,7 +294,7 @@ export default function Home() {
                 alt="ANVM Power Infra"
                 className="w-auto object-contain"
                 style={{
-                  height: "340px",
+                  height: "480px",
                   position: "relative",
                   zIndex: 1,
                   filter:
