@@ -64,8 +64,8 @@ export default function About() {
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(5,15,40,0.82) 0%, rgba(5,20,50,0.65) 50%, rgba(5,15,40,0.50) 100%)' }} />
           <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, rgba(5,15,40,0.55))' }} />
         </div>
-        {/* Transmission tower animation */}
-        <div className="absolute inset-0 z-[1] overflow-hidden">
+        {/* Transmission tower animation — pinned to bottom strip only */}
+        <div className="absolute bottom-0 left-0 right-0 z-[1] overflow-hidden" style={{ height: '160px', pointerEvents: 'none' }}>
           <TransmissionScene />
         </div>
         <div className="container relative z-10 py-24 md:py-32">

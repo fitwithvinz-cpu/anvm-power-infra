@@ -105,3 +105,4 @@
 - [x] Extend transmission line animation full width across navbar behind all menu items
 - [x] Reduce tower size and change background in About page header only
 - [x] Fix hero section text overlapping with navbar transmission towers on laptop screens
+- [x] Fix About page header — transmission towers overlapping the heading text
