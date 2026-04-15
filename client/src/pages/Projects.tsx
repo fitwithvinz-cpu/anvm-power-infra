@@ -266,21 +266,57 @@ export default function Projects() {
       <section className="py-20" style={{ background: 'linear-gradient(160deg, #f0f7f4 0%, #e8f5e9 50%, #e3f2fd 100%)' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-[#0f172a] mb-12 text-center">Key Clients</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              "Karnataka Power Transmission Corporation Limited (KPTCL)",
-              "Hubli Electricity Supply Company Limited (HESCOM)",
-              "Wind World India Ltd",
-              "JSW Renewables",
-              "CleanMax Renewables",
-              "Suzlon",
-              "Hero Future Energies",
+              {
+                name: "KPTCL",
+                full: "Karnataka Power Transmission Corporation Limited",
+                logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/kptcl_09b7be71.png",
+              },
+              {
+                name: "HESCOM",
+                full: "Hubli Electricity Supply Company Limited",
+                logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hescom_fdfe9031.jpg",
+              },
+              {
+                name: "Wind World India",
+                full: "Wind World India Ltd",
+                logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/windworld_21ca2692.jpg",
+              },
+              {
+                name: "JSW Renewables",
+                full: "JSW Renewables",
+                logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/jsw_d3eb5466.png",
+              },
+              {
+                name: "CleanMax",
+                full: "CleanMax Renewables",
+                logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/cleanmax_290906e5.svg",
+              },
+              {
+                name: "Suzlon",
+                full: "Suzlon",
+                logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_ebbdc9e3.png",
+              },
+              {
+                name: "Hero Future Energies",
+                full: "Hero Future Energies",
+                logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-future_b777d678.png",
+              },
             ].map((client, index) => (
               <div
                 key={index}
-                className="bg-[#f0fdf4] border border-[#d1fae5] p-6 rounded-xl text-center hover:shadow-md transition-shadow"
+                className="bg-white border border-[#d1fae5] rounded-2xl p-5 flex flex-col items-center justify-center gap-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                style={{ minHeight: '150px' }}
               >
-                <p className="font-semibold text-[#0f172a]">{client}</p>
+                <div className="w-full flex items-center justify-center" style={{ height: '72px' }}>
+                  <img
+                    src={client.logo}
+                    alt={client.name + ' logo'}
+                    className="max-h-16 max-w-full object-contain"
+                  />
+                </div>
+                <p className="text-xs font-semibold text-[#0f172a] text-center leading-tight">{client.full}</p>
               </div>
             ))}
           </div>

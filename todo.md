@@ -112,3 +112,4 @@
 - [x] Adjust TransmissionScene start/end points slightly inward from edges
 - [x] Fix broken last tower in TransmissionScene animation
 - [x] Replace About page header background with a better image
+- [x] Add logos of all 7 key clients to Projects page Key Clients section
