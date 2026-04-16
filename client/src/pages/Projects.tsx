@@ -273,7 +273,6 @@ export default function Projects() {
               { name: "Wind World India", full: "Wind World India Ltd", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/windworld_21ca2692.jpg" },
               { name: "JSW Renewables", full: "JSW Renewables", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/jsw_d3eb5466.png" },
               { name: "CleanMax", full: "CleanMax Renewables", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/cleanmax_logo_112fb9b3.png" },
-              { name: "Suzlon", full: "Suzlon", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_logo_f28335a1.png" },
               { name: "Hero Future Energies", full: "Hero Future Energies", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-future_b777d678.png" },
             ] as { name: string; full: string; logo: string }[]).map((client, index) => (
               <div
@@ -292,6 +291,27 @@ export default function Projects() {
                 <p className="text-xs font-semibold text-[#0f172a] text-center leading-tight">{client.full}</p>
               </div>
             ))}
+            {/* Suzlon special card with bigger logo + GPTW badge */}
+            <div
+              className="bg-white border border-[#d1fae5] rounded-2xl p-5 flex flex-col items-center justify-center gap-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              style={{ minHeight: '150px' }}
+            >
+              <div className="w-full flex items-center justify-center gap-2" style={{ height: '80px' }}>
+                <img
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_logo_f28335a1.png"
+                  alt="Suzlon logo"
+                  className="object-contain"
+                  style={{ maxHeight: '72px', maxWidth: '160px' }}
+                />
+                <img
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/gptw_badge_fd10c58f.webp"
+                  alt="Great Place to Work Certified"
+                  className="object-contain"
+                  style={{ maxHeight: '64px', maxWidth: '56px' }}
+                />
+              </div>
+              <p className="text-xs font-semibold text-[#0f172a] text-center leading-tight">Suzlon</p>
+            </div>
           </div>
         </div>
       </section>
