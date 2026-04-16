@@ -273,7 +273,7 @@ export default function Projects() {
               { name: "Wind World India", full: "Wind World India Ltd", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/windworld_21ca2692.jpg" },
               { name: "JSW Renewables", full: "JSW Renewables", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/jsw_d3eb5466.png" },
               { name: "CleanMax", full: "CleanMax Renewables", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/cleanmax_logo_112fb9b3.png" },
-              { name: "Suzlon", full: "Suzlon", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_ebbdc9e3.png" },
+              { name: "Suzlon", full: "Suzlon", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_logo_f28335a1.png" },
               { name: "Hero Future Energies", full: "Hero Future Energies", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-future_b777d678.png" },
             ] as { name: string; full: string; logo: string }[]).map((client, index) => (
               <div
