@@ -38,23 +38,6 @@ export default function Team() {
       bio: "B. Mahendra is a seasoned electrical contractor with over two decades of hands-on experience in the power and energy sector. Since beginning his professional journey in 2003, he has built a strong reputation for delivering reliable and high-quality electrical solutions across a wide range of projects. His work spans power transmission, renewable energy initiatives, and has demonstrated deep expertise through numerous successful projects with KPTCL.",
       photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/b-mahendra_d9651951.png",
     },
-    {
-      name: "M. Rajalaxmi",
-      role: "Co-founder",
-      birthDate: "March 9, 1986",
-      qualifications: ["Bachelor of Arts (BA)", "Bachelor of Laws (LL.B)"],
-      experience: "Legal and business governance expertise",
-      expertise: [
-        "Legal compliance",
-        "Business governance",
-        "Strategic planning",
-        "Organizational management",
-        "Regulatory compliance",
-        "Ethical practices",
-      ],
-      bio: "M. Rajalaxmi is a dedicated professional and co-founder, bringing strong legal knowledge and organizational insight to the company. With her academic background in law, she plays an important role in ensuring compliance, managing legal aspects, and supporting the strategic growth of the organization. Her attention to detail and commitment to ethical practices contribute significantly to the company's strong operational framework.",
-      photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/rajalaxmi-cofounder_8688397a.png",
-    },
   ];
 
   const teamRoles = [
