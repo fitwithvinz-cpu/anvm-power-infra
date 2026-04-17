@@ -175,7 +175,7 @@ export default function Navigation() {
                 width: "auto",
                 objectFit: "contain",
                 filter:
-                  "drop-shadow(0 0 8px rgba(59,130,246,0.9)) drop-shadow(0 0 18px rgba(59,130,246,0.6)) drop-shadow(0 0 35px rgba(59,130,246,0.35))",
+                  "drop-shadow(0 0 8px rgba(255,255,255,0.9)) drop-shadow(0 0 18px rgba(255,255,255,0.6)) drop-shadow(0 0 35px rgba(255,255,255,0.35))",
                 animation: "navbar-logo-glow 2.5s ease-in-out infinite",
               }}
             />
@@ -183,16 +183,16 @@ export default function Navigation() {
               @keyframes navbar-logo-glow {
                 0%, 100% {
                   filter:
-                    drop-shadow(0 0 8px rgba(59,130,246,0.9))
-                    drop-shadow(0 0 18px rgba(59,130,246,0.6))
-                    drop-shadow(0 0 35px rgba(59,130,246,0.35));
+                    drop-shadow(0 0 8px rgba(255,255,255,0.9))
+                    drop-shadow(0 0 18px rgba(255,255,255,0.6))
+                    drop-shadow(0 0 35px rgba(255,255,255,0.35));
                 }
                 50% {
                   filter:
-                    drop-shadow(0 0 14px rgba(59,130,246,1))
-                    drop-shadow(0 0 30px rgba(59,130,246,0.85))
-                    drop-shadow(0 0 60px rgba(59,130,246,0.55))
-                    drop-shadow(0 0 100px rgba(59,130,246,0.3));
+                    drop-shadow(0 0 14px rgba(255,255,255,1))
+                    drop-shadow(0 0 30px rgba(255,255,255,0.85))
+                    drop-shadow(0 0 60px rgba(255,255,255,0.55))
+                    drop-shadow(0 0 100px rgba(255,255,255,0.3));
                 }
               }
             `}</style>
