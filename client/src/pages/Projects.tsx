@@ -298,7 +298,7 @@ export default function Projects() {
             >
               <div className="w-full flex items-center justify-center gap-2" style={{ height: '80px' }}>
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_correct_1083d59b.png"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_logo_f98645e1.png"
                   alt="Suzlon logo"
                   className="object-contain"
                   style={{ maxHeight: '72px', maxWidth: '160px' }}
