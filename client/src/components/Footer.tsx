@@ -6,64 +6,49 @@ export default function Footer() {
 
   return (
     <>
-      {/* Large Brand Name Banner — above footer, Suzlon-style with flash glow */}
-      <div className="relative overflow-hidden bg-[#0a1628] py-8">
+      {/* Large Brand Logo Banner — above footer, Suzlon-style with flash glow */}
+      <div className="relative overflow-hidden bg-[#0a1628] py-10 flex flex-col items-center justify-center">
         {/* Animated sweep flash overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(105deg, transparent 35%, rgba(34,197,94,0.18) 50%, transparent 65%)",
-            animation: "anvm-flash-sweep 3s ease-in-out infinite",
+              "linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.06) 50%, transparent 65%)",
+            animation: "anvm-flash-sweep 3.5s ease-in-out infinite",
           }}
         />
 
-        <div className="text-center select-none pointer-events-none" aria-hidden="true">
-          <span
-            className="font-black uppercase block"
+        {/* Full ANVM Logo — large, centered, with glow */}
+        <div className="relative flex flex-col items-center justify-center">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
+            alt="ANVM Power Infra Pvt. Ltd."
             style={{
-              fontSize: "clamp(5rem, 20vw, 17rem)",
-              lineHeight: 1,
-              letterSpacing: "0.06em",
-              /* Bright teal-green fill */
-              color: "#22c55e",
-              /* Multi-layer text shadow for strong glow flash */
-              textShadow:
-                "0 0 20px rgba(34,197,94,0.9), 0 0 40px rgba(34,197,94,0.7), 0 0 80px rgba(34,197,94,0.5), 0 0 160px rgba(34,197,94,0.3)",
-              animation: "anvm-glow-pulse 2.5s ease-in-out infinite",
+              width: "clamp(260px, 45vw, 640px)",
+              filter:
+                "drop-shadow(0 0 18px rgba(59,130,246,0.8)) drop-shadow(0 0 40px rgba(59,130,246,0.5)) drop-shadow(0 0 80px rgba(59,130,246,0.3))",
+              animation: "anvm-logo-pulse 2.8s ease-in-out infinite",
             }}
-          >
-            ANVM
-          </span>
-          <p
-            className="text-white/60 tracking-[0.3em] uppercase text-sm md:text-base mt-2 font-medium"
-            style={{ letterSpacing: "0.35em" }}
-          >
-            Power Infra Pvt. Ltd.
-          </p>
+          />
         </div>
 
         {/* Bottom glow line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-green-400/60 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent" />
 
         <style>{`
-          @keyframes anvm-glow-pulse {
+          @keyframes anvm-logo-pulse {
             0%, 100% {
-              text-shadow:
-                0 0 20px rgba(34,197,94,0.9),
-                0 0 40px rgba(34,197,94,0.7),
-                0 0 80px rgba(34,197,94,0.5),
-                0 0 160px rgba(34,197,94,0.3);
-              opacity: 1;
+              filter:
+                drop-shadow(0 0 18px rgba(59,130,246,0.8))
+                drop-shadow(0 0 40px rgba(59,130,246,0.5))
+                drop-shadow(0 0 80px rgba(59,130,246,0.3));
             }
             50% {
-              text-shadow:
-                0 0 30px rgba(34,197,94,1),
-                0 0 60px rgba(34,197,94,0.9),
-                0 0 120px rgba(34,197,94,0.7),
-                0 0 240px rgba(34,197,94,0.5),
-                0 0 400px rgba(34,197,94,0.3);
-              opacity: 0.92;
+              filter:
+                drop-shadow(0 0 28px rgba(59,130,246,1))
+                drop-shadow(0 0 60px rgba(59,130,246,0.8))
+                drop-shadow(0 0 120px rgba(59,130,246,0.5))
+                drop-shadow(0 0 200px rgba(59,130,246,0.3));
             }
           }
           @keyframes anvm-flash-sweep {
