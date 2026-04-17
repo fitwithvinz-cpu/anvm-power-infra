@@ -6,31 +6,71 @@ export default function Footer() {
 
   return (
     <>
-      {/* Large Brand Name Banner — above footer, like Suzlon style */}
-      <div className="relative overflow-hidden bg-gradient-to-b from-[#0a1628] to-[#0f172a] py-10">
+      {/* Large Brand Name Banner — above footer, Suzlon-style with flash glow */}
+      <div className="relative overflow-hidden bg-[#0a1628] py-8">
+        {/* Animated sweep flash overlay */}
         <div
-          className="text-center select-none pointer-events-none"
-          aria-hidden="true"
-        >
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(105deg, transparent 35%, rgba(34,197,94,0.18) 50%, transparent 65%)",
+            animation: "anvm-flash-sweep 3s ease-in-out infinite",
+          }}
+        />
+
+        <div className="text-center select-none pointer-events-none" aria-hidden="true">
           <span
-            className="font-black uppercase tracking-widest text-transparent"
+            className="font-black uppercase block"
             style={{
-              fontSize: "clamp(5rem, 18vw, 16rem)",
-              WebkitTextStroke: "2px rgba(34,197,94,0.18)",
-              color: "transparent",
-              background: "linear-gradient(180deg, rgba(34,197,94,0.22) 0%, rgba(34,197,94,0.06) 100%)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
+              fontSize: "clamp(5rem, 20vw, 17rem)",
               lineHeight: 1,
-              letterSpacing: "0.08em",
-              display: "block",
+              letterSpacing: "0.06em",
+              /* Bright teal-green fill */
+              color: "#22c55e",
+              /* Multi-layer text shadow for strong glow flash */
+              textShadow:
+                "0 0 20px rgba(34,197,94,0.9), 0 0 40px rgba(34,197,94,0.7), 0 0 80px rgba(34,197,94,0.5), 0 0 160px rgba(34,197,94,0.3)",
+              animation: "anvm-glow-pulse 2.5s ease-in-out infinite",
             }}
           >
             ANVM
           </span>
+          <p
+            className="text-white/60 tracking-[0.3em] uppercase text-sm md:text-base mt-2 font-medium"
+            style={{ letterSpacing: "0.35em" }}
+          >
+            Power Infra Pvt. Ltd.
+          </p>
         </div>
-        {/* Subtle green glow line at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
+
+        {/* Bottom glow line */}
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-green-400/60 to-transparent" />
+
+        <style>{`
+          @keyframes anvm-glow-pulse {
+            0%, 100% {
+              text-shadow:
+                0 0 20px rgba(34,197,94,0.9),
+                0 0 40px rgba(34,197,94,0.7),
+                0 0 80px rgba(34,197,94,0.5),
+                0 0 160px rgba(34,197,94,0.3);
+              opacity: 1;
+            }
+            50% {
+              text-shadow:
+                0 0 30px rgba(34,197,94,1),
+                0 0 60px rgba(34,197,94,0.9),
+                0 0 120px rgba(34,197,94,0.7),
+                0 0 240px rgba(34,197,94,0.5),
+                0 0 400px rgba(34,197,94,0.3);
+              opacity: 0.92;
+            }
+          }
+          @keyframes anvm-flash-sweep {
+            0% { transform: translateX(-100%); }
+            60%, 100% { transform: translateX(200%); }
+          }
+        `}</style>
       </div>
 
       <footer className="bg-[#0f172a] text-white">
@@ -42,7 +82,6 @@ export default function Footer() {
               <p className="text-primary-foreground/80 text-sm mb-4">
                 Delivering excellence in electrical and power infrastructure solutions across India.
               </p>
-
             </div>
 
             {/* Quick Links */}
