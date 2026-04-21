@@ -24,7 +24,7 @@ export default function About() {
     { year: "2005", title: "Legacy Begins", description: "Shri Mangalagouri Electricals founded, building deep expertise in electrical contracting and power infrastructure", color: "#16a34a" },
     { year: "2015", title: "Expansion", description: "Expanded operations across Karnataka and Maharashtra with major KPTCL and HESCOM projects", color: "#1e3a8a" },
     { year: "2020", title: "Renewable Energy", description: "Ventured into wind and solar energy infrastructure, partnering with leading renewable energy companies", color: "#16a34a" },
-    { year: "2025", title: "ANVM Established", description: "ANVM Power Infra Pvt. Ltd. formally incorporated, building on 20 years of Mangalagouri legacy", color: "#1e3a8a" },
+    { year: "2023", title: "ANVM Established", description: "ANVM Power Infra Pvt. Ltd. formally incorporated, building on 20 years of Mangalagouri legacy", color: "#1e3a8a" },
   ];
 
   const values = [
@@ -75,7 +75,7 @@ export default function About() {
               About Us
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">About ANVM<br />Power Infra Pvt. Ltd.</h1>
-            <p className="text-lg text-white/70 max-w-xl">Established in 2025 with a vision for excellence in electrical and power infrastructure — built on 20 years of legacy</p>
+            <p className="text-lg text-white/70 max-w-xl">Established in 2023 with a vision for excellence in electrical and power infrastructure — built on 20 years of legacy</p>
           </div>
         </div>
       </section>
@@ -92,10 +92,10 @@ export default function About() {
               <h2 className="text-4xl font-bold text-primary mb-8">Two Decades of Excellence</h2>
               <div className="space-y-5 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  ANVM Power Infra Pvt. Ltd. is a dynamic and forward-thinking company in the electrical and power infrastructure sector, formally established in 2025. The company is built on the strong foundation of <strong className="text-primary">Shri Mangalagouri Electricals</strong>, which was founded in 2005.
+                  ANVM Power Infra Pvt. Ltd. is a dynamic and forward-thinking company in the electrical and power infrastructure sector, formally established in 2023. The company is built on the strong foundation of <strong className="text-primary">Shri Mangalagouri Electricals</strong>, which was founded in 2005.
                 </p>
                 <p>
-                  Carrying forward this legacy, ANVM Power Infra Pvt. Ltd. was formally incorporated in 2025 with a vision to deliver high-quality, reliable, and efficient power solutions across Karnataka and beyond.
+                  Carrying forward this legacy, ANVM Power Infra Pvt. Ltd. was formally incorporated in 2023 with a vision to deliver high-quality, reliable, and efficient power solutions across Karnataka and beyond.
                 </p>
                 <p>
                   The company has successfully executed numerous projects in collaboration with <strong className="text-green-700">KPTCL, HESCOM, and CleanMax Renewables</strong>, along with various private and industrial clients.

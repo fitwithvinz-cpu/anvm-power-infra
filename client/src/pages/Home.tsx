@@ -158,7 +158,7 @@ export default function Home() {
               }}
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              Established 2025 — Built on 20 Years of Excellence
+              Established 2023 — Built on 20 Years of Excellence
             </div>
 
             {/* Headline */}
@@ -477,7 +477,7 @@ export default function Home() {
                 Building Tomorrow's Power Infrastructure
               </h2>
               <p className="text-lg leading-relaxed mb-6" style={{ color: "#475569" }}>
-                Established in 2025 and built on the 20-year legacy of <strong style={{ color: "#0f172a" }}>Shri Mangalagouri Electricals</strong> (founded 2005), ANVM Power Infra Pvt. Ltd. is at the forefront of electrical infrastructure development in Karnataka.
+                Established in 2023 and built on the 20-year legacy of <strong style={{ color: "#0f172a" }}>Shri Mangalagouri Electricals</strong> (founded 2005), ANVM Power Infra Pvt. Ltd. is at the forefront of electrical infrastructure development in Karnataka.
               </p>
               <p className="leading-relaxed mb-8" style={{ color: "#64748b" }}>
                 With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation. Our team works with leading corporations including KPTCL, HESCOM, and BESCOM.

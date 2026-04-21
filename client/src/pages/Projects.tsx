@@ -88,7 +88,7 @@ const projects = [
   },
   {
     category: "Industrial",
-    title: "NRCON Projects",
+    title: "NR Corn Projects",
     location: "Karnataka",
     year: "2021",
     description: "Electrical infrastructure for industrial facility with specialized power requirements",
@@ -96,7 +96,7 @@ const projects = [
   },
   {
     category: "Transmission Lines",
-    title: "Gamesha 33kV Line & Metering Works",
+    title: "Ganesha 33kV Line & Metering Works",
     location: "Karnataka",
     year: "2022",
     description: "33kV transmission line with comprehensive metering and protection systems",
@@ -298,7 +298,7 @@ export default function Projects() {
             >
               <div className="w-full flex items-center justify-center gap-2" style={{ height: '80px' }}>
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_logo_f98645e1.png"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_correct_1083d59b.png"
                   alt="Suzlon logo"
                   className="object-contain"
                   style={{ maxHeight: '72px', maxWidth: '160px' }}
