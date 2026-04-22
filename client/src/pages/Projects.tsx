@@ -274,20 +274,24 @@ export default function Projects() {
               { name: "JSW Renewables", full: "JSW Renewables", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/jsw_d3eb5466.png" },
               { name: "CleanMax", full: "CleanMax Renewables", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/cleanmax_logo_112fb9b3.png" },
               { name: "Hero Future Energies", full: "Hero Future Energies", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-future_b777d678.png" },
-              { name: "Vivid Renewables", full: "Vivid Renewables Pvt Ltd", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/vivid-renewables-logo_17f8a601.jpg" },
-            ] as { name: string; full: string; logo: string }[]).map((client, index) => (
+              { name: "Vivid Renewables", full: "Vivid Renewables Pvt Ltd" },
+            ] as { name: string; full: string; logo?: string }[]).map((client, index) => (
               <div
                 key={index}
                 className="bg-white border border-[#d1fae5] rounded-2xl p-5 flex flex-col items-center justify-center gap-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 style={{ minHeight: '150px' }}
               >
                 <div className="w-full flex items-center justify-center" style={{ height: '72px' }}>
-                  <img
-                    src={client.logo}
-                    alt={client.name + ' logo'}
-                    className="max-h-16 max-w-full object-contain"
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                  />
+                  {client.logo ? (
+                    <img
+                      src={client.logo}
+                      alt={client.name + ' logo'}
+                      className="max-h-16 max-w-full object-contain"
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                    />
+                  ) : (
+                    <div className="text-lg font-bold text-[#0f172a] text-center">{client.name}</div>
+                  )}
                 </div>
                 <p className="text-xs font-semibold text-[#0f172a] text-center leading-tight">{client.full}</p>
               </div>
