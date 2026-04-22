@@ -19,7 +19,7 @@ export default function Footer() {
         `}</style>
         <div className="container mx-auto px-4 flex justify-center items-center">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final_f1a2b3c4.png"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-transparent_6c0a8415.png"
             alt="ANVM Power Infra Logo"
             className="logo-banner h-32 md:h-40 object-contain"
           />
