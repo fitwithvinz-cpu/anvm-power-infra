@@ -296,18 +296,12 @@ export default function Projects() {
               className="bg-white border border-[#d1fae5] rounded-2xl p-5 flex flex-col items-center justify-center gap-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               style={{ minHeight: '150px' }}
             >
-              <div className="w-full flex items-center justify-center gap-2" style={{ height: '80px' }}>
+              <div className="w-full flex items-center justify-center" style={{ height: '80px' }}>
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon_correct_1083d59b.png"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon-official-logo_30b6a90f.png"
                   alt="Suzlon logo"
                   className="object-contain"
                   style={{ maxHeight: '72px', maxWidth: '160px' }}
-                />
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/gptw_badge_fd10c58f.webp"
-                  alt="Great Place to Work Certified"
-                  className="object-contain"
-                  style={{ maxHeight: '64px', maxWidth: '56px' }}
                 />
               </div>
               <p className="text-xs font-semibold text-[#0f172a] text-center leading-tight">Suzlon</p>

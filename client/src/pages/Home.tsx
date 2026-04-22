@@ -105,7 +105,6 @@ export default function Home() {
     { name: "BESCOM", full: "Bangalore Electricity Supply Company" },
     { name: "MESCOM", full: "Mangalore Electricity Supply Company" },
     { name: "GESCOM", full: "Gulbarga Electricity Supply Company" },
-    { name: "Suzlon", full: "Suzlon Southern Projects Limited", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/suzlon-logo_f3b6a175.jpeg" },
   ];
 
   const testimonials = [
@@ -626,11 +625,7 @@ export default function Home() {
                   className="flex flex-col items-center justify-center p-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default"
                   style={{ background: "white", border: "1px solid #e2e8f0", boxShadow: "0 2px 8px rgba(0,0,0,0.04)", width: "180px", minHeight: "100px" }}
                 >
-                  {client.logo ? (
-                    <img src={client.logo} alt={client.name} className="h-12 mb-2 object-contain" />
-                  ) : (
-                    <div className="text-2xl font-black mb-2" style={{ color: "#0f172a" }}>{client.name}</div>
-                  )}
+                  <div className="text-2xl font-black mb-2" style={{ color: "#0f172a" }}>{client.name}</div>
                   <p className="text-xs leading-tight" style={{ color: "#94a3b8" }}>{client.full}</p>
                 </div>
               </AnimatedSection>
