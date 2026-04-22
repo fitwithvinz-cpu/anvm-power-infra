@@ -274,7 +274,7 @@ export default function Projects() {
               { name: "JSW Renewables", full: "JSW Renewables", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/jsw_d3eb5466.png" },
               { name: "CleanMax", full: "CleanMax Renewables", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/cleanmax_logo_112fb9b3.png" },
               { name: "Hero Future Energies", full: "Hero Future Energies", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/hero-future_b777d678.png" },
-              { name: "Vivid Renewables", full: "Vivid Renewables Pvt Ltd" },
+              { name: "Vivid Renewables", full: "Vivid Renewables" },
             ] as { name: string; full: string; logo?: string }[]).map((client, index) => (
               <div
                 key={index}
