@@ -323,7 +323,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <CounterCard target={20} suffix="+" label="Years of Experience" icon={Award} />
             <CounterCard target={50} suffix="+" label="Projects Completed" icon={TrendingUp} />
-            <CounterCard target={50} suffix="+" label="Team Members" icon={Users} />
+            <CounterCard target={100} suffix="+" label="Team Members" icon={Users} />
             <CounterCard target={6} suffix="+" label="Major Corporations" icon={Globe} />
           </div>
         </div>
