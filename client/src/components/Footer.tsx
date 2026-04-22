@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+// Latest version with all changes
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
