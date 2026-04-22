@@ -6,6 +6,26 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#0f172a] text-white mt-20">
+      {/* Large ANVM Logo Banner with Blue Glow */}
+      <div className="relative py-24 overflow-hidden" style={{
+        background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(20, 30, 60, 0.9) 100%)'
+      }}>
+        <style>{`
+          @keyframes logoPulse {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.4)) drop-shadow(0 0 40px rgba(59, 130, 246, 0.2)); }
+            50% { filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 60px rgba(59, 130, 246, 0.3)); }
+          }
+          .logo-banner { animation: logoPulse 2.5s ease-in-out infinite; }
+        `}</style>
+        <div className="container mx-auto px-4 flex justify-center items-center">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anvm-logo-final_f1a2b3c4.png"
+            alt="ANVM Power Infra Logo"
+            className="logo-banner h-32 md:h-40 object-contain"
+          />
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
