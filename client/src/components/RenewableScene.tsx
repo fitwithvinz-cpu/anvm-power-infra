@@ -315,23 +315,22 @@ export default function RenewableScene() {
       drawSun(w, h);
       drawHills(w, h);
 
-      // Wind turbines — varied positions, heights, speeds
+      // Wind turbines — left side only
       const turbines = [
         { cx: w * 0.06, h: h * 0.52, speed: 0.022, phase: 0 },
         { cx: w * 0.16, h: h * 0.44, speed: 0.018, phase: 1.2 },
         { cx: w * 0.27, h: h * 0.56, speed: 0.025, phase: 2.4 },
         { cx: w * 0.38, h: h * 0.40, speed: 0.020, phase: 0.8 },
-        { cx: w * 0.50, h: h * 0.50, speed: 0.023, phase: 1.8 },
-        { cx: w * 0.61, h: h * 0.42, speed: 0.017, phase: 3.0 },
       ];
       turbines.forEach((tb) => {
         drawTurbine(tb.cx, h * 0.78, tb.h, tb.speed, tb.phase, 1);
       });
 
-      // Solar panels — right side, slow sun-tracking tilt
+      // Solar panels — right side, slow sun-tracking tilt (expanded)
       const baseTilt = -0.35 + 0.18 * Math.sin(t * 0.004);
-      drawSolarArray(w * 0.70, h * 0.78, baseTilt, 28, 18);
-      drawSolarArray(w * 0.82, h * 0.78, baseTilt + 0.05 * Math.sin(t * 0.006), 22, 14);
+      drawSolarArray(w * 0.55, h * 0.78, baseTilt, 28, 18);
+      drawSolarArray(w * 0.68, h * 0.78, baseTilt + 0.05 * Math.sin(t * 0.006), 22, 14);
+      drawSolarArray(w * 0.80, h * 0.78, baseTilt - 0.03 * Math.sin(t * 0.005), 28, 18);
 
       drawBirds(w);
 
