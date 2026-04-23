@@ -88,7 +88,7 @@ const projects = [
   },
   {
     category: "Industrial",
-    title: "NR Corn Projects",
+    title: "NR Con Projects",
     location: "Karnataka",
     year: "2021",
     description: "Electrical infrastructure for industrial facility with specialized power requirements",
