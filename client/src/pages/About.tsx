@@ -107,7 +107,7 @@ export default function About() {
                 {[
                   { value: "2005", label: "Founded (Legacy)", color: "#16a34a" },
                   { value: "20+", label: "Years Experience", color: "#1e3a8a" },
-                  { value: "50+", label: "Projects Done", color: "#16a34a" },
+                  { value: "150+", label: "Projects Done", color: "#16a34a" },
                   { value: "3+", label: "Major Clients", color: "#1e3a8a" },
                 ].map((stat, i) => (
                   <div key={i} className="p-6 rounded-2xl text-center transition-all hover:-translate-y-1 hover:shadow-lg"
