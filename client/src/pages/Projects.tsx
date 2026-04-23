@@ -96,7 +96,7 @@ const projects = [
   },
   {
     category: "Transmission Lines",
-    title: "Ganesha 33kV Line & Metering Works",
+    title: "Gamesha 33kV Line & Metering Works",
     location: "Karnataka",
     year: "2022",
     description: "33kV transmission line with comprehensive metering and protection systems",
