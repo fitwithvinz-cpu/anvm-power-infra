@@ -94,7 +94,7 @@ export default function Home() {
     { icon: Award, title: "20+ Years Legacy", description: "Built on the foundation of Shri Mangalagouri Electricals (est. 2005), with two decades of proven excellence in power infrastructure." },
     { icon: CheckCircle, title: "Certified Excellence", description: "ISO certified processes with strict quality control and safety standards on every project we undertake." },
     { icon: Users, title: "Expert Team", description: "50+ skilled engineers and technicians with deep domain expertise in power and renewable energy infrastructure." },
-    { icon: TrendingUp, title: "Proven Track Record", description: "50+ successfully completed projects across Karnataka for KPTCL, HESCOM, BESCOM, and other major utilities." },
+    { icon: TrendingUp, title: "Proven Track Record", description: "150+ successfully completed projects across Karnataka for KPTCL, HESCOM, BESCOM, and other major utilities." },
     { icon: Globe, title: "Renewable Focus", description: "Committed to India's clean energy future with specialised wind and solar infrastructure expertise." },
     { icon: Star, title: "Client Trust", description: "Long-term partnerships with Karnataka's major power utilities built on reliability, quality, and timely delivery." },
   ];
@@ -322,7 +322,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <CounterCard target={20} suffix="+" label="Years of Experience" icon={Award} />
-            <CounterCard target={50} suffix="+" label="Projects Completed" icon={TrendingUp} />
+            <CounterCard target={150} suffix="+" label="Projects Completed" icon={TrendingUp} />
             <CounterCard target={100} suffix="+" label="Team Members" icon={Users} />
             <CounterCard target={6} suffix="+" label="Major Corporations" icon={Globe} />
           </div>
