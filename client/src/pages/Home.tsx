@@ -480,7 +480,7 @@ export default function Home() {
                 Established in 2023, ANVM Power Infra Pvt. Ltd. is at the forefront of electrical infrastructure development in Karnataka, delivering world-class power transmission, renewable energy, and substation solutions.
               </p>
               <p className="leading-relaxed mb-8" style={{ color: "#64748b" }}>
-                With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation. Our team works with leading corporations including KPTCL, HESCOM, and BESCOM.
+                With deep expertise in power transmission, renewable energy, and substation construction, we deliver solutions that power the nation. Our team has successfully executed numerous projects in collaboration with leading corporations including KPTCL, HESCOM, BESCOM, MESCOM, GESCOM, and other major power utilities across Karnataka.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {["Power Transmission", "Renewable Energy", "Substation Works", "Civil Infrastructure"].map((tag) => (
