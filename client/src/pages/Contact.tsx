@@ -1,7 +1,6 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -32,32 +31,46 @@ export default function Contact() {
     message: "",
   });
 
-  const submitContact = trpc.contact.submit.useMutation({
-    onSuccess: () => {
-      toast.success("Message sent! We will get back to you soon.");
-      setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
-    },
-    onError: (err) => {
-      toast.error("Failed to send message. Please try again or email us directly.");
-      console.error(err);
-    },
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    submitContact.mutate({
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone || undefined,
-      company: formData.company || undefined,
-      subject: formData.subject,
-      message: formData.message,
-    });
+    setIsSubmitting(true);
+
+    try {
+      const formPayload = new FormData();
+      formPayload.append("access_key", "1947d24d-656e-4ab5-b8f5-b3b243fc17af");
+      formPayload.append("name", formData.name);
+      formPayload.append("email", formData.email);
+      formPayload.append("phone", formData.phone || "");
+      formPayload.append("company", formData.company || "");
+      formPayload.append("subject", formData.subject);
+      formPayload.append("message", formData.message);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formPayload,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Message sent! We will get back to you soon.");
+        setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again or email us directly.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Failed to send message. Please try again or email us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -242,10 +255,10 @@ export default function Contact() {
 
                   <Button
                     type="submit"
-                    disabled={submitContact.isPending}
+                    disabled={isSubmitting}
                     className="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 rounded-lg transition-colors"
                   >
-                    {submitContact.isPending ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </div>
@@ -263,36 +276,16 @@ export default function Contact() {
               SF-09, Shriya Riddhi Siddhi Commercial Complex, R N Shetty Road, Hubli-580030, Karnataka
             </p>
           </div>
-          <div className="w-full rounded-xl overflow-hidden shadow-xl border border-border" style={{ height: '480px' }}>
+          <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
             <iframe
-              title="ANVM Power Infra Pvt. Ltd. Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.5!2d75.1116!3d15.3471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d78be860443f%3A0x641f120a27f00512!2sShriya%20Ridhi%20Sidhi%2C%2084W6%2BRMF%2C%20Chaitanya%20Nagar%2C%20Rajendra%20Nagar%2C%20Hubballi%2C%20Karnataka%20580024!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.4577825093!2d75.34!3d15.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5b5b5b5b5b5b5%3A0x0!2sANVM%20Power%20Infra!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://www.google.com/maps/place/Shriya+Ridhi+Sidhi/@15.3470599,75.111657,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb8d78be860443f:0x641f120a27f00512!8m2!3d15.3470599!4d75.111657!16s%2Fg%2F11s2yrgfm7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors justify-center"
-            >
-              <MapPin size={18} />
-              Open in Google Maps
-            </a>
-            <a
-              href="https://www.google.com/maps/dir//Shriya+Ridhi+Sidhi,84W6+RMF,Chaitanya+Nagar,Rajendra+Nagar,Hubballi,Karnataka+580024/@15.3470599,75.111657,17z"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors justify-center"
-            >
-              Get Directions
-            </a>
+            ></iframe>
           </div>
         </div>
       </section>
