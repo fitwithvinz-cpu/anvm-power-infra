@@ -104,7 +104,7 @@ const projects = [
   },
   {
     category: "Transmission Lines",
-    title: "Sujalar 33kV Line Project",
+    title: "Suzlon 33kV Line Project",
     location: "Maharashtra",
     year: "2023",
     description: "33kV transmission line construction in Maharashtra with modern standards",
