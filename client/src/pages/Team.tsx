@@ -49,7 +49,7 @@ export default function Team() {
         "Operational excellence",
       ],
       bio: "Anand Kumar Nagpal brings strategic vision and business acumen to ANVM Power Infra. With 18+ years of experience in the power and energy sector, he has played a pivotal role in expanding the company's portfolio and establishing strong partnerships with key clients. His expertise spans project finance, business development, and operational management, driving the company's growth in renewable and conventional power infrastructure.",
-      photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anand-kumar-nagpal_a1b2c3d4.png",
+      photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/kumaranand(1)_4cd9c77a.png",
     },
   ];
 
