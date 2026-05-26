@@ -1,4 +1,4 @@
-import { Calendar, Award, Briefcase } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import SolarScene from "@/components/SolarScene";
 
@@ -24,8 +24,6 @@ export default function Team() {
     {
       name: "B. Mahendra",
       role: "Founder & Managing Director",
-      birthDate: "January 23, 1986",
-      qualifications: ["ITI Certification", "Diploma in Electrical Engineering"],
       experience: "20+ years in electrical contracting and power infrastructure",
       expertise: [
         "Power transmission infrastructure",
@@ -37,6 +35,21 @@ export default function Team() {
       ],
       bio: "B. Mahendra is a seasoned electrical contractor with over two decades of hands-on experience in the power and energy sector. Since beginning his professional journey in 2003, he has built a strong reputation for delivering reliable and high-quality electrical solutions across a wide range of projects. His work spans power transmission, renewable energy initiatives, and has demonstrated deep expertise through numerous successful projects with KPTCL.",
       photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/b-mahendra_d9651951.png",
+    },
+    {
+      name: "Anand Kumar Nagpal",
+      role: "Board of Director",
+      experience: "18+ years in power infrastructure and business development",
+      expertise: [
+        "Strategic business planning",
+        "Power infrastructure development",
+        "Project finance and management",
+        "Renewable energy initiatives",
+        "Client relationship management",
+        "Operational excellence",
+      ],
+      bio: "Anand Kumar Nagpal brings strategic vision and business acumen to ANVM Power Infra. With 18+ years of experience in the power and energy sector, he has played a pivotal role in expanding the company's portfolio and establishing strong partnerships with key clients. His expertise spans project finance, business development, and operational management, driving the company's growth in renewable and conventional power infrastructure.",
+      photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663363203606/BP3KNNhhLb9JXyhfdCGiaL/anand-kumar-nagpal_a1b2c3d4.png",
     },
   ];
 
@@ -107,24 +120,8 @@ export default function Team() {
                   {/* Bio */}
                   <p className="text-foreground/70 mb-6 leading-relaxed text-sm">{founder.bio}</p>
 
-                  {/* Details */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 pb-6 border-b border-border">
-                    <div className="flex items-start gap-2">
-                      <Calendar size={18} className="text-secondary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-xs text-foreground/50">Date of Birth</p>
-                        <p className="font-semibold text-foreground text-sm">{founder.birthDate}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <Award size={18} className="text-secondary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-xs text-foreground/50">Qualifications</p>
-                        {founder.qualifications.map((qual, idx) => (
-                          <p key={idx} className="font-semibold text-foreground text-sm">{qual}</p>
-                        ))}
-                      </div>
-                    </div>
+                  {/* Experience */}
+                  <div className="mb-6 pb-6 border-b border-border">
                     <div className="flex items-start gap-2">
                       <Briefcase size={18} className="text-secondary flex-shrink-0 mt-0.5" />
                       <div>
