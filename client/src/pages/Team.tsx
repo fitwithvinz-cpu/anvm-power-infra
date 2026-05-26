@@ -124,14 +124,7 @@ export default function Team() {
                   <p className="text-foreground/70 mb-6 leading-relaxed text-sm">{founder.bio}</p>
 
                   {/* Details */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 pb-6 border-b border-border">
-                    <div className="flex items-start gap-2">
-                      <Calendar size={18} className="text-secondary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-xs text-foreground/50">Date of Birth</p>
-                        <p className="font-semibold text-foreground text-sm">{founder.birthDate}</p>
-                      </div>
-                    </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 pb-6 border-b border-border">
                     <div className="flex items-start gap-2">
                       <Award size={18} className="text-secondary flex-shrink-0 mt-0.5" />
                       <div>
