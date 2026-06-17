@@ -88,7 +88,7 @@ const projects = [
   },
   {
     category: "Industrial",
-    title: "NR Con Projects",
+    title: "ENERCON Projects",
     location: "Karnataka",
     year: "2021",
     description: "Electrical infrastructure for industrial facility with specialized power requirements",
@@ -105,14 +105,14 @@ const projects = [
   {
     category: "Transmission Lines",
     title: "Suzlon 33kV Line Project",
-    location: "Maharashtra",
+    location: "Karnataka - Harppanahalli",
     year: "2023",
-    description: "33kV transmission line construction in Maharashtra with modern standards",
-    highlights: ["33kV Line", "Maharashtra", "Modern Standards"],
+    description: "33kV transmission line construction in Karnataka with modern standards",
+    highlights: ["33kV Line", "Karnataka", "Modern Standards"],
   },
   {
     category: "Renewable Energy",
-    title: "Wind World India Project",
+    title: "Wind World India LTD",
     location: "Karnataka & Maharashtra",
     year: "2023",
     description: "Large-scale wind energy project with complete electrical infrastructure",
