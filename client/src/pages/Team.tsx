@@ -207,7 +207,7 @@ export default function Team() {
             We are always looking for talented and dedicated professionals to join our growing team. If you are passionate about electrical infrastructure and power solutions, we would love to hear from you.
           </p>
           <a
-            href="mailto:HR@anvmpowerinfra.com?subject=Resume Submission&body=Dear HR Team,%0A%0APlease find my resume attached.%0A%0AThank you,%0A"
+            href="mailto:hr@anvmpowerinfra.com?subject=Resume Submission&body=Dear HR Team,%0A%0APlease find my resume attached.%0A%0AThank you,%0A"
             className="inline-flex items-center gap-2 bg-primary text-white hover:bg-secondary px-8 py-4 rounded-lg font-semibold transition-all"
           >
             Send Your Resume
