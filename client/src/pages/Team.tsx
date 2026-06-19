@@ -21,14 +21,8 @@ function AnimatedSection({ children, className = "", delay = 0 }: { children: Re
 }
 
 export default function Team() {
-  const [copied, setCopied] = React.useState(false);
   const hrEmail = "hr@anvmpowerinfra.com";
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(hrEmail);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
   const founders = [
     {
       name: "B. Mahendra",
@@ -107,49 +101,31 @@ export default function Team() {
               <div
                 className="bg-white/90 border border-green-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col md:flex-row"
               >
-                {/* Photo Section - only show if photo exists */}
-                {founder.photo && (
-                  <div className="md:w-72 flex-shrink-0 bg-gradient-to-b from-primary/10 to-secondary/10 flex items-center justify-center p-6">
-                    <div className="w-56 h-64 rounded-xl overflow-hidden shadow-md border-4 border-white">
-                      <img
-                        src={founder.photo}
-                        alt={founder.name}
-                        className="w-full h-full object-cover object-center"
-                        style={{ objectPosition: "center 10%" }}
-                      />
-                    </div>
+                <div className="md:w-1/3 flex-shrink-0">
+                  <img
+                    src={founder.photo}
+                    alt={founder.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="md:w-2/3 p-8 flex flex-col justify-center">
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold text-primary mb-1">{founder.name}</h3>
+                    <p className="text-secondary font-semibold">{founder.role}</p>
                   </div>
-                )}
-
-                {/* Content Section */}
-                <div className="flex-1 p-8">
-                  <h3 className="text-3xl font-bold text-primary mb-1">{founder.name}</h3>
-                  <p className="text-lg text-secondary font-semibold mb-4">{founder.role}</p>
-
-                  {/* Bio */}
-                  <p className="text-foreground/70 mb-6 leading-relaxed text-sm">{founder.bio}</p>
-
-                  {/* Experience */}
-                  <div className="mb-6 pb-6 border-b border-border">
-                    <div className="flex items-start gap-2">
-                      <Briefcase size={18} className="text-secondary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-xs text-foreground/50">Experience</p>
-                        <p className="font-semibold text-foreground text-sm">{founder.experience}</p>
-                      </div>
-                    </div>
+                  <p className="text-foreground/70 mb-6 leading-relaxed">{founder.bio}</p>
+                  <div className="mb-6">
+                    <p className="text-sm font-semibold text-primary mb-3">Experience: {founder.experience}</p>
                   </div>
-
-                  {/* Expertise */}
                   <div>
-                    <h4 className="font-bold text-primary mb-3 text-sm uppercase tracking-wide">Areas of Expertise</h4>
+                    <p className="text-sm font-semibold text-primary mb-3">Areas of Expertise:</p>
                     <div className="flex flex-wrap gap-2">
-                      {founder.expertise.map((exp, idx) => (
+                      {founder.expertise.map((skill, idx) => (
                         <span
                           key={idx}
-                          className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full border border-primary/20"
+                          className="bg-green-50 text-green-700 border border-green-200 px-3 py-1 rounded-full text-xs font-medium"
                         >
-                          {exp}
+                          {skill}
                         </span>
                       ))}
                     </div>
@@ -215,23 +191,41 @@ export default function Team() {
           <p className="text-xl text-foreground/70 mb-8 max-w-2xl mx-auto">
             We are always looking for talented and dedicated professionals to join our growing team. If you are passionate about electrical infrastructure and power solutions, we would love to hear from you.
           </p>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-6">
             <button
-              onClick={handleCopyEmail}
               className="inline-flex items-center gap-2 bg-primary text-white hover:bg-secondary px-8 py-4 rounded-lg font-semibold transition-all"
             >
               Send Your Resume
             </button>
-            <div className="bg-white p-4 rounded-lg border-2 border-primary">
-              <p className="text-sm text-foreground/60 mb-2">Send your resume to:</p>
-              <p className="text-lg font-bold text-primary">{hrEmail}</p>
-              <button
-                onClick={handleCopyEmail}
-                className="mt-3 text-sm text-primary hover:underline font-semibold"
-              >
-                {copied ? "✓ Copied to clipboard" : "Copy email address"}
-              </button>
+            <div 
+              className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-xl border-2 border-green-500 shadow-lg"
+              style={{
+                animation: 'slideInUp 0.7s ease-out, subtlePulse 3s ease-in-out infinite'
+              }}
+            >
+              <p className="text-sm text-green-600 font-semibold mb-3 tracking-wide uppercase">Send your resume to:</p>
+              <p className="text-3xl font-bold text-green-700 tracking-tight">{hrEmail}</p>
             </div>
+            <style>{`
+              @keyframes slideInUp {
+                from {
+                  opacity: 0;
+                  transform: translateY(20px);
+                }
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+              @keyframes subtlePulse {
+                0%, 100% {
+                  box-shadow: 0 10px 25px rgba(22, 163, 74, 0.1);
+                }
+                50% {
+                  box-shadow: 0 10px 35px rgba(22, 163, 74, 0.2);
+                }
+              }
+            `}</style>
           </div>
         </div>
       </section>
