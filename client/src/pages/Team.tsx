@@ -1,4 +1,5 @@
 import { Briefcase } from "lucide-react";
+import React from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import SolarScene from "@/components/SolarScene";
 
@@ -20,6 +21,14 @@ function AnimatedSection({ children, className = "", delay = 0 }: { children: Re
 }
 
 export default function Team() {
+  const [copied, setCopied] = React.useState(false);
+  const hrEmail = "hr@anvmpowerinfra.com";
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(hrEmail);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   const founders = [
     {
       name: "B. Mahendra",
@@ -206,12 +215,24 @@ export default function Team() {
           <p className="text-xl text-foreground/70 mb-8 max-w-2xl mx-auto">
             We are always looking for talented and dedicated professionals to join our growing team. If you are passionate about electrical infrastructure and power solutions, we would love to hear from you.
           </p>
-          <a
-            href="mailto:hr@anvmpowerinfra.com?subject=Resume Submission&body=Dear HR Team,%0A%0APlease find my resume attached.%0A%0AThank you,%0A"
-            className="inline-flex items-center gap-2 bg-primary text-white hover:bg-secondary px-8 py-4 rounded-lg font-semibold transition-all"
-          >
-            Send Your Resume
-          </a>
+          <div className="flex flex-col items-center gap-4">
+            <button
+              onClick={handleCopyEmail}
+              className="inline-flex items-center gap-2 bg-primary text-white hover:bg-secondary px-8 py-4 rounded-lg font-semibold transition-all"
+            >
+              Send Your Resume
+            </button>
+            <div className="bg-white p-4 rounded-lg border-2 border-primary">
+              <p className="text-sm text-foreground/60 mb-2">Send your resume to:</p>
+              <p className="text-lg font-bold text-primary">{hrEmail}</p>
+              <button
+                onClick={handleCopyEmail}
+                className="mt-3 text-sm text-primary hover:underline font-semibold"
+              >
+                {copied ? "✓ Copied to clipboard" : "Copy email address"}
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
