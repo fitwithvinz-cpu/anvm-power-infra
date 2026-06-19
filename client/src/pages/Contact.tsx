@@ -145,10 +145,27 @@ export default function Contact() {
                     <Mail size={24} className="text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-primary mb-2">Email</h3>
-                    <a href="mailto:anvmpowerinfrapvtltd@gmail.com" className="text-foreground/70 hover:text-secondary transition-colors break-all">
-                      anvmpowerinfrapvtltd@gmail.com
-                    </a>
+                    <h3 className="font-bold text-primary mb-3">Email</h3>
+                    <div className="space-y-2">
+                      <div>
+                        <p className="text-xs text-foreground/50 font-semibold mb-1">HR Department</p>
+                        <a href="mailto:hr@anvmpowerinfra.com" className="text-foreground/70 hover:text-secondary transition-colors break-all text-sm">
+                          hr@anvmpowerinfra.com
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-xs text-foreground/50 font-semibold mb-1">Finance Department</p>
+                        <a href="mailto:finance@anvmpowerinfra.com" className="text-foreground/70 hover:text-secondary transition-colors break-all text-sm">
+                          finance@anvmpowerinfra.com
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-xs text-foreground/50 font-semibold mb-1">Administration</p>
+                        <a href="mailto:admin@anvmpowerinfra.com" className="text-foreground/70 hover:text-secondary transition-colors break-all text-sm">
+                          admin@anvmpowerinfra.com
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
