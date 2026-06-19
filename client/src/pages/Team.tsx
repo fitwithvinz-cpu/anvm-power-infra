@@ -54,9 +54,9 @@ export default function Team() {
   ];
 
   const teamRoles = [
-    { role: "Site Managers", count: "4+", description: "Experienced project site managers" },
-    { role: "Engineers", count: "8+", description: "Qualified electrical and civil engineers" },
-    { role: "Technicians", count: "15+", description: "Skilled technical professionals" },
+    { role: "Site Engineers", count: "50+", description: "Experienced site engineers and managers" },
+    { role: "Engineers", count: "30+", description: "Qualified electrical and civil engineers" },
+    { role: "Technicians", count: "20+", description: "Skilled technical professionals" },
     { role: "Support Staff", count: "20+", description: "Administrative and operational support" },
   ];
 
